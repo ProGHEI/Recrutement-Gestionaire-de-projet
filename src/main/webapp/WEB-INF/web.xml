@@ -9,6 +9,9 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <welcome-file-list>
+    <welcome-file>accueil</welcome-file>
+  </welcome-file-list>
   <servlet>
     <description></description>
     <display-name>AccueilServlet</display-name>
@@ -19,8 +22,62 @@
     <servlet-name>AccueilServlet</servlet-name>
     <url-pattern>/accueil</url-pattern>
   </servlet-mapping>
-  
-  <welcome-file-list>
-    <welcome-file>accueil</welcome-file>
-  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ConnexionServlet</display-name>
+    <servlet-name>ConnexionServlet</servlet-name>
+    <servlet-class>controllers.ConnexionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConnexionServlet</servlet-name>
+    <url-pattern>/connexion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DeconnexionServlet</servlet-name>
+    <servlet-class>controllers.DeconnexionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeconnexionServlet</servlet-name>
+    <url-pattern>/deconnexion</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>RestrictionFiltre</filter-name>
+    <filter-class>filtres.RestrictionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RestrictionFiltre</filter-name>
+    <url-pattern>/restreint/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>		<!-- Le filtre s'applique également lors des Request et Forward côté serveur -->
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+  <filter>
+    <filter-name>Set Character Encoding</filter-name>
+    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>		<!-- L'encodage du serveur est défini en UTF-8 -->
+    </init-param>
+    <init-param>
+      <param-name>ignore</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>Set Character Encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DownloadServlet</display-name>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>controllers.DownloadServlet</servlet-class>
+    <init-param>
+		<param-name>chemin</param-name> 
+		<param-value>/fichiers/</param-value> 	<!-- Va chercher la ressource dans C:\fichiers -->
+	</init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/fichiers/*</url-pattern>
+  </servlet-mapping>
 </web-app>
