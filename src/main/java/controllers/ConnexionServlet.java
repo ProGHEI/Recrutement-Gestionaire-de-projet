@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Utilisateur;
 import dao.ConnexionForm;
-import dao.Utilisateur;
 
 public class ConnexionServlet extends HttpServlet {
     public static final String ATT_USER         = "utilisateur";

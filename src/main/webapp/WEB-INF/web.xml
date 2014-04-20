@@ -47,7 +47,7 @@
   <filter-mapping>
     <filter-name>RestrictionFiltre</filter-name>
     <url-pattern>/restreint/*</url-pattern>
-    <dispatcher>REQUEST</dispatcher>		<!-- Le filtre s'applique également lors des Request et Forward côté serveur -->
+    <dispatcher>REQUEST</dispatcher>
     <dispatcher>FORWARD</dispatcher>
   </filter-mapping>
   <filter>
@@ -55,7 +55,7 @@
     <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
     <init-param>
       <param-name>encoding</param-name>
-      <param-value>UTF-8</param-value>		<!-- L'encodage du serveur est défini en UTF-8 -->
+      <param-value>UTF-8</param-value>
     </init-param>
     <init-param>
       <param-name>ignore</param-name>
@@ -72,12 +72,32 @@
     <servlet-name>DownloadServlet</servlet-name>
     <servlet-class>controllers.DownloadServlet</servlet-class>
     <init-param>
-		<param-name>chemin</param-name> 
-		<param-value>/fichiers/</param-value> 	<!-- Va chercher la ressource dans C:\fichiers -->
-	</init-param>
+      <param-name>chemin</param-name>
+      <param-value>/fichiers/</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>DownloadServlet</servlet-name>
     <url-pattern>/fichiers/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AjouterMembreServlet</display-name>
+    <servlet-name>AjouterMembreServlet</servlet-name>
+    <servlet-class>controllers.AjouterMembreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjouterMembreServlet</servlet-name>
+    <url-pattern>/ajouter</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SupprimerMembreServlet</display-name>
+    <servlet-name>SupprimerMembreServlet</servlet-name>
+    <servlet-class>controllers.SupprimerMembreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SupprimerMembreServlet</servlet-name>
+    <url-pattern>/supprimerMembre</url-pattern>
   </servlet-mapping>
 </web-app>

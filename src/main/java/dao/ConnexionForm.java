@@ -1,16 +1,23 @@
 package dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import model.Utilisateur;
+
 public final class ConnexionForm {
     private static final String CHAMP_EMAIL  = "email";
     private static final String CHAMP_PASS   = "motdepasse";
 
-    private String              resultat;
+    private String 				resultat;
     private Map<String, String> erreurs      = new HashMap<String, String>();
+
 
     public String getResultat() {
         return resultat;
@@ -27,24 +34,20 @@ public final class ConnexionForm {
 
         Utilisateur utilisateur = new Utilisateur();
 
-        /* Validation du champ email. */
+        
+        /* Validation du membre. */
         try {
-            validationEmail( email );
-        } catch ( Exception e ) {
-            setErreur( CHAMP_EMAIL, e.getMessage() );
-        }
-        utilisateur.setEmail( email );
-
-        /* Validation du champ mot de passe. */
-        try {
-            validationMotDePasse( motDePasse );
+            validationMembre(email, motDePasse);
+            utilisateur.setEmail( email );
+        	utilisateur.setMotDePasse( motDePasse );
         } catch ( Exception e ) {
             setErreur( CHAMP_PASS, e.getMessage() );
+            setErreur( CHAMP_EMAIL, e.getMessage() );
         }
-        utilisateur.setMotDePasse( motDePasse );
+
 
         /* Initialisation du résultat global de la validation. */
-        if ( erreurs.isEmpty() ) {
+        if ( erreurs.isEmpty()) {
             resultat = "Succès de la connexion.";
         } else {
             resultat = "Échec de la connexion.";
@@ -52,28 +55,7 @@ public final class ConnexionForm {
 
         return utilisateur;
     }
-
-    /**
-     * Valide l'adresse email saisie.
-     */
-    private void validationEmail( String email ) throws Exception {
-        if ( email != null && !email.matches( "([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)" ) ) {
-            throw new Exception( "Merci de saisir une adresse mail valide." );
-        }
-    }
-
-    /**
-     * Valide le mot de passe saisi.
-     */
-    private void validationMotDePasse( String motDePasse ) throws Exception {
-        if ( motDePasse != null ) {
-            if ( motDePasse.length() < 3 ) {
-                throw new Exception( "Le mot de passe doit contenir au moins 3 caractères." );
-            }
-        } else {
-            throw new Exception( "Merci de saisir votre mot de passe." );
-        }
-    }
+    
 
     /*
      * Ajoute un message correspondant au champ spécifié à la map des erreurs.
@@ -93,5 +75,39 @@ public final class ConnexionForm {
         } else {
             return valeur;
         }
+    }
+    
+    
+    /*
+     * Méthode permettant de savoir si le membre est enregistré ou non, et 
+     * renvoie une exception qui fait echouer la connexion
+     */
+    public void validationMembre(String email, String motDePasse) throws Exception{
+		boolean validation = false;
+    	
+    	try {
+			Connection connection = DataSourceProvider.getDataSource()
+					.getConnection();
+			// Utiliser la connexion
+			PreparedStatement stmt = connection.prepareStatement( "SELECT * FROM `user` WHERE `mail`=? AND `pass`=?"); 
+			stmt.setString(1,email); 
+			stmt.setString(2,motDePasse); 
+			ResultSet results = stmt.executeQuery();
+			if(results.next()){
+				validation=true;
+			}
+
+			// Fermer la connexion
+			stmt.close();
+			connection.close(); 
+			
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	
+    	if (!validation) {
+			throw new Exception();
+    	}
     }
 }
