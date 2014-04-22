@@ -40,32 +40,6 @@
     <servlet-name>DeconnexionServlet</servlet-name>
     <url-pattern>/deconnexion</url-pattern>
   </servlet-mapping>
-  <filter>
-    <filter-name>RestrictionFiltre</filter-name>
-    <filter-class>filtres.RestrictionFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>RestrictionFiltre</filter-name>
-    <url-pattern>/restreint/*</url-pattern>
-    <dispatcher>REQUEST</dispatcher>
-    <dispatcher>FORWARD</dispatcher>
-  </filter-mapping>
-  <filter>
-    <filter-name>Set Character Encoding</filter-name>
-    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
-    <init-param>
-      <param-name>encoding</param-name>
-      <param-value>UTF-8</param-value>
-    </init-param>
-    <init-param>
-      <param-name>ignore</param-name>
-      <param-value>false</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>Set Character Encoding</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
   <servlet>
     <description></description>
     <display-name>DownloadServlet</display-name>
@@ -100,4 +74,52 @@
     <servlet-name>SupprimerMembreServlet</servlet-name>
     <url-pattern>/supprimerMembre</url-pattern>
   </servlet-mapping>
+  <filter>
+    <filter-name>RestrictionFiltre</filter-name>
+    <filter-class>filtres.RestrictionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RestrictionFiltre</filter-name>
+    <url-pattern>/restreint/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+  <filter>
+    <filter-name>Set Character Encoding</filter-name>
+    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>ignore</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>Set Character Encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConnexionAdminServlet</display-name>
+    <servlet-name>ConnexionAdminServlet</servlet-name>
+    <servlet-class>controllers.ConnexionAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConnexionAdminServlet</servlet-name>
+    <url-pattern>/connexionAdmin</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>RestrictionAdminFilter</display-name>
+    <filter-name>RestrictionAdminFilter</filter-name>
+    <filter-class>filtres.RestrictionAdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RestrictionAdminFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+  </filter-mapping>
 </web-app>

@@ -11,12 +11,12 @@ import javax.servlet.http.HttpSession;
 import model.Utilisateur;
 import dao.ConnexionForm;
 
-public class ConnexionServlet extends HttpServlet {
+public class ConnexionAdminServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-    public static final String ATT_USER         = "utilisateur";
+    public static final String ATT_USER         = "admin";
     public static final String ATT_FORM         = "form";
-    public static final String ATT_SESSION_USER = "sessionUtilisateur";
-    public static final String VUE              = "/WEB-INF/pages/connexion.jsp";
+    public static final String ATT_SESSION_USER2 = "sessionAdmin";								//pour outrepasser RestrictionFilter en admin
+    public static final String VUE              = "/WEB-INF/pages/connexionAdmin.jsp";
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         /* Affichage de la page de connexion */
@@ -28,7 +28,8 @@ public class ConnexionServlet extends HttpServlet {
         ConnexionForm form = new ConnexionForm();
 
         /* Traitement de la requête et récupération du bean en résultant */
-        Utilisateur utilisateur = form.connecterUtilisateur( request );
+        Utilisateur admin = form.connecterAdmin( request );
+        
 
         /* Récupération de la session depuis la requête */
         HttpSession session = request.getSession();
@@ -38,15 +39,14 @@ public class ConnexionServlet extends HttpServlet {
          * Utilisateur à la session, sinon suppression du bean de la session.
          */
         if ( form.getErreurs().isEmpty() ) {
-            session.setAttribute( ATT_SESSION_USER, utilisateur );
-        } 
-        else {
-            session.setAttribute( ATT_SESSION_USER, null );
+            session.setAttribute( ATT_SESSION_USER2, admin );
+        } else {
+            session.setAttribute( ATT_SESSION_USER2, null );
         }
 
         /* Stockage du formulaire et du bean dans l'objet request */
         request.setAttribute( ATT_FORM, form );
-        request.setAttribute( ATT_USER, utilisateur );
+        request.setAttribute( ATT_USER, admin );
 
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }

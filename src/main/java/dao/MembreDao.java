@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.Membre;
@@ -88,7 +89,63 @@ public class MembreDao {
 		}
 	}
 
+	public void validationMembre(String email, String motDePasse) throws Exception{
+		boolean validation = false;
+    	
+    	try {
+			Connection connection = DataSourceProvider.getDataSource()
+					.getConnection();
+			// Utiliser la connexion
+			PreparedStatement stmt = connection.prepareStatement( "SELECT * FROM `user` WHERE `mail`=? AND `pass`=?"); 
+			stmt.setString(1,email); 
+			stmt.setString(2,motDePasse); 
+			ResultSet results = stmt.executeQuery();
+			if(results.next()){
+				validation=true;
+			}
 
+			// Fermer la connexion
+			stmt.close();
+			connection.close(); 
+			
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	
+    	if (!validation) {
+			throw new Exception();
+    	}
+    }
 	
+	
+	public void validationAdmin(String email, String motDePasse) throws Exception{
+		boolean validation = false;
+    	
+    	try {
+			Connection connection = DataSourceProvider.getDataSource()
+					.getConnection();
+			// Utiliser la connexion
+			PreparedStatement stmt = connection.prepareStatement( "SELECT * FROM `user` WHERE `mail`=? AND `pass`=? AND `role`='admin'"); 
+			stmt.setString(1,email); 
+			stmt.setString(2,motDePasse); 
+			ResultSet results = stmt.executeQuery();
+			if(results.next()){
+				validation=true;
+			}
+
+			// Fermer la connexion
+			stmt.close();
+			connection.close(); 
+			
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	
+    	if (!validation) {
+			throw new Exception();
+    	}
+    }
 		
 }
