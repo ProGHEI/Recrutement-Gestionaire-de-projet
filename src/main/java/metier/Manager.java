@@ -41,6 +41,4 @@ public class Manager {
 		return newMembre;
 	}
 	
-	
-	
 }

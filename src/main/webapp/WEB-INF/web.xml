@@ -22,6 +22,29 @@
     <servlet-name>AccueilServlet</servlet-name>
     <url-pattern>/accueil</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>AccueilPostulantServlet</display-name>
+    <servlet-name>AccueilPostulantServlet</servlet-name>
+    <servlet-class>controllers.AccueilPostulantServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AccueilPostulantServlet</servlet-name>
+    <url-pattern>/accueilPostulant</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>AccueilRealisateurServlet</display-name>
+    <servlet-name>AccueilRealisateurServlet</servlet-name>
+    <servlet-class>controllers.AccueilRealisateurServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AccueilRealisateurServlet</servlet-name>
+    <url-pattern>/accueilRealisateur</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>ConnexionServlet</display-name>
@@ -122,4 +145,14 @@
     <dispatcher>FORWARD</dispatcher>
     <dispatcher>INCLUDE</dispatcher>
   </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CalendrierServlet</display-name>
+    <servlet-name>CalendrierServlet</servlet-name>
+    <servlet-class>controllers.CalendrierServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CalendrierServlet</servlet-name>
+    <url-pattern>/calendrier</url-pattern>
+  </servlet-mapping>
 </web-app>

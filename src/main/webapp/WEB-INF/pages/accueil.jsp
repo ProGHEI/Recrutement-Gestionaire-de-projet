@@ -17,43 +17,14 @@
 
 <section>
 	<div class="container">
-	<form method="post" action="ajouterepisode">
-		<table>
-			<thead>
-				<tr><h1>Tes coordonnées</h1></tr>
-				<tr></tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Civilité</td>
-					<td><select name="personnage" id="personnage">		
-							<option value="mlle">Mlle.</option>
-							<option value="m">M.</option>
-						</select></td>
-				</tr>
-				<tr>
-					<td>Nom</td>
-					<td><input type="text" id="nom" name="nom"></td>
-				</tr>
-				<tr>
-					<td>Prénom</td>
-					<td><input type="text" id="prenom" name="prénom"></td>
-				</tr>
-				<tr>
-					<td>E-mail</td>
-					<td><input type="email" id="email" name="email"></td>
-				</tr>
-				<tr>
-					<td>Date de naissance</td>
-					<td><input type="date" id="naissance" name="naissance"></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" value="Enregistrer"></td>
-				</tr>
-			</tbody>
-		</table>
-		</form>
+	<ul>
+							<li 
+								<%if ("accueilRealisateur".equals(request.getParameter("pageSelectionnee"))) {%>
+								 <%}%>><a class="active" href="accueilRealisateur">Elève Réalisateur</a></li>
+							<li class="current_page_item"
+								<%if ("accueilPostulant".equals(request.getParameter("pageSelectionnee"))) {%>
+								class="active" <%}%>><a href="accueilPostulant">Postulant</a></li>
+						</ul>
 		
 		<!-- Sous Firefox, le type "date" n'est pas implémenté, ce qui laisse un champ texte pour
 		rentrer la date. Or ce n'est pas le cas pour les autres navigateurs. On crée donc un élement

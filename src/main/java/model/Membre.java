@@ -8,21 +8,25 @@ public class Membre {
     private String status;
     
     public Membre(String name, String mail, String password, String status) {
-		this.name = name;
+    	this.name = name;
 		this.mail = mail;
 		this.password = password;
 		this.status = status;
 	}
 
-    public String getStatus() {
+
+	public String getStatus() {
 		return status;
 	}
+	
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
 	public void setMail(String mail) {
 	this.mail = mail;
     }
+	
     public String getMail() {
 	return mail;
     }
@@ -30,6 +34,7 @@ public class Membre {
     public void setPassword(String password) {
 	this.password = password;
     }
+    
     public String getPassword() {
 	return password;
     }
@@ -37,6 +42,7 @@ public class Membre {
     public void setName(String name) {
 	this.name = name;
     }
+    
     public String getName() {
 	return name;
     }
