@@ -2,48 +2,131 @@ package model;
 
 public class Membre {
 
-	private String name;
-	private String mail;
-    private String password;
-    private String status;
-    
-    public Membre(String name, String mail, String password, String status) {
-    	this.name = name;
-		this.mail = mail;
-		this.password = password;
+	private Integer civilite;
+	private Integer idetudiant;
+	private String nom;
+	private String prenom;
+	private String telephone;
+	private String email;
+	private String domaine;
+	private String promo;
+	private String postevise;
+	private Integer eleverealisateur;
+	private Integer postulant;
+	private String status;
+
+	public Membre(Integer civilite, Integer idetudiant, String nom,
+			String prenom, String telephone, String email, String domaine,
+			String promo, String postevise, Integer eleverealisateur,
+			Integer postulant, String status) {
+		this.civilite = civilite;
+		this.idetudiant = idetudiant;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.telephone = telephone;
+		this.email = email;
+		this.domaine = domaine;
+		this.promo = promo;
+		this.postevise = postevise;
+		this.eleverealisateur = eleverealisateur;
+		this.postulant = postulant;
 		this.status = status;
 	}
 
+	public Integer getCivilite() {
+		return civilite;
+	}
 
-	public String getStatus() {
-		return status;
+	public void setCivilite(Integer civilite) {
+		this.civilite = civilite;
+	}
+
+	public Integer getIdetudiant() {
+		return idetudiant;
+	}
+
+	public void setIdetudiant(Integer idetudiant) {
+		this.idetudiant = idetudiant;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setDomaine(String domaine) {
+		this.domaine = domaine;
+	}
+
+	public String getDomaine() {
+		return domaine;
+	}
+
+	public void setPromo(String promo) {
+		this.promo = promo;
+	}
+
+	public String getPromo() {
+		return promo;
+	}
+
+	public void setPostevise(String postevise) {
+		this.postevise = postevise;
+	}
+
+	public String getPostevise() {
+		return postevise;
+	}
+
+	public void setEleverealisateur(Integer eleverealisateur) {
+		this.eleverealisateur = eleverealisateur;
+	}
+
+	public Integer getEleverealisateur() {
+		return eleverealisateur;
+	}
+	
+	public void setPostulant(Integer postulant) {
+		this.postulant = postulant;
+	}
+
+	public Integer getPostulant() {
+		return postulant;
 	}
 	
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	
-	public void setMail(String mail) {
-	this.mail = mail;
-    }
-	
-    public String getMail() {
-	return mail;
-    }
 
-    public void setPassword(String password) {
-	this.password = password;
-    }
-    
-    public String getPassword() {
-	return password;
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public void setName(String name) {
-	this.name = name;
-    }
-    
-    public String getName() {
-	return name;
-    }
 }

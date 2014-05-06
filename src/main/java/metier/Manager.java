@@ -21,6 +21,7 @@ public class Manager {
 		membreDao = new MembreDao();
 	}
 	
+	
 	public Membre ajouterMembre(Membre newMembre) {
 		membreDao.addMembre(newMembre);
 		return newMembre;

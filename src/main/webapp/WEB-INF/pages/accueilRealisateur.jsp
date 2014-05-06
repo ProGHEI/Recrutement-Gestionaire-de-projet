@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+<%@ page pageEncoding="UTF-8"%>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -160,15 +161,12 @@
 
 								<div id="twitter">
 									<a href="https://twitter.com/proghei" target="_blank"><img
-										src="images/logo-twitter.png"
-										alt=""></a>
+										src="images/logo-twitter.png" alt=""></a>
 								</div>
 								<div id="facebook">
 									<a
 										href="https://www.facebook.com/pages/ProGHEI-La-Junior-Entreprise-dHEI/232534073459701"
-										target="_blank"><img
-										src="images/logo-facebook.png"
-										alt=""></a>
+										target="_blank"><img src="images/logo-facebook.png" alt=""></a>
 								</div>
 
 							</div>
@@ -179,9 +177,7 @@
                             </div>-->
 								<div id="linkedin">
 									<a href="http://www.linkedin.com/company/prog'hei"
-										target="_blank"><img
-										src="images/logo-linkedin.png"
-										alt=""></a>
+										target="_blank"><img src="images/logo-linkedin.png" alt=""></a>
 								</div>
 							</div>
 
@@ -214,18 +210,20 @@
 										<li class="last expanded dropdown"><a href="/processus"
 											title="" class="dropdown-toggle" data-toggle="dropdown"
 											data-target="#">Prestations<span class="caret"></span></a>
-										<ul class="dropdown-menu">
+											<ul class="dropdown-menu">
 												<li class="first leaf"><a href="/competences" title="">Nos
 														Compétences</a></li>
 												<li class="last leaf"><a href="/processus">Notre
 														Démarche</a></li>
 											</ul>
-											<li class="last expanded dropdown"><a href="/processus"
+										<li class="last expanded dropdown"><a href="/processus"
 											title="" class="dropdown-toggle" data-toggle="dropdown"
 											data-target="#">Postuler<span class="caret"></span></a>
-										<ul class="dropdown-menu">
-												<li class="first leaf"><a href="accueilPostulant" title="">Postulant</a></li>
-												<li class="last leaf"><a href="accueilRealisateur">Eleve Realisateur</a></li>
+											<ul class="dropdown-menu">
+												<li class="first leaf"><a href="accueilPostulant"
+													title="">Postulant</a></li>
+												<li class="last leaf"><a href="accueilRealisateur">Eleve
+														Realisateur</a></li>
 											</ul>
 									</ul>
 								</nav>
@@ -241,7 +239,7 @@
 							<div class="spanTexte">
 								<ul>
 									<li class="subtitle-puce" id="JE-front">
-										<h4>Vous voulez réaliser des études pour ProG'HEI ?</h4>
+										<h4>Vous voulez réaliser une étude pour ProG'HEI ?</h4>
 									</li>
 								</ul>
 								<hr>
@@ -251,45 +249,45 @@
 									conditions que vous soyez en HEI4 ou HEI5. <br />Cette
 									opportunité représentera une réelle plus value sur votre
 									parcours HEI que vous pourrez plus tard mettre en valeur face à
-									un recruteur. <br />
-									<br />NB : La rémunération est exonéré d'impôt et vous permet
-									dès à présent de cotiser pour la retraite!
+									un recruteur. <br /> <br />NB : La rémunération est exonéré
+									d'impôt et vous permet dès à présent de cotiser pour la
+									retraite!
 								</p>
 								<br />
 							</div>
 
 							<div class="spanImage">
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
 								<br /> <img class="cooperation" src="images/cooperation.png"
 									width="350">
 							</div>
 
 							<div class="span12 mot-president">
 								<br />
-								<ul>
-									<li class="subtitle-puce" id="president-front">
-										<h4>Vos coordonnées</h4>
-									</li>
-								</ul>
-								<hr>
 
 								<form method="post" action="/upload12">
 									<table>
+										
+
 
 										<div class="coordonnees">
-											<tbody>
+										<ul>
+											<li class="subtitle-puce" id="president-front">
+												<h4>Vos coordonnées</h4>
+											</li>
+										</ul>
+											
 												<tr>
 													<td>Civilité</td>
-													<td><select name="personnage" id="personnage">
-															<option value="mlle">Mlle.</option>
-															<option value="m">M.</option>
+													<td><select name="civilite" id="civilite">
+															<option value="2">Mlle.</option>
+															<option value="1">M.</option>
 													</select></td>
 												</tr>
 												<br></br>
+												<tr>
+													<td>Matricule HEI (sans le "h")</td>
+													<td><input type="text" id="matricule" name="idetudiant"></td>
+												</tr>
 												<tr>
 													<td>Nom</td>
 													<td><input type="text" id="nom" name="nom"></td>
@@ -347,7 +345,7 @@
 										<td></td>
 										<td><input type="submit" value="Enregistrer"></td>
 										</tr>
-										</tbody>
+										
 									</table>
 								</form>
 
@@ -355,6 +353,79 @@
 
 						</div>
 					</div>
+
+					<span class="span12">
+						<ul>
+							<li class="subtitle-puce" id="president-front">
+								<h4>Vos Compétences</h4>
+							</li>
+						</ul>
+
+						<!-- <meta http-equiv="Content-Type"
+							content="text/html; charset=windows-1252">
+
+						<title>StarRating</title> <script type='text/javascript'>
+							var done = false
+							var pic = new Array();
+							pic[0] = new Image();
+							pic[0].src = "images/star1.png";
+							pic[1] = new Image();
+							pic[1].src = "images/star2.png";
+							var bareme = new Array("Connais pas ",
+									"Notions de base", "Notions avancées",
+									"Maitrise", "Expertise");
+
+							function rate(level) {
+								if (done) {
+									return false;
+								}
+								for (i = 1; i < 6; i++) {
+									document.getElementById('_' + i).src = (level < i) ? pic[0].src
+											: pic[1].src;
+									document.getElementById('vote').innerHTML = "Votre niveau : "
+											+ " " + bareme[level - 1];
+								}
+							}
+
+							function zero() {
+								for (i = 1; i < 6; i++) {
+									document.getElementById('_' + i).src = pic[0].src;
+									done = false;
+									document.getElementById('vote').innerHTML = "Veuillez renseigner votre niveau pour cette compétence";
+
+								}
+							}
+							function valider() {
+								done = true;
+								document.getElementById('vote').innerHTML += '';
+							}
+						</script>
+
+						<body>
+							Cliquez sur l'étoile de votre choix pour indiquer votre niveau:
+							<br />
+							<br />
+							<img src="images/star1.png" id='_1' onclick="valider()"
+								onmouseover="rate(1)" />
+							<img src="images/star1.png" id='_2' onclick="valider()"
+								onmouseover="rate(2)" />
+							<img src="images/star1.png" id='_3' onclick="valider()"
+								onmouseover="rate(3)" />
+							<img src="images/star1.png" id='_4' onclick="valider()"
+								onmouseover="rate(4)" />
+							<img src="images/star1.png" id='_5' onclick="valider()"
+								onmouseover="rate(5)" />
+							<br />
+							<br />
+							<div id="vote">Veuillez renseigner votre niveau pour cette
+								compétence</div>
+
+							<br />
+							<br />
+							<input type="button" onclick="zero();" value="Annuler" />
+						</body>
+					</span> -->
+
 					<div class="span12 quotation" id="slogan">
 						<hr>
 						<h5>ProG'HEI - Vos projets, nos compétences.</h5>

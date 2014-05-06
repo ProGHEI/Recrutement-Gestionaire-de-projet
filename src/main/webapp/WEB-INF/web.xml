@@ -33,6 +33,7 @@
     <servlet-name>AccueilPostulantServlet</servlet-name>
     <url-pattern>/accueilPostulant</url-pattern>
   </servlet-mapping>
+ 
   
     <servlet>
     <description></description>
@@ -77,16 +78,7 @@
     <servlet-name>DownloadServlet</servlet-name>
     <url-pattern>/fichiers/*</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>AjouterMembreServlet</display-name>
-    <servlet-name>AjouterMembreServlet</servlet-name>
-    <servlet-class>controllers.AjouterMembreServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AjouterMembreServlet</servlet-name>
-    <url-pattern>/ajouter</url-pattern>
-  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>SupprimerMembreServlet</display-name>
