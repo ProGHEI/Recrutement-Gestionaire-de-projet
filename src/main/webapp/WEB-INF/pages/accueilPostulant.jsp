@@ -269,8 +269,9 @@
 									<div class="organigrame" id="president"
 										style="position: absolute; width: 133px; height: 67px; left: 1042px; top: 740px;">
 										<div class="preview"
-											style="display: none; position: absolute; top: 70px; background-color: white; padding: 10px;">
-											<img src="images/president.jpg" alt="">Président
+											style="display: none; width:500px; position: absolute; top: 70px; background-color: white; padding: 10px;">
+											<img src="images/president.jpg" alt="">Le Président est garant du bon fonctionnement de la J.E., il préside les conseils d’administrations, pose les objectifs à long terme, gère la coordination interne, est responsable de la représentation externe de la J.E. auprès de la CNJE et d'HEI.
+Il doit également négocier, suivre et améliorer les partenariats, prendre des décisions et en informer les membres.
 										</div>
 									</div>
 									<div class="organigrame" id="vicepresident"
@@ -448,7 +449,7 @@
 											</tr>
 											<tr>
 												<td>Prénom</td>
-												<td><input type="text" id="prenom" name="prénom"></td>
+												<td><input type="text" id="prenom" name="prenom"></td>
 											</tr>
 											<tr>
 												<td>Numéro de téléphone</td>
@@ -461,15 +462,15 @@
 											<tr>
 												<td>Promo</td>
 												<td><select name="promo" id="promo">
-														<option value="HEI 1">HEI 1</option>
-														<option value="HEI 2">HEI 2</option>
-														<option value="HEI 3">HEI 3</option>
-														<option value="HEI 4">HEI 4</option>
+														<option value="1">HEI 1</option>
+														<option value="2">HEI 2</option>
+														<option value="3">HEI 3</option>
+														<option value="4">HEI 4</option>
 												</select></td>
 											</tr>
 											<tr>
 												<td>Poste Visé</td>
-												<td><select name="poste" id="poste">
+												<td><select name="postevise" id="postevise">
 														<option value="President">President</option>
 														<option value="Vice président">Vice président</option>
 														<option value="Trésorier">Trésorier</option>
@@ -496,18 +497,11 @@
 											</tr>
 
 											<tr>
-												<td>Certificat de scolarité</td>
-												<td><input type="file" value="certificatScolarite"></td>
-											</tr>
-											<tr>
 												<td>Fiche d'adhésion</td>
 												<td><a href="/images/myw3schoolsimage.jpg"
 													download="ficheAdhesion"></td>
 											</tr>
 											</div>
-
-
-
 
 										</tbody>
 										

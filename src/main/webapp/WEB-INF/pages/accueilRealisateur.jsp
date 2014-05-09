@@ -63,6 +63,8 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script
 	src="http://proghei.fr/sites/proghei.fr/themes/bootstrap/script.js?mojj9s"></script>
 <script>
@@ -118,6 +120,8 @@
 						}
 					});
 </script>
+
+
 <!-- HTML5 element support for IE6-8 -->
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -258,56 +262,58 @@
 
 							<div class="spanImage">
 								<br /> <img class="cooperation" src="images/cooperation.png"
-									width="350">
+									width="500">
 							</div>
+
 
 							<div class="span12 mot-president">
 								<br />
+								<ul>
+									<li class="subtitle-puce" id="president-front">
+										<h4>Vos coordonnées</h4>
+									</li>
+								</ul>
+								<hr>
 
-								<form method="post" action="/upload12">
+								<form method="post" action="accueilRealisateur">
 									<table>
-										
 
-
-										<div class="coordonnees">
-										<ul>
-											<li class="subtitle-puce" id="president-front">
-												<h4>Vos coordonnées</h4>
-											</li>
-										</ul>
-											
-												<tr>
-													<td>Civilité</td>
-													<td><select name="civilite" id="civilite">
-															<option value="2">Mlle.</option>
-															<option value="1">M.</option>
-													</select></td>
+										<tbody>
+											<div class="coordonnees">
+												<td>Civilité</td>
+												<td><select name="civilite" id="civilite">
+														<option value="2">Mlle.</option>
+														<option value="1">M.</option>
+												</select></td>
 												</tr>
-												<br></br>
 												<tr>
 													<td>Matricule HEI (sans le "h")</td>
-													<td><input type="text" id="matricule" name="idetudiant"></td>
+													<td><input type="text" id="matricule"
+														name="idetudiant"></td>
 												</tr>
 												<tr>
 													<td>Nom</td>
 													<td><input type="text" id="nom" name="nom"></td>
 												</tr>
-												<br></br>
 												<tr>
 													<td>Prénom</td>
-													<td><input type="text" id="prenom" name="prénom"></td>
+													<td><input type="text" id="prenom" name="prenom"></td>
 												</tr>
-												<br></br>
 												<tr>
 													<td>Numéro de téléphone</td>
 													<td><input type="tel" id="telephone" name="telephone"></td>
 												</tr>
-												<br></br>
 												<tr>
 													<td>E-mail</td>
 													<td><input type="email" id="email" name="email"></td>
 												</tr>
-												<br></br>
+												<tr>
+													<td>Promo</td>
+													<td><select name="promo" id="promo">
+															<option value="4">HEI 4</option>
+															<option value="5">HEI 5</option>
+													</select></td>
+												</tr>
 												<tr>
 													<td>Domaine</td>
 													<td><select name="domaine" id="domaine">
@@ -322,136 +328,304 @@
 															<option value="EHE">EHE</option>
 													</select></td>
 												</tr>
-												<br></br>
+
 												<tr>
-													<td>Promo</td>
-													<td><select name="promo" id="promo">
-															<option value="HEI 4">HEI 4</option>
-															<option value="HEI 4">HEI 5</option>
-													</select></td>
+													<td>Certificat de scolarité</td>
+													<td><input type="file" value="certificatScolarite"></td>
 												</tr>
-												<br></br>
+												<tr>
+													<td>Carte Vitale (ou attestion de sécurité sociale)</td>
+													<td><input type="file" value="carteVitale"></td>
+												</tr>
 												<tr>
 													<td>CV</td>
-													<td><input type="file" value="CV"></td>
+													<td><input type="file" value="cv"></td>
 												</tr>
+
 												<tr>
-										</div>
+													<td>Fiche d'adhésion</td>
+													<td><a href="/images/myw3schoolsimage.jpg"
+														download="ficheAdhesion"></td>
+												</tr>
+											</div>
 
-										<br></br>
 
 
-										<br></br>
-										<td></td>
-										<td><input type="submit" value="Enregistrer"></td>
-										</tr>
-										
+										</tbody>
 									</table>
+									<td></td>
+							<td><input type="submit" value="Enregistrer"></td>
+							</tr>
 								</form>
 
 							</div>
 
+
+							<br></br> <br></br>
+							
+
+							</table>
+							</form>
+
 						</div>
+
+						<div class="span12 mot-president">
+							<br />
+							<ul>
+								<li class="subtitle-puce" id="president-front">
+									<h4>Vos Compétences</h4>
+								</li>
+							</ul>
+							<hr>
+
+							<meta http-equiv="Content-Type"
+								content="text/html; charset=windows-1252">
+
+							<body>
+								<div class="divStars" data-idVote="0">
+									<img src="images/html5.png" width="60" height="40" alt="">
+									Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+									en HTML: <br /> <br /> <img class="star st0"
+										src="images/star1.png" data-vote="0" /> <img
+										src="images/star1.png" class="star st1" data-vote="1" /> <img
+										src="images/star1.png" class="star st2" data-vote="2" /> <img
+										src="images/star1.png" class="star st3" data-vote="3" /> <img
+										src="images/star1.png" class="star st4" data-vote="4" /> <br />
+									<br />
+									<div class="voteTexte" id="vote">Veuillez renseigner
+										votre niveau pour cette compétence</div>
+
+									<br /> <input type="button" class="reset" value="Annuler" />
+								</div>
+								<br />
+								<br />
+								<br />
+
+
+								<div class="divStars" data-idVote="1">
+									<img src="images/css.png" width="60" height="40" alt="">
+									Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+									en CSS: <br /> <br /> <img class="star st0"
+										src="images/star1.png" data-vote="0" /> <img
+										src="images/star1.png" class="star st1" data-vote="1" /> <img
+										src="images/star1.png" class="star st2" data-vote="2" /> <img
+										src="images/star1.png" class="star st3" data-vote="3" /> <img
+										src="images/star1.png" class="star st4" data-vote="4" /> <br />
+									<br />
+									<div class="voteTexte" id="vote">Veuillez renseigner
+										votre niveau pour cette compétence</div>
+
+									<br /> <input type="button" class="reset" value="Annuler" />
+								</div>
+								<br />
+								<br />
+								<br />
+								<div class="divStars" data-idVote="2">
+									<img src="images/php.png" width="60" height="40" alt="">
+									Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+									en PHP: <br /> <br /> <img class="star st0"
+										src="images/star1.png" data-vote="0" /> <img
+										src="images/star1.png" class="star st1" data-vote="1" /> <img
+										src="images/star1.png" class="star st2" data-vote="2" /> <img
+										src="images/star1.png" class="star st3" data-vote="3" /> <img
+										src="images/star1.png" class="star st4" data-vote="4" /> <br />
+									<br />
+									<div class="voteTexte" id="vote">Veuillez renseigner
+										votre niveau pour cette compétence</div>
+
+									<br /> <input type="button" class="reset" value="Annuler" />
+								</div>
+								<br />
+								<br />
+								<br />
+
+								<div class="divStars" data-idVote="3">
+									<img src="images/java.png" width="60" height="40" alt="">
+									Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+									en JAVA: <br /> <br /> <img class="star st0"
+										src="images/star1.png" data-vote="0" /> <img
+										src="images/star1.png" class="star st1" data-vote="1" /> <img
+										src="images/star1.png" class="star st2" data-vote="2" /> <img
+										src="images/star1.png" class="star st3" data-vote="3" /> <img
+										src="images/star1.png" class="star st4" data-vote="4" /> <br />
+									<br />
+									<div class="voteTexte" id="vote">Veuillez renseigner
+										votre niveau pour cette compétence</div>
+
+									<br /> <input type="button" class="reset" value="Annuler" />
+									<br /><br /><br />
+								</div>
+							</body>
+							<script>
+								var done = new Array(false, false, false, false);
+								var bareme = new Array("Connais pas ",
+										"Notions de base", "Notions avancées",
+										"Maitrise", "Expertise");
+
+								$(".star")
+										.mouseover(
+												function() {
+													var idVote = $(this)
+															.parent()
+															.attr("data-idVote");
+													if (done[idVote] == false) {
+														for (var i = 0; i <= parseInt($(
+																this).attr(
+																"data-vote")); i++) {
+															$(this)
+																	.parent()
+																	.children(
+																			".st"
+																					+ i)
+																	.attr(
+																			"src",
+																			"images/star2.png");
+														}
+														for (var i = parseInt($(
+																this).attr(
+																"data-vote")) + 1; i <= 4; i++) {
+															$(this)
+																	.parent()
+																	.children(
+																			".st"
+																					+ i)
+																	.attr(
+																			"src",
+																			"images/star1.png");
+														}
+														$(this)
+																.parent()
+																.children(
+																		".voteTexte")
+																.html(
+																		"Votre niveau : "
+																				+ bareme[$(
+																						this)
+																						.attr(
+																								"data-vote")])
+													}
+												});
+
+								$(".reset")
+										.click(
+												function() {
+													var idVote = $(this)
+															.parent()
+															.attr("data-idVote");
+													for (i = 0; i <= 4; i++) {
+														done[idVote] = false;
+														$(this)
+																.parent()
+																.children(
+																		".st"
+																				+ i)
+																.attr("src",
+																		"images/star1.png");
+														$(this)
+																.parent()
+																.children(
+																		".voteTexte")
+																.html(
+																		"Veuillez renseigner votre niveau pour cette compétence");
+													}
+												});
+
+								$(".star")
+										.click(
+												function() {
+													var idVote = $(this)
+															.parent()
+															.attr("data-idVote");
+													if (done[idVote] == false) {
+														for (var i = 0; i <= parseInt($(
+																this).attr(
+																"data-vote")); i++) {
+															$(this)
+																	.parent()
+																	.children(
+																			".st"
+																					+ i)
+																	.attr(
+																			"src",
+																			"images/star2.png");
+														}
+														for (var i = parseInt($(
+																this).attr(
+																"data-vote")) + 1; i <= 4; i++) {
+															$(this)
+																	.parent()
+																	.children(
+																			".st"
+																					+ i)
+																	.attr(
+																			"src",
+																			"images/star1.png");
+														}
+														$(this)
+																.parent()
+																.children(
+																		".voteTexte")
+																.html(
+																		"Votre niveau : "
+																				+ bareme[$(
+																						this)
+																						.attr(
+																								"data-vote")])
+														done[idVote] = true;
+													}
+												});
+							</script>
+
+							</tbody>
+
+							</form>
+
+						</div>
+</br>
+
+						<br></br> <br></br>
+						<td></td>
+						<td> </br><input type="submit" value="Enregistrer"></td>
+						</tr>
+
+						</table>
+						</form>
+						
+						</br>
+
 					</div>
 
-					<span class="span12">
-						<ul>
-							<li class="subtitle-puce" id="president-front">
-								<h4>Vos Compétences</h4>
-							</li>
-						</ul>
+					
 
-						<!-- <meta http-equiv="Content-Type"
-							content="text/html; charset=windows-1252">
-
-						<title>StarRating</title> <script type='text/javascript'>
-							var done = false
-							var pic = new Array();
-							pic[0] = new Image();
-							pic[0].src = "images/star1.png";
-							pic[1] = new Image();
-							pic[1].src = "images/star2.png";
-							var bareme = new Array("Connais pas ",
-									"Notions de base", "Notions avancées",
-									"Maitrise", "Expertise");
-
-							function rate(level) {
-								if (done) {
-									return false;
-								}
-								for (i = 1; i < 6; i++) {
-									document.getElementById('_' + i).src = (level < i) ? pic[0].src
-											: pic[1].src;
-									document.getElementById('vote').innerHTML = "Votre niveau : "
-											+ " " + bareme[level - 1];
-								}
-							}
-
-							function zero() {
-								for (i = 1; i < 6; i++) {
-									document.getElementById('_' + i).src = pic[0].src;
-									done = false;
-									document.getElementById('vote').innerHTML = "Veuillez renseigner votre niveau pour cette compétence";
-
-								}
-							}
-							function valider() {
-								done = true;
-								document.getElementById('vote').innerHTML += '';
-							}
-						</script>
-
-						<body>
-							Cliquez sur l'étoile de votre choix pour indiquer votre niveau:
-							<br />
-							<br />
-							<img src="images/star1.png" id='_1' onclick="valider()"
-								onmouseover="rate(1)" />
-							<img src="images/star1.png" id='_2' onclick="valider()"
-								onmouseover="rate(2)" />
-							<img src="images/star1.png" id='_3' onclick="valider()"
-								onmouseover="rate(3)" />
-							<img src="images/star1.png" id='_4' onclick="valider()"
-								onmouseover="rate(4)" />
-							<img src="images/star1.png" id='_5' onclick="valider()"
-								onmouseover="rate(5)" />
-							<br />
-							<br />
-							<div id="vote">Veuillez renseigner votre niveau pour cette
-								compétence</div>
-
-							<br />
-							<br />
-							<input type="button" onclick="zero();" value="Annuler" />
-						</body>
-					</span> -->
-
-					<div class="span12 quotation" id="slogan">
-						<hr>
-						<h5>ProG'HEI - Vos projets, nos compétences.</h5>
-						<hr>
-					</div>
 				</div>
 		</div>
-		</section>
 
-
-		<div class="span12">
-			<div class="span10 offset2">
-				<footer class="footer container">
-
-					<div class="infos-legales">
-						<p class="infos-legales">
-							ProG'HEI - La Junior Entreprise d'HEI <br> 13 Rue de Toul -
-							59046 Lille Cedex <br> <a href="http://www.hei.fr">HEI</a> |
-							<a href="http://www.junior-entreprises.com/">CNJE</a>
-						</p>
-
-					</div>
-
-				</footer>
-			</div>
+		<div class="span12 quotation" id="slogan">
+			<hr>
+			<h5>ProG'HEI - Vos projets, nos compétences.</h5>
+			<hr>
 		</div>
+	</div>
+	</div>
+	</section>
+
+
+	<div class="span12">
+		<div class="span10 offset2">
+			<footer class="footer container">
+
+				<div class="infos-legales">
+					<p class="infos-legales">
+						ProG'HEI - La Junior Entreprise d'HEI <br> 13 Rue de Toul -
+						59046 Lille Cedex <br> <a href="http://www.hei.fr">HEI</a> |
+						<a href="http://www.junior-entreprises.com/">CNJE</a>
+					</p>
+
+				</div>
+
+			</footer>
+		</div>
+	</div>
 
 	</div>
 

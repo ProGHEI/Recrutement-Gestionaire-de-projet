@@ -32,17 +32,14 @@ public class AccueilPostulantServlet extends HttpServlet {
 		String prenom = request.getParameter("prenom");
 		String telephone = request.getParameter("telephone");
 		String email = request.getParameter("email");
-		String domaine = request.getParameter("domaine");
+		String domaine = " ";
 		String promo = request.getParameter("promo");
 		String postevise = request.getParameter("postevise");
-		Integer eleverealisateur = Integer.parseInt(request
-				.getParameter("eleverealisateur"));
-		Integer postulant = Integer.parseInt(request.getParameter("postulant"));
-		String status = request.getParameter("status");
+		Integer postulant = 1;
 
 		Membre nemMembre = new Membre(civilite, idetudiant, nom, prenom,
-				telephone, email, domaine, promo, postevise, eleverealisateur,
-				postulant, status);
+				telephone, email, domaine, promo, postevise, 0,
+				postulant);
 
 		Manager.getInstance().ajouterMembre(nemMembre);
 

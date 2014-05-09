@@ -13,12 +13,11 @@ public class Membre {
 	private String postevise;
 	private Integer eleverealisateur;
 	private Integer postulant;
-	private String status;
 
 	public Membre(Integer civilite, Integer idetudiant, String nom,
 			String prenom, String telephone, String email, String domaine,
 			String promo, String postevise, Integer eleverealisateur,
-			Integer postulant, String status) {
+			Integer postulant) {
 		this.civilite = civilite;
 		this.idetudiant = idetudiant;
 		this.nom = nom;
@@ -30,7 +29,6 @@ public class Membre {
 		this.postevise = postevise;
 		this.eleverealisateur = eleverealisateur;
 		this.postulant = postulant;
-		this.status = status;
 	}
 
 	public Integer getCivilite() {
@@ -120,13 +118,4 @@ public class Membre {
 	public Integer getPostulant() {
 		return postulant;
 	}
-	
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
 }
