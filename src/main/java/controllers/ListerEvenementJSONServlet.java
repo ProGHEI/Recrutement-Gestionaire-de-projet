@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,15 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class CalendrierServlet
- */
-public class CalendrierServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+import metier.EvenementManager;
 
+
+public class ListerEvenementJSONServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/pages/agenda/selectable.jsp");
+		List<String> evenements = EvenementManager.getInstance().listerEvenementJSON();
+		request.setAttribute("evenements", evenements);
+		
+		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/pages/calendrier/eventJSON.jsp");
 		view.forward(request, response);
 	}
+
 
 }

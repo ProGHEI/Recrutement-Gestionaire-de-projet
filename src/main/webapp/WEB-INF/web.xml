@@ -137,14 +137,74 @@
     <dispatcher>FORWARD</dispatcher>
     <dispatcher>INCLUDE</dispatcher>
   </filter-mapping>
-  <servlet>
+    <servlet>
     <description></description>
-    <display-name>CalendrierServlet</display-name>
-    <servlet-name>CalendrierServlet</servlet-name>
-    <servlet-class>controllers.CalendrierServlet</servlet-class>
+    <display-name>CalendrierHEIConnectServlet</display-name>
+    <servlet-name>CalendrierHEIConnectServlet</servlet-name>
+    <servlet-class>controllers.CalendrierHEIConnectServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CalendrierServlet</servlet-name>
-    <url-pattern>/calendrier</url-pattern>
+    <servlet-name>CalendrierHEIConnectServlet</servlet-name>
+    <url-pattern>/calendrierHEIConnect</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CalendrierProGServlet</display-name>
+    <servlet-name>CalendrierProGServlet</servlet-name>
+    <servlet-class>controllers.CalendrierProGServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CalendrierProGServlet</servlet-name>
+    <url-pattern>/calendrierProG</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListerEvenementJSONServlet</display-name>
+    <servlet-name>ListerEvenementJSONServlet</servlet-name>
+    <servlet-class>controllers.ListerEvenementJSONServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListerEvenementJSONServlet</servlet-name>
+    <url-pattern>/JSON</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AjouterEvenementServlet</display-name>
+    <servlet-name>AjouterEvenementServlet</servlet-name>
+    <servlet-class>controllers.AjouterEvenementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjouterEvenementServlet</servlet-name>
+    <url-pattern>/ajouterEvenement</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListerEvenementServlet</display-name>
+    <servlet-name>ListerEvenementServlet</servlet-name>
+    <servlet-class>controllers.ListerEvenementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListerEvenementServlet</servlet-name>
+    <url-pattern>/listerEvenement</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModifierEvenementServlet</display-name>
+    <servlet-name>ModifierEvenementServlet</servlet-name>
+    <servlet-class>controllers.ModifierEvenementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModifierEvenementServlet</servlet-name>
+    <url-pattern>/modifierEvenement</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SupprimerEvenementServlet</display-name>
+    <servlet-name>SupprimerEvenementServlet</servlet-name>
+    <servlet-class>controllers.SupprimerEvenementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SupprimerEvenementServlet</servlet-name>
+    <url-pattern>/supprimerEvenement</url-pattern>
   </servlet-mapping>
 </web-app>
