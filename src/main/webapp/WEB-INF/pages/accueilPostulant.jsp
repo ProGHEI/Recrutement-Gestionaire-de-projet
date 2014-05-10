@@ -634,23 +634,23 @@
 												<tr>
 													<td>Matricule HEI (sans le "h")</td>
 													<td><input type="text" id="matricule"
-														name="idetudiant"></td>
+														name="idetudiant" required></td>
 												</tr>
 												<tr>
 													<td>Nom</td>
-													<td><input type="text" id="nom" name="nom"></td>
+													<td><input type="text" id="nom" name="nom" required></td>
 												</tr>
 												<tr>
 													<td>Prénom</td>
-													<td><input type="text" id="prenom" name="prenom"></td>
+													<td><input type="text" id="prenom" name="prenom" required></td>
 												</tr>
 												<tr>
 													<td>Numéro de téléphone</td>
-													<td><input type="tel" id="telephone" name="telephone"></td>
+													<td><input type="tel" id="telephone" name="telephone" required></td>
 												</tr>
 												<tr>
 													<td>E-mail</td>
-													<td><input type="email" id="email" name="email"></td>
+													<td><input type="email" id="email" name="email" required></td>
 												</tr>
 												<tr>
 													<td>Promo</td>
@@ -684,15 +684,15 @@
 
 												<tr>
 													<td>Certificat de scolarité</td>
-													<td><input type="file" value="certificatScolarite"></td>
+													<td><input type="file" value="certificatScolarite" required></td>
 												</tr>
 												<tr>
 													<td>Carte Vitale (ou attestion de sécurité sociale)</td>
-													<td><input type="file" value="carteVitale"></td>
+													<td><input type="file" value="carteVitale" required></td>
 												</tr>
 												<tr>
 													<td>CV</td>
-													<td><input type="file" value="cv"></td>
+													<td><input type="file" value="cv" required></td>
 												</tr>
 												<tr>
 													<td>Lettre de motivation</td>
