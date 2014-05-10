@@ -72,6 +72,8 @@
 </head>
 <body>
 
+Test
+
 	<a href="ajouterEvenement">Ajouter un évènement</a>
 	<a href="listerEvenement">Modifier un évènement</a>
 	
