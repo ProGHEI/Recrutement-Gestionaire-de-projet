@@ -282,8 +282,8 @@
 											d'HEI. Il doit également négocier, suivre et améliorer les
 											partenariats, prendre des décisions et en informer les
 											membres.</br>
-											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
+												personnes postulant à ce poste : ${nbPres} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="vicepresident"
@@ -303,8 +303,8 @@
 											et de la formation, doit assurer la direction du pôle
 											communication et répartir les diverses missions entre les
 											Chargés de Mission.</br>
-											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
+												personnes postulant à ce poste : ${nbVicePres} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="responsable commercial"
@@ -324,7 +324,7 @@
 											clients avec le chef de projet. Le Directeur Général réalise
 											le lien entre le pôle commercial et le pôle administratif. </br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbRespCo} </Strong>
 
 										</div>
 									</div>
@@ -344,7 +344,7 @@
 											éventuels dépenses. Il remplit également les différents
 											déclaratifs sociaux et fiscaux.</br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbTreso} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="secretaire generale"
@@ -362,7 +362,7 @@
 											responsable de la gestion associative de la
 											Junior-Entreprise.</br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbSecGen} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="charges de qualite1"
@@ -382,7 +382,7 @@
 											solutions permettant de formaliser et d'augmenter
 											l'éfficacité de chacun.</br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbCdQ} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="charges de qualite2"
@@ -401,7 +401,7 @@
 											solutions permettant de formaliser et d'augmenter
 											l'éfficacité de chacun.</br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbCdQ} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="charges de qualite3"
@@ -420,7 +420,7 @@
 											solutions permettant de formaliser et d'augmenter
 											l'éfficacité de chacun.</br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbCdQ} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="charges de mission"
@@ -441,7 +441,7 @@
 											client, son rôle est essentiel pour le bon fonctionnement de
 											la J.E </br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbCdM} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="DSI"
@@ -461,7 +461,7 @@
 											autres, se montrer flexible, faire preuve de spontanité pour
 											assurer le développement cohérent de l'ensemble des pôles.</br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbDSI} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="responsable communication interne"
@@ -476,14 +476,13 @@
 												Interne</Strong></br>
 											</br>Le responsable de communication est responsable de la
 											communication interne (HEI) et externe (Hors HEI) de
-											ProG'HEI. Pour cela il définit avec le VP en début d'année
+											ProG'HEI. Pour cela il définit en début d'année
 											une stratégie efficasse et organisée afin de toucher le plus
 											de monde possible. Pour l'interne il réalise des affcihes,
 											des supports vidéos, met à jour les pages ProG des réseau
-											sociaux,organise des manifestations, s'occupe de la ligne
-											ProG,etc afin de faire connaitre ProG au seins d'HEI.</br>
+											sociaux,organise des manifestations afin de faire connaitre ProG au seins d'HEI.</br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbRespComInt} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="responsable communication externe"
@@ -498,14 +497,13 @@
 												Interne</Strong></br>
 											</br>Le responsable de communication est responsable de la
 											communication interne (HEI) et externe (Hors HEI) de
-											ProG'HEI. Pour cela il définit avec le VP en début d'année
+											ProG'HEI. Pour cela il définit en début d'année
 											une stratégie efficasse et organisée afin de toucher le plus
 											de monde possible. Pour l'interne il réalise des affcihes,
 											des supports vidéos, met à jour les pages ProG des réseau
-											sociaux,organise des manifestations, s'occupe de la ligne
-											ProG,etc afin de faire connaitre ProG au seins d'HEI.</br>
+											sociaux,organise des manifestations afin de faire connaitre ProG au seins d'HEI.</br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbRespComExt} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="responsable departement inge"
@@ -525,7 +523,7 @@
 											doit être force de proposition pour faire évoluer les
 											indicateurs et garder la motivation dans son pôle.</br>
 											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+												personnes postulant à ce poste : ${nbRespDepInge} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="responsable departement iti"
@@ -543,8 +541,8 @@
 											les chargés d’affaires dans la rédaction des documents. Il
 											doit être force de proposition pour faire évoluer les
 											indicateurs et garder la motivation dans son pôle.</br>
-											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+											</br>&nbsp;&nbsp;&nbsp;<Strong>Nombre de
+												personnes postulant à ce poste : ${nbRespDepITI} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="charges d'affaire"
@@ -567,8 +565,8 @@
 											réalisation, c'est le lien entre l'élève réalisateur et le
 											client, son rôle est essentiel pour le bon fonctionnement de
 											la J.E</br>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
+												personnes postulant à ce poste : ${nbCdA} </Strong>
 										</div>
 									</div>
 									<div class="organigrame" id="comptable"
@@ -586,8 +584,8 @@
 											au quotidien la trésorerie et donne son accord pour les
 											éventuels dépenses. Il remplit également les différents
 											déclaratifs sociaux et fiscaux.</br>
-											</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
-												personnes postulant à ce poste : X </Strong>
+											</br>&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre de
+												personnes postulant à ce poste : ${nbComptable} </Strong>
 										</div>
 									</div>
 
@@ -666,11 +664,21 @@
 												<tr>
 													<td>Poste Visé</td>
 													<td><select name="postevise" id="postevise">
-															<option value="President">President</option>
-															<option value="Vice président">Vice président</option>
-															<option value="Trésorier">Trésorier</option>
-															<option value="Responsable Commercial">Responsable
+															<option value="president">President</option>
+															<option value="vice president">Vice président</option>
+															<option value="tresorier">Trésorier</option>
+															<option value="responsable commercial">Responsable
 																Commercial</option>
+															<option value="secretaire generale">Secrétaire Général</option>
+															<option value="responsable departement ITI">Responsable Département ITI</option>
+															<option value="responsable departement Ingé">Responsable Département Ingé</option>
+															<option value="directeur des systemes informatiques">Directeur des Systèmes Informatiques</option>
+															<option value="responsable communication externe">Responsable Communication Externe</option>
+															<option value="responsable communication interne">Responsable Communication Interne</option>
+															<option value="charge d'affaire">Chargé d'Affaire</option>
+															<option value="charge de qualite">Chargé de Qualité</option>
+															<option value="charge de mission">Chargé de Mission</option>
+															<option value="comptable">Comptable</option>
 													</select></td>
 												</tr>
 

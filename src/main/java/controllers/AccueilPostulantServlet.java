@@ -17,6 +17,36 @@ public class AccueilPostulantServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		int nbPres = Manager.getInstance().getNbPostulants("president");
+		int nbVicePres = Manager.getInstance().getNbPostulants("vice president");
+		int nbTreso = Manager.getInstance().getNbPostulants("tresorier");
+		int nbRespCo = Manager.getInstance().getNbPostulants("responsable commercial");
+		int nbSecGen = Manager.getInstance().getNbPostulants("secretaire generale");
+		int nbRespDepITI = Manager.getInstance().getNbPostulants("responsable departement ITI");
+		int nbRespDepInge = Manager.getInstance().getNbPostulants("responsable departement Ingé");
+		int nbDSI = Manager.getInstance().getNbPostulants("directeur des systemes informatiques");
+		int nbRespComExt = Manager.getInstance().getNbPostulants("responsable communication externe");
+		int nbRespComInt = Manager.getInstance().getNbPostulants("responsable communication interne");
+		int nbCdA = Manager.getInstance().getNbPostulants("charge d'affaire");
+		int nbCdQ = Manager.getInstance().getNbPostulants("charge de qualite");
+		int nbCdM = Manager.getInstance().getNbPostulants("charge de mission");
+		int nbComptable = Manager.getInstance().getNbPostulants("comptable");
+		
+		request.setAttribute("nbPres", nbPres);
+		request.setAttribute("nbVicePres", nbVicePres);
+		request.setAttribute("nbTreso", nbTreso);
+		request.setAttribute("nbRespCo", nbRespCo);
+		request.setAttribute("nbSecGen", nbSecGen);
+		request.setAttribute("nbRespDepITI", nbRespDepITI);
+		request.setAttribute("nbRespDepInge", nbRespDepInge);
+		request.setAttribute("nbDSI", nbDSI);
+		request.setAttribute("nbRespComExt", nbRespComExt);
+		request.setAttribute("nbRespComInt", nbRespComInt);
+		request.setAttribute("nbCdA", nbCdA);
+		request.setAttribute("nbCdQ", nbCdQ);
+		request.setAttribute("nbCdM", nbCdM);
+		request.setAttribute("nbComptable", nbComptable);
+		
 		RequestDispatcher view = request
 				.getRequestDispatcher("WEB-INF/pages/accueilPostulant.jsp");
 		view.forward(request, response);

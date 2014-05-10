@@ -32,7 +32,7 @@ public class Manager {
 		return newMembre;
 	}
 	
-	public Membre activerMembre(Membre newMembre) {
+	/*public Membre activerMembre(Membre newMembre) {
 		membreDao.activerMembre(newMembre);
 		return newMembre;
 	}
@@ -40,6 +40,11 @@ public class Manager {
 	public Membre desactiverMembre(Membre newMembre) {
 		membreDao.desactiverMembre(newMembre);
 		return newMembre;
+	}*/
+
+	public int getNbPostulants(String poste) {
+		// TODO Auto-generated method stub
+		return membreDao.getNbPostulants(poste);
 	}
-	
+
 }

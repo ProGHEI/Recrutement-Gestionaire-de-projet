@@ -59,6 +59,37 @@ public class MembreDao {
 		}
 	}
 	
+	public int getNbPostulants(String poste){
+		int nbPostulants=5;
+		
+		// recuperation de la cl� classe la plus recente
+		try {
+			Connection connection = DataSourceProvider.getDataSource()
+					.getConnection();
+			
+			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement("SELECT COUNT(postevise) as nbpostulants FROM membre WHERE postevise=?");
+			
+			stmt.setString(1,poste);
+			ResultSet results = stmt.executeQuery();
+			results.next();
+			
+			nbPostulants=results.getInt("nbpostulants");
+			
+			
+			// Fermer la connexion
+			results.close();
+			stmt.close();
+			connection.close();
+			
+			}
+		catch (SQLException e) {
+							e.printStackTrace();
+						}
+		
+		System.out.println(nbPostulants);
+		return nbPostulants;
+	}
+	
 	/*public void activerMembre(Membre membre) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
