@@ -32,7 +32,7 @@
 			
 			theme: true,
 			
-			events: {url:'http://localhost:8080/projetEtude/JSON'},
+			events: {url:'http://localhost:8080/upload/JSON'},
 			
 			
 		});
@@ -71,8 +71,6 @@
 
 </head>
 <body>
-
-Test
 
 	<a href="ajouterEvenement">Ajouter un évènement</a>
 	<a href="listerEvenement">Modifier un évènement</a>

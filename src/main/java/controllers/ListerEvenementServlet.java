@@ -23,7 +23,7 @@ public class ListerEvenementServlet extends HttpServlet {
 		List<Evenement> evenements = EvenementManager.getInstance().listerEvenement();
 		request.setAttribute("evenements", evenements);
 		
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/pages/calendrier/listeEvenement.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/listeEvenement.jsp");
 		view.forward(request, response);
 	}
 

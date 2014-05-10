@@ -14,7 +14,7 @@ public class CalendrierProGServlet extends HttpServlet {
        
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/pages/calendrier/calendrierProG.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/calendrierProG.jsp");
 		view.forward(request, response);
 	}
 

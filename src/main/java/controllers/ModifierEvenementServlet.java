@@ -26,7 +26,7 @@ public class ModifierEvenementServlet extends HttpServlet {
 		Evenement evenement = EvenementManager.getInstance().getEvenement(idEvenement);
 		request.setAttribute("evenement", evenement);
 		
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/pages/calendrier/evenement.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/evenement.jsp");
 		view.forward(request, response);
 	}
 

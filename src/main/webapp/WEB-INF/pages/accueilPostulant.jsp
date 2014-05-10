@@ -634,23 +634,23 @@
 												<tr>
 													<td>Matricule HEI (sans le "h")</td>
 													<td><input type="text" id="matricule"
-														name="idetudiant" required></td>
+														name="idetudiant"></td>
 												</tr>
 												<tr>
 													<td>Nom</td>
-													<td><input type="text" id="nom" name="nom" required></td>
+													<td><input type="text" id="nom" name="nom"></td>
 												</tr>
 												<tr>
 													<td>Prénom</td>
-													<td><input type="text" id="prenom" name="prenom" required></td>
+													<td><input type="text" id="prenom" name="prenom"></td>
 												</tr>
 												<tr>
 													<td>Numéro de téléphone</td>
-													<td><input type="tel" id="telephone" name="telephone" required></td>
+													<td><input type="tel" id="telephone" name="telephone"></td>
 												</tr>
 												<tr>
 													<td>E-mail</td>
-													<td><input type="email" id="email" name="email" required></td>
+													<td><input type="email" id="email" name="email"></td>
 												</tr>
 												<tr>
 													<td>Promo</td>
@@ -684,15 +684,15 @@
 
 												<tr>
 													<td>Certificat de scolarité</td>
-													<td><input type="file" value="certificatScolarite" required></td>
+													<td><input type="file" value="certificatScolarite"></td>
 												</tr>
 												<tr>
 													<td>Carte Vitale (ou attestion de sécurité sociale)</td>
-													<td><input type="file" value="carteVitale" required></td>
+													<td><input type="file" value="carteVitale"></td>
 												</tr>
 												<tr>
 													<td>CV</td>
-													<td><input type="file" value="cv" required></td>
+													<td><input type="file" value="cv"></td>
 												</tr>
 												<tr>
 													<td>Lettre de motivation</td>
@@ -700,15 +700,9 @@
 												</tr>
 
 												<tr>
-													<td>Fiche d'adhésion (à imprimer pour signature)</td>
-													<td><a href="http://localhost:8080/upload/images/ficheAdhesion.pdf"
-														download="Fiche d'Adhésion">Télécharger</td>
-												</tr>
-												
-												<tr>
-													<td>Fiche de Membre (à remplir directement)</td>
-													<td><a href="http://localhost:8080/upload/images/Membre Actif.docx"
-														download="Fiche de Membre Actif">Télécharger</td>
+													<td>Fiche d'adhésion</td>
+													<td><a href="/images/myw3schoolsimage.jpg"
+														download="ficheAdhesion"></td>
 												</tr>
 											</div>
 

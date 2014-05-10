@@ -90,7 +90,7 @@ public class MembreDao {
 		return nbPostulants;
 	}
 	
-	public void activerMembre(Membre membre) {
+	/*public void activerMembre(Membre membre) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
 					.getConnection();
@@ -186,5 +186,5 @@ public class MembreDao {
 			throw new Exception();
     	}
     }
-		
+		*/
 }
