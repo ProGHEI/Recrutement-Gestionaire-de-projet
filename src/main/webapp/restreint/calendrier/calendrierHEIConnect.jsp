@@ -13,10 +13,7 @@
 <script src='js/fullcalendar/fr.js'></script>
 <script>
 
-
-
 	$(document).ready(function() {
-		
 		
 	
 		$('#calendar').fullCalendar({
