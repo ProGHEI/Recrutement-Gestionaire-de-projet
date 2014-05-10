@@ -700,9 +700,15 @@
 												</tr>
 
 												<tr>
-													<td>Fiche d'adhésion</td>
-													<td><a href="/images/myw3schoolsimage.jpg"
-														download="ficheAdhesion"></td>
+													<td>Fiche d'adhésion (à imprimer pour signature)</td>
+													<td><a href="http://localhost:8080/upload/images/ficheAdhesion.pdf"
+														download="Fiche d'Adhésion">Télécharger</td>
+												</tr>
+												
+												<tr>
+													<td>Fiche de Membre (à remplir directement)</td>
+													<td><a href="http://localhost:8080/upload/images/Membre Actif.docx"
+														download="Fiche de Membre Actif">Télécharger</td>
 												</tr>
 											</div>
 

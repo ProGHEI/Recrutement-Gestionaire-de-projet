@@ -289,23 +289,26 @@
 												<tr>
 													<td>Matricule HEI (sans le "h")</td>
 													<td><input type="text" id="matricule"
-														name="idetudiant"></td>
+														name="idetudiant" required></td>
 												</tr>
 												<tr>
 													<td>Nom</td>
-													<td><input type="text" id="nom" name="nom"></td>
+													<td><input type="text" id="nom" name="nom" required></td>
 												</tr>
 												<tr>
 													<td>Prénom</td>
-													<td><input type="text" id="prenom" name="prenom"></td>
+													<td><input type="text" id="prenom" name="prenom"
+														required></td>
 												</tr>
 												<tr>
 													<td>Numéro de téléphone</td>
-													<td><input type="tel" id="telephone" name="telephone"></td>
+													<td><input type="tel" id="telephone" name="telephone"
+														required></td>
 												</tr>
 												<tr>
 													<td>E-mail</td>
-													<td><input type="email" id="email" name="email"></td>
+													<td><input type="email" id="email" name="email"
+														required></td>
 												</tr>
 												<tr>
 													<td>Promo</td>
@@ -331,21 +334,28 @@
 
 												<tr>
 													<td>Certificat de scolarité</td>
-													<td><input type="file" value="certificatScolarite"></td>
+													<td><input type="file" value="certificatScolarite"
+														required></td>
 												</tr>
 												<tr>
 													<td>Carte Vitale (ou attestion de sécurité sociale)</td>
-													<td><input type="file" value="carteVitale"></td>
+													<td><input type="file" value="carteVitale" required></td>
 												</tr>
 												<tr>
 													<td>CV</td>
-													<td><input type="file" value="cv"></td>
+													<td><input type="file" value="cv" required></td>
 												</tr>
 
 												<tr>
-													<td>Fiche d'adhésion</td>
-													<td><a href="/images/myw3schoolsimage.jpg"
-														download="ficheAdhesion"></td>
+													<td>Fiche d'adhésion (à imprimer pour signature)</td>
+													<td><a href="http://localhost:8080/upload/images/ficheAdhesion.pdf"
+														download="Fiche d'Adhésion">Télécharger</td>
+												</tr>
+												
+												<tr>
+													<td>Fiche de Membre (à remplir directement)</td>
+													<td><a href="http://localhost:8080/upload/images/Membre Actif.docx"
+														download="Fiche de Membre Actif">Télécharger</td>
 												</tr>
 											</div>
 
@@ -354,20 +364,23 @@
 										</tbody>
 									</table>
 									<td></td>
-							<td><input type="submit" value="Enregistrer"></td>
-							</tr>
+									<td><input type="submit" value="Enregistrer"></td>
+									</tr>
 								</form>
 
 							</div>
 
 
 							<br></br> <br></br>
-							
+
 
 							</table>
 							</form>
 
 						</div>
+
+
+
 
 						<div class="span12 mot-president">
 							<br />
@@ -453,7 +466,9 @@
 										votre niveau pour cette compétence</div>
 
 									<br /> <input type="button" class="reset" value="Annuler" />
-									<br /><br /><br />
+									<br />
+									<br />
+									<br />
 								</div>
 							</body>
 							<script>
@@ -497,12 +512,7 @@
 																.parent()
 																.children(
 																		".voteTexte")
-																.html(
-																		"Votre niveau : "
-																				+ bareme[$(
-																						this)
-																						.attr(
-																								"data-vote")])
+																.html("Votre niveau : "+ bareme[$(this).attr("data-vote")]);
 													}
 												});
 
@@ -565,12 +575,7 @@
 																.parent()
 																.children(
 																		".voteTexte")
-																.html(
-																		"Votre niveau : "
-																				+ bareme[$(
-																						this)
-																						.attr(
-																								"data-vote")])
+																.html("Votre niveau : "+ bareme[$(this).attr("data-vote")]+"<b><strong> VALIDE</strong></b>")
 														done[idVote] = true;
 													}
 												});
@@ -581,21 +586,20 @@
 							</form>
 
 						</div>
-</br>
-
-						<br></br> <br></br>
+						</br> <br></br> <br></br>
 						<td></td>
-						<td> </br><input type="submit" value="Enregistrer"></td>
+						<td></br>
+						<input type="submit" value="Enregistrer"></td>
 						</tr>
 
 						</table>
 						</form>
-						
+
 						</br>
 
 					</div>
 
-					
+
 
 				</div>
 		</div>
