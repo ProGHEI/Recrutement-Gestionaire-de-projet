@@ -289,23 +289,26 @@
 												<tr>
 													<td>Matricule HEI (sans le "h")</td>
 													<td><input type="text" id="matricule"
-														name="idetudiant"></td>
+														name="idetudiant" required></td>
 												</tr>
 												<tr>
 													<td>Nom</td>
-													<td><input type="text" id="nom" name="nom"></td>
+													<td><input type="text" id="nom" name="nom" required></td>
 												</tr>
 												<tr>
 													<td>Prénom</td>
-													<td><input type="text" id="prenom" name="prenom"></td>
+													<td><input type="text" id="prenom" name="prenom"
+														required></td>
 												</tr>
 												<tr>
 													<td>Numéro de téléphone</td>
-													<td><input type="tel" id="telephone" name="telephone"></td>
+													<td><input type="tel" id="telephone" name="telephone"
+														required></td>
 												</tr>
 												<tr>
 													<td>E-mail</td>
-													<td><input type="email" id="email" name="email"></td>
+													<td><input type="email" id="email" name="email"
+														required></td>
 												</tr>
 												<tr>
 													<td>Promo</td>
@@ -320,32 +323,37 @@
 															<option value="BAA">BAA</option>
 															<option value="BTP">BTP</option>
 															<option value="CM">CM</option>
-															<option value="Chimie">Chimie</option>
 															<option value="ESEA">ESEA</option>
 															<option value="ITI">ITI</option>
 															<option value="TIMTEX">TIMTEX</option>
-															<option value="OME">OME</option>
-															<option value="EHE">EHE</option>
 													</select></td>
 												</tr>
 
 												<tr>
 													<td>Certificat de scolarité</td>
-													<td><input type="file" value="certificatScolarite"></td>
+													<td><input type="file" value="certificatScolarite"
+														required></td>
 												</tr>
 												<tr>
 													<td>Carte Vitale (ou attestion de sécurité sociale)</td>
-													<td><input type="file" value="carteVitale"></td>
+													<td><input type="file" value="carteVitale" required></td>
 												</tr>
 												<tr>
 													<td>CV</td>
-													<td><input type="file" value="cv"></td>
+													<td><input type="file" value="cv" required></td>
 												</tr>
 
 												<tr>
-													<td>Fiche d'adhésion</td>
-													<td><a href="/images/myw3schoolsimage.jpg"
-														download="ficheAdhesion"></td>
+													<td>Fiche d'adhésion (à imprimer pour signature)</td>
+													<td><a
+														href="http://localhost:8080/upload/images/ficheAdhesion.pdf"
+														download="Fiche d'Adhésion">Télécharger</td>
+												</tr>
+												<tr>
+													<td>Fiche de Membre (à remplir directement)</td>
+													<td><a
+														href="http://localhost:8080/upload/images/Membre Actif.docx"
+														download="Membre Actif">Télécharger</td>
 												</tr>
 											</div>
 
@@ -354,108 +362,552 @@
 										</tbody>
 									</table>
 									<td></td>
-							<td><input type="submit" value="Enregistrer"></td>
-							</tr>
+									<td><input type="submit" value="Enregistrer"></td>
+									</tr>
 								</form>
 
 							</div>
 
 
 							<br></br> <br></br>
-							
+
 
 							</table>
 							</form>
 
 						</div>
+						
+							<script>
+							$(document).ready(function()									
+							{
+								$("#competenceBAA").hide();
+								$("#competenceBTP").hide();
+								$("#competenceCM").hide();
+								$("#competenceESEA").hide();
+								$("#competenceITI").hide();
+								$("#competenceTIMTEX").hide();
+								
+							$("#domaine").change(function(){
+								if(document.getElementById('domaine').value == "BAA")
+									{
+									$("#competenceBAA").show();
+									$("#competenceBTP").hide();
+									$("#competenceCM").hide();
+									$("#competenceESEA").hide();
+									$("#competenceITI").hide();
+									$("#competenceTIMTEX").hide();
+									}
+								if(document.getElementById('domaine').value == "BTP")
+									{
+									$("#competenceBAA").hide();
+									$("#competenceBTP").show();
+									$("#competenceCM").hide();
+									$("#competenceESEA").hide();
+									$("#competenceITI").hide();
+									$("#competenceTIMTEX").hide();
+									}
+								if(document.getElementById('domaine').value == "CM")
+									{
+									$("#competenceBAA").hide();
+									$("#competenceBTP").hide();
+									$("#competenceCM").show();
+									$("#competenceESEA").hide();
+									$("#competenceITI").hide();
+									$("#competenceTIMTEX").hide();
+									}
+								if(document.getElementById('domaine').value == "ESEA")
+									{
+									$("#competenceBAA").hide();
+									$("#competenceBTP").hide();
+									$("#competenceCM").hide();
+									$("#competenceESEA").show();
+									$("#competenceITI").hide();
+									$("#competenceTIMTEX").hide();
+									}
+								if(document.getElementById('domaine').value == "ITI")
+									{
+									$("#competenceBAA").hide();
+									$("#competenceBTP").hide();
+									$("#competenceCM").hide();
+									$("#competenceESEA").hide();
+									$("#competenceITI").show();
+									$("#competenceTIMTEX").hide();
+									}
+								if(document.getElementById('domaine').value == "TIMTEX")
+									{
+									$("#competenceBAA").hide();
+									$("#competenceBTP").hide();
+									$("#competenceCM").hide();
+									$("#competenceESEA").hide();
+									$("#competenceITI").hide();
+									$("#competenceTIMTEX").show();
+									}
+								});	
+							});
+							</script>
 
-						<div class="span12 mot-president">
-							<br />
-							<ul>
-								<li class="subtitle-puce" id="president-front">
-									<h4>Vos Compétences</h4>
-								</li>
-							</ul>
-							<hr>
+						 
+						 
+						
+			<!-- *******************BAA************************** -->
+			
+	<div id="competenceBAA">		
+		<div class="span12 mot-president">
+			<br />
+			<ul>
+				<li class="subtitle-puce" id="president-front">
+					<h4>Vos Compétences</h4>
+				</li>
+			</ul>
+<br />
+				<div class="divStars" data-idVote="0">
+					<img src="images/autocad.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en AUTOCAD: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
 
-							<meta http-equiv="Content-Type"
-								content="text/html; charset=windows-1252">
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
 
-							<body>
-								<div class="divStars" data-idVote="0">
-									<img src="images/html5.png" width="60" height="40" alt="">
-									Cliquez sur l'étoile de votre choix pour indiquer votre niveau
-									en HTML: <br /> <br /> <img class="star st0"
-										src="images/star1.png" data-vote="0" /> <img
-										src="images/star1.png" class="star st1" data-vote="1" /> <img
-										src="images/star1.png" class="star st2" data-vote="2" /> <img
-										src="images/star1.png" class="star st3" data-vote="3" /> <img
-										src="images/star1.png" class="star st4" data-vote="4" /> <br />
-									<br />
-									<div class="voteTexte" id="vote">Veuillez renseigner
-										votre niveau pour cette compétence</div>
+				<div class="divStars" data-idVote="1">
+					<img src="images/advance.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en ADVANCE: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
 
-									<br /> <input type="button" class="reset" value="Annuler" />
-								</div>
-								<br />
-								<br />
-								<br />
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+				
+				<div class="divStars" data-idVote="2">
+					<img src="images/maquette.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en MAQUETTE: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
 
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />					
+					</br> <br></br> <br></br>
+	
+			</div>
+		</div>
+			<!-- *******************FIN BAA************************** -->
+			
+			<!-- *********************BTP**************************** -->
+			
+	<div id="competenceBTP">		
+		<div class="span12 mot-president">
+			<br />
+			<ul>
+				<li class="subtitle-puce" id="president-front">
+					<h4>Vos Compétences</h4>
+				</li>
+			</ul>
+<br />
+				<div class="divStars" data-idVote="0">
+					<img src="images/calculdesstructures.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en CALCUL DE STRUCTURES: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
 
-								<div class="divStars" data-idVote="1">
-									<img src="images/css.png" width="60" height="40" alt="">
-									Cliquez sur l'étoile de votre choix pour indiquer votre niveau
-									en CSS: <br /> <br /> <img class="star st0"
-										src="images/star1.png" data-vote="0" /> <img
-										src="images/star1.png" class="star st1" data-vote="1" /> <img
-										src="images/star1.png" class="star st2" data-vote="2" /> <img
-										src="images/star1.png" class="star st3" data-vote="3" /> <img
-										src="images/star1.png" class="star st4" data-vote="4" /> <br />
-									<br />
-									<div class="voteTexte" id="vote">Veuillez renseigner
-										votre niveau pour cette compétence</div>
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
 
-									<br /> <input type="button" class="reset" value="Annuler" />
-								</div>
-								<br />
-								<br />
-								<br />
-								<div class="divStars" data-idVote="2">
-									<img src="images/php.png" width="60" height="40" alt="">
-									Cliquez sur l'étoile de votre choix pour indiquer votre niveau
-									en PHP: <br /> <br /> <img class="star st0"
-										src="images/star1.png" data-vote="0" /> <img
-										src="images/star1.png" class="star st1" data-vote="1" /> <img
-										src="images/star1.png" class="star st2" data-vote="2" /> <img
-										src="images/star1.png" class="star st3" data-vote="3" /> <img
-										src="images/star1.png" class="star st4" data-vote="4" /> <br />
-									<br />
-									<div class="voteTexte" id="vote">Veuillez renseigner
-										votre niveau pour cette compétence</div>
+				<div class="divStars" data-idVote="1">
+					<img src="images/dimensionnement.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en DIMENSIONNEMENT: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
 
-									<br /> <input type="button" class="reset" value="Annuler" />
-								</div>
-								<br />
-								<br />
-								<br />
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+				
+				<div class="divStars" data-idVote="2">
+					<img src="images/planification.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en PLANIFICATION: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
 
-								<div class="divStars" data-idVote="3">
-									<img src="images/java.png" width="60" height="40" alt="">
-									Cliquez sur l'étoile de votre choix pour indiquer votre niveau
-									en JAVA: <br /> <br /> <img class="star st0"
-										src="images/star1.png" data-vote="0" /> <img
-										src="images/star1.png" class="star st1" data-vote="1" /> <img
-										src="images/star1.png" class="star st2" data-vote="2" /> <img
-										src="images/star1.png" class="star st3" data-vote="3" /> <img
-										src="images/star1.png" class="star st4" data-vote="4" /> <br />
-									<br />
-									<div class="voteTexte" id="vote">Veuillez renseigner
-										votre niveau pour cette compétence</div>
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />					
+					</br> <br></br> <br></br>
+	
+			</div>
+		</div>
+			<!-- *******************FIN BTP************************** -->
+			
+			
+			<!-- *********************CM**************************** -->			
+	<div id="competenceCM">		
+		<div class="span12 mot-president">
+			<br />
+			<ul>
+				<li class="subtitle-puce" id="president-front">
+					<h4>Vos Compétences</h4>
+				</li>
+			</ul>
+<br />
+				<div class="divStars" data-idVote="0">
+					<img src="images/catia.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en CATIA: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
 
-									<br /> <input type="button" class="reset" value="Annuler" />
-									<br /><br /><br />
-								</div>
-							</body>
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+
+				<div class="divStars" data-idVote="1">
+					<img src="images/caldescotes.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en CALCUL DES COTES: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+				
+				<div class="divStars" data-idVote="2">
+					<img src="images/plaquecoque.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en PLAQUE & COQUE: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />					
+					</br> <br></br> <br></br>
+	
+			</div>
+		</div>
+			<!-- *******************FIN CM************************** -->
+			
+			
+			<!-- *********************ESEA**************************** -->			
+	<div id="competenceESEA">		
+		<div class="span12 mot-president">
+			<br />
+			<ul>
+				<li class="subtitle-puce" id="president-front">
+					<h4>Vos Compétences</h4>
+				</li>
+			</ul>
+<br />
+				<div class="divStars" data-idVote="0">
+					<img src="images/automatique.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en AUTOMATIQUE: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+
+				<div class="divStars" data-idVote="1">
+					<img src="images/electronnique.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en ELECTRONIQUE: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+				
+				<div class="divStars" data-idVote="2">
+					<img src="images/electrotechnique.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en ELECTROTECHNIQUE: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />					
+					</br> <br></br> <br></br>
+	
+			</div>
+		</div>
+			<!-- *******************FIN ESEA************************** -->
+			
+			
+			<!-- *********************ITI**************************** -->			
+	<div id="competenceITI">		
+		<div class="span12 mot-president">
+			<br />
+			<ul>
+				<li class="subtitle-puce" id="president-front">
+					<h4>Vos Compétences</h4>
+				</li>
+			</ul>
+<br />
+				<div class="divStars" data-idVote="0">
+					<img src="images/html5.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en HTML: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+
+				<div class="divStars" data-idVote="1">
+					<img src="images/css.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en CSS: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+				
+				<div class="divStars" data-idVote="2">
+					<img src="images/php.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en PHP: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />	
+				
+				<div class="divStars" data-idVote="2">
+					<img src="images/java.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en JAVA: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />						
+					</br> <br></br> <br></br>
+	
+			</div>
+		</div>
+			<!-- *******************FIN ITI************************** -->
+			
+			
+			<!-- *********************TIMTEX**************************** -->			
+	<div id="competenceTIMTEX">		
+		<div class="span12 mot-president">
+			<br />
+			<ul>
+				<li class="subtitle-puce" id="president-front">
+					<h4>Vos Compétences</h4>
+				</li>
+			</ul>
+<br />
+				<div class="divStars" data-idVote="0">
+					<img src="images/couture.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en COUTURE: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+
+				<div class="divStars" data-idVote="1">
+					<img src="images/maille.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en MAILLE: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />
+				
+				<div class="divStars" data-idVote="2">
+					<img src="images/tissage.png" width="80" height="50" alt="">
+					Cliquez sur l'étoile de votre choix pour indiquer votre niveau
+					en TISSAGE: <br /> <br /> <img class="star st0"
+						src="images/star1.png" data-vote="0" /> <img
+						src="images/star1.png" class="star st1" data-vote="1" /> <img
+						src="images/star1.png" class="star st2" data-vote="2" /> <img
+						src="images/star1.png" class="star st3" data-vote="3" /> <img
+						src="images/star1.png" class="star st4" data-vote="4" /> <br />
+					<br />
+					<div class="voteTexte" id="vote">Veuillez renseigner
+						votre niveau pour cette compétence</div>
+
+					<br /> <input type="button" class="reset" value="Annuler" />
+				</div>
+				<br />
+				<br />
+				<br />					
+					</br> <br></br> <br></br>
+	
+			</div>
+		</div>
+			<!-- *******************FIN TIMTEX************************** -->
+				
+						
+							
 							<script>
 								var done = new Array(false, false, false, false);
 								var bareme = new Array("Connais pas ",
@@ -570,7 +1022,7 @@
 																				+ bareme[$(
 																						this)
 																						.attr(
-																								"data-vote")])
+																								"data-vote")] +"<b> VALIDE</b>")
 														done[idVote] = true;
 													}
 												});
@@ -581,21 +1033,13 @@
 							</form>
 
 						</div>
-</br>
-
-						<br></br> <br></br>
-						<td></td>
-						<td> </br><input type="submit" value="Enregistrer"></td>
-						</tr>
-
-						</table>
-						</form>
 						
+
 						</br>
 
 					</div>
 
-					
+
 
 				</div>
 		</div>

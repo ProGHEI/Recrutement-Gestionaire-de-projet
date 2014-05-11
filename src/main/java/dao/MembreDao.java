@@ -43,7 +43,7 @@ public class MembreDao {
 	
 	
 	public int getNbPostulants(String poste){
-		int nbPostulants=5;
+		int nbPostulants=0;
 		
 		// recuperation de la cl� classe la plus recente
 		try {
@@ -54,7 +54,7 @@ public class MembreDao {
 			
 			stmt.setString(1,poste);
 			ResultSet results = stmt.executeQuery();
-			results.next();
+			results.next();	
 			
 			nbPostulants=results.getInt("nbpostulants");
 			
@@ -68,8 +68,7 @@ public class MembreDao {
 		catch (SQLException e) {
 							e.printStackTrace();
 						}
-		
-		System.out.println(nbPostulants);
+	
 		return nbPostulants;
 	}
 	

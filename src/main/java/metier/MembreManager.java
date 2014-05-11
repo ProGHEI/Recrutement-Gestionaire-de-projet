@@ -25,9 +25,6 @@ public class MembreManager {
 		membreDao.addMembre(newMembre);
 		return newMembre;
 	}
-	
-	public void deleteMembre(Integer id) {
-		membreDao.deleteMembre(id);
-	}
+
 	
 }
