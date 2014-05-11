@@ -70,7 +70,7 @@
 <body>
 
 	<nav>
-	
+	${user.webcal}
 	<c:forEach var="utilisateurs" items="${utilisateurs}">
 		<a href="calendrierHEIConnect?id=${utilisateurs.name}">${utilisateurs.name}</a>
 	</c:forEach>

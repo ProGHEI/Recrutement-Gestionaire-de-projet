@@ -16,13 +16,33 @@ public class CalendrierHEIConnectServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		
-		List<User> utilisateurs = UserManager.getInstance().getAllUser();
-		request.setAttribute("utilisateurs", utilisateurs);
+		System.out.println(request.getParameter("user"));
+		
+		List<User> listeUsers = UserManager.getInstance().getAllUser();
+		request.setAttribute("utilisateurs", listeUsers );
 		
 		RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/calendrierHEIConnect.jsp");
 		view.forward(request, response);
 	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String name = request.getParameter("name");
+		
+		User user = UserManager.getInstance().getUser(name);
+		
+		
+		request.setAttribute("user", user);
+		
+		List<User> listeUsers = UserManager.getInstance().getAllUser();
+		request.setAttribute("utilisateurs", listeUsers );
+		
+		
+		
+		RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/calendrierHEIConnect.jsp");
+		view.forward(request, response);
+
+		}
 
 }
