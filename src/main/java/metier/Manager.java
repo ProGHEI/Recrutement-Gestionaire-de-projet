@@ -27,10 +27,6 @@ public class Manager {
 		return newMembre;
 	}
 	
-	public void supprimerMembre(Integer id) {
-		membreDao.supprimerMembre(id);
-	}
-	
 	/*public Membre activerMembre(Membre newMembre) {
 		membreDao.activerMembre(newMembre);
 		return newMembre;

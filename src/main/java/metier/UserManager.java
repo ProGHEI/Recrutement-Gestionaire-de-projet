@@ -40,4 +40,9 @@ private static UserManager instance;
 		
 	}
 
+	public void supprimerUser(Integer id) {
+		userDao.supprimerUser(id);
+		
+	}
+
 }

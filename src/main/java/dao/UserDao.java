@@ -122,4 +122,23 @@ public class UserDao {
 		
 	}
 	
+	public void supprimerUser(Integer id) {
+		try {
+			Connection connection = DataSourceProvider.getDataSource()
+					.getConnection();
+			// Utiliser la connexion
+			PreparedStatement stmt = connection
+					.prepareStatement("DELETE FROM `user` WHERE `id`=?");
+			stmt.setInt(1, id);
+			stmt.executeUpdate();
+
+			// Fermer la connexion
+			stmt.close();
+			connection.close();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

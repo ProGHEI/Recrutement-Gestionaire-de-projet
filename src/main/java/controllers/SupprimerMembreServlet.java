@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import metier.Manager;
+import metier.UserManager;
 
 
 public class SupprimerMembreServlet extends HttpServlet {
@@ -25,7 +26,7 @@ public class SupprimerMembreServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		Integer id = Integer.parseInt(request.getParameter("id"));
 
-		Manager.getInstance().supprimerMembre(id);
+		UserManager.getInstance().supprimerUser(id);
 		
 		request.removeAttribute("id");
 		
