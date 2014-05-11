@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,7 +12,7 @@ import model.UtilisateurCalendrier;
 
 public class UtilisateurCalendrierDao {
 
-	public List<UtilisateurCalendrier> listerWebcal() {
+	public List<UtilisateurCalendrier> getAllWebcal() {
 		List<UtilisateurCalendrier> liste = new ArrayList<UtilisateurCalendrier>();
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
@@ -40,5 +41,4 @@ public class UtilisateurCalendrierDao {
 
 		return liste;
 	}
-
 }

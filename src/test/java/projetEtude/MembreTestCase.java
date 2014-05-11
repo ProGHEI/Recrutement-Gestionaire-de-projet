@@ -15,34 +15,42 @@ import dao.MembreDao;
 
 public class MembreTestCase {
 	
-//	@Before
-//	public void purgeBDD() throws Exception {
-//		Connection connection = DataSourceProvider.getDataSource()
-//				.getConnection();
-//		Statement stmt = connection.createStatement();
-//		stmt.executeUpdate("DELETE FROM user");
-//		stmt.executeUpdate("INSERT INTO `user`(`name`,`pass`,`mail`,`status`) VALUES ('user1','passuser1', 'mail@user1.com','bloque')");
-//		stmt.executeUpdate("INSERT INTO `user`(`name`,`pass`,`mail`,`status`) VALUES ('user2','passuser2', 'mail@user2.com','bloque')");
-//		stmt.close();
-//		connection.close();
-//	}
+	@Before
+	public void purgeBDD() throws Exception {
+		Connection connection = DataSourceProvider.getDataSource()
+				.getConnection();
+		Statement stmt = connection.createStatement();
+		stmt.executeUpdate("DELETE FROM membre");
+		stmt.executeUpdate("INSERT INTO `membre`(`civilite`,`idetudiant`,`nom`,`prenom`,`telephone`,`email`,`domaine`,`promo`,`postevise`,`eleverealisateur`,`postulant`) VALUES (1,10236, 'Dupont','Michel','0688310265','email@user2.com', 'BTP','42','Président',0 ,1)");
+		stmt.executeUpdate("INSERT INTO `membre`(`civilite`,`idetudiant`,`nom`,`prenom`,`telephone`,`email`,`domaine`,`promo`,`postevise`,`eleverealisateur`,`postulant`) VALUES (1,11236, 'Dupond','Martin','0652399267','email@user3.com', 'BAA','41','Président',0 ,1)");
+		stmt.executeUpdate("INSERT INTO `membre`(`civilite`,`idetudiant`,`nom`,`prenom`,`telephone`,`email`,`domaine`,`promo`,`postevise`,`eleverealisateur`,`postulant`) VALUES (1,12236, 'Meunier','Laurent','0657489216','email@user4.com', 'CM','44','Président',0 ,1)");
+		stmt.executeUpdate("INSERT INTO `membre`(`civilite`,`idetudiant`,`nom`,`prenom`,`telephone`,`email`,`domaine`,`promo`,`postevise`,`eleverealisateur`,`postulant`) VALUES (0,10254, 'Rabot','Laure','0647589623','email@user5.com', 'ITI','42','DSI',0 ,1)");
+		stmt.close();
+		connection.close();
+	}
 	
 	private MembreDao membreDao = new MembreDao();
 	
 //	@Test
 //	public void testAddMembre() throws Exception {
-//		Membre membre = new Membre("test", "test@test.com", "password", "bloque");
+//		Membre membre = new Membre(1,11243,"LOMBARD-PLATET","Félix","0600000000","email@hei.fr","ITI","43","DSI",0,1);
 //		membreDao.addMembre(membre);
 //
 //		Connection connection = DataSourceProvider.getDataSource()
 //				.getConnection();
 //		Statement stmt = connection.createStatement();
-//		ResultSet results = stmt.executeQuery("SELECT * FROM user WHERE name='test'");
+//		ResultSet results = stmt.executeQuery("SELECT * FROM membre WHERE idetudiant=11243");
 //		Assert.assertTrue(results.next());
-//		Assert.assertNotNull(results.getInt("id"));
-//		Assert.assertEquals("test@test.com", results.getString("mail"));
-//		Assert.assertEquals("password", results.getString("pass"));
-//		Assert.assertEquals("bloque", results.getString("status"));
+//		Assert.assertEquals(1, results.getInt("civilite"));
+//		Assert.assertEquals("LOMBARD-PLATET", results.getString("nom"));
+//		Assert.assertEquals("Félix", results.getString("prenom"));
+//		Assert.assertEquals("0600000000", results.getString("telephone"));
+//		Assert.assertEquals("email@hei.fr", results.getString("email"));
+//		Assert.assertEquals("ITI", results.getString("domaine"));
+//		Assert.assertEquals("43", results.getString("promo"));
+//		Assert.assertEquals("DSI", results.getString("postevise"));
+//		Assert.assertEquals(0, results.getInt("eleverealisateur"));
+//		Assert.assertEquals(1, results.getInt("postulant"));
 //
 //		results.close();
 //		stmt.close();
@@ -52,13 +60,12 @@ public class MembreTestCase {
 	
 //	@Test
 //	public void testDeleteMembre() throws Exception {
-//		Membre membre = new Membre("user1", null, null, null);
-//		membreDao.deleteMembre(membre);
+//		membreDao.deleteMembre(10236);
 //		
 //		Connection connection = DataSourceProvider.getDataSource()
 //				.getConnection();
 //		Statement stmt = connection.createStatement();
-//		ResultSet results = stmt.executeQuery("SELECT * FROM user WHERE name='user1'");
+//		ResultSet results = stmt.executeQuery("SELECT * FROM membre WHERE idetudiant=10236");
 //		Assert.assertFalse(results.next());
 //		
 //		results.close();
@@ -68,39 +75,21 @@ public class MembreTestCase {
 //	}
 	
 //	@Test
-//	public void testActiverMembre() throws Exception {
-//		Membre membre = new Membre("test", "test@test.com", "password", "bloque");
-//		membreDao.addMembre(membre);
-//		membreDao.activerMembre(membre);
-//
+//	public void testGetNbPostulants() throws Exception {
+//		membreDao.getNbPostulants("Président");
+//		
 //		Connection connection = DataSourceProvider.getDataSource()
 //				.getConnection();
 //		Statement stmt = connection.createStatement();
-//		ResultSet results = stmt.executeQuery("SELECT * FROM user WHERE name='test'");
+//		ResultSet results = stmt.executeQuery("SELECT COUNT(postevise) as nbpostulants FROM membre WHERE postevise='Président'");
 //		Assert.assertTrue(results.next());
-//		Assert.assertEquals("actif", results.getString("status"));
-//
+//		Assert.assertEquals(3, results.getInt("nbpostulants"));
+//		
 //		results.close();
 //		stmt.close();
 //		connection.close();
+//
 //	}
-	
-	@Test
-	public void testDesactiverMembre() throws Exception {
-		Membre membre = new Membre("test", "test@test.com", "password", "actif");
-		membreDao.addMembre(membre);
-		membreDao.desactiverMembre(membre);
 
-		Connection connection = DataSourceProvider.getDataSource()
-				.getConnection();
-		Statement stmt = connection.createStatement();
-		ResultSet results = stmt.executeQuery("SELECT * FROM user WHERE name='test'");
-		Assert.assertTrue(results.next());
-		Assert.assertEquals("bloque", results.getString("status"));
-
-		results.close();
-		stmt.close();
-		connection.close();
-	}
 
 }

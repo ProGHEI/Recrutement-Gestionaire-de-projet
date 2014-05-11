@@ -40,14 +40,14 @@ public class MembreDao {
 	}
 		
 		
-	public void deleteMembre(Membre membre) {
+	public void deleteMembre(Integer id) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
 					.getConnection();
 			// Utiliser la connexion
 			PreparedStatement stmt = connection
 					.prepareStatement("DELETE FROM `membre` WHERE `idetudiant`=?");
-			stmt.setInt(1, membre.getIdetudiant());
+			stmt.setInt(1, id);
 			stmt.executeUpdate();
 
 			// Fermer la connexion
@@ -90,101 +90,4 @@ public class MembreDao {
 		return nbPostulants;
 	}
 	
-	/*public void activerMembre(Membre membre) {
-		try {
-			Connection connection = DataSourceProvider.getDataSource()
-					.getConnection();
-			// Utiliser la connexion
-			PreparedStatement stmt = connection
-					.prepareStatement("UPDATE membre set status='actif' WHERE idetudiant=?");
-			stmt.setInt(1, membre.getIdetudiant());
-			stmt.executeUpdate();
-
-			// Fermer la connexion
-			stmt.close();
-			connection.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public void desactiverMembre(Membre membre) {
-		try {
-			Connection connection = DataSourceProvider.getDataSource()
-					.getConnection();
-			// Utiliser la connexion
-			PreparedStatement stmt = connection
-					.prepareStatement("UPDATE membre set status='bloque' WHERE idetudiant=?");
-			stmt.setInt(1, membre.getIdetudiant());
-			stmt.executeUpdate();
-
-			// Fermer la connexion
-			stmt.close();
-			connection.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void validationMembre(String email, String motDePasse) throws Exception{
-		boolean validation = false;
-    	
-    	try {
-			Connection connection = DataSourceProvider.getDataSource()
-					.getConnection();
-			// Utiliser la connexion
-			PreparedStatement stmt = connection.prepareStatement( "SELECT * FROM `user` WHERE `mail`=? AND `pass`=?"); 
-			stmt.setString(1,email); 
-			stmt.setString(2,motDePasse); 
-			ResultSet results = stmt.executeQuery();
-			if(results.next()){
-				validation=true;
-			}
-
-			// Fermer la connexion
-			stmt.close();
-			connection.close(); 
-			
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-    	
-    	if (!validation) {
-			throw new Exception();
-    	}
-    }
-	
-	
-	public void validationAdmin(String email, String motDePasse) throws Exception{
-		boolean validation = false;
-    	
-    	try {
-			Connection connection = DataSourceProvider.getDataSource()
-					.getConnection();
-			// Utiliser la connexion
-			PreparedStatement stmt = connection.prepareStatement( "SELECT * FROM `user` WHERE `mail`=? AND `pass`=? AND `role`='admin'"); 
-			stmt.setString(1,email); 
-			stmt.setString(2,motDePasse); 
-			ResultSet results = stmt.executeQuery();
-			if(results.next()){
-				validation=true;
-			}
-
-			// Fermer la connexion
-			stmt.close();
-			connection.close(); 
-			
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-    	
-    	if (!validation) {
-			throw new Exception();
-    	}
-    }
-		*/
 }

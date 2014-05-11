@@ -26,19 +26,8 @@ public class MembreManager {
 		return newMembre;
 	}
 	
-	public Membre deleteMembre(Membre newMembre) {
-		membreDao.deleteMembre(newMembre);
-		return newMembre;
-	}
-	
-	public Membre activerMembre(Membre newMembre) {
-		membreDao.activerMembre(newMembre);
-		return newMembre;
-	}
-	
-	public Membre desactiverMembre(Membre newMembre) {
-		membreDao.desactiverMembre(newMembre);
-		return newMembre;
+	public void deleteMembre(Integer id) {
+		membreDao.deleteMembre(id);
 	}
 	
 }

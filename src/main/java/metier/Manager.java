@@ -27,9 +27,8 @@ public class Manager {
 		return newMembre;
 	}
 	
-	public Membre deleteMembre(Membre newMembre) {
-		membreDao.deleteMembre(newMembre);
-		return newMembre;
+	public void deleteMembre(Integer id) {
+		membreDao.deleteMembre(id);
 	}
 	
 	/*public Membre activerMembre(Membre newMembre) {

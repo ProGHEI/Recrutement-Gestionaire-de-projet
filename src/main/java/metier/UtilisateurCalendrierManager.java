@@ -21,9 +21,9 @@ private static UtilisateurCalendrierManager instance;
 	private UtilisateurCalendrierManager(){
 		utilisateurCalendrierDao = new UtilisateurCalendrierDao();
 	}
-
-	public List<UtilisateurCalendrier> listerWebcal() {
-		return utilisateurCalendrierDao.listerWebcal();
+	
+	public List<UtilisateurCalendrier> getAllWebcal() {
+		return utilisateurCalendrierDao.getAllWebcal();
 	}
 
 }

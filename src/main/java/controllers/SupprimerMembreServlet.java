@@ -23,11 +23,9 @@ public class SupprimerMembreServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String name = request.getParameter("name");
-		
-		Membre newUser = new Membre(name, null, null, null);
+		Integer id = Integer.parseInt(request.getParameter("id"));
 
-		Manager.getInstance().deleteMembre(newUser);
+		Manager.getInstance().deleteMembre(id);
 	}
 
 }

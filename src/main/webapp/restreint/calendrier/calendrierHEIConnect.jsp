@@ -13,6 +13,9 @@
 <script src='js/fullcalendar/fr.js'></script>
 <script>
 
+	var param = window.location.search
+	var url = "http://localhost:8080/upload/webcal"+param
+
 	$(document).ready(function() {
 		
 	
@@ -29,8 +32,8 @@
 			right: 'month,agendaWeek,agendaDay'
 			},
 			
-			// US Holidays
-			events: '${utilisateurs.webcal}',
+			// Lien pour l'adresse de l'agenda Google
+			events : 'https://www.google.com/calendar/feeds/9v6rkge5agbn8ijag8ilch67kn995gde%40import.calendar.google.com/public/basic',
 			
 			
 			eventClick: function(event) {
@@ -67,11 +70,11 @@
 <body>
 
 	<nav>
-		<c:forEach var="utilisateurs" items="${utilisateurs}">
-			<a href="calendrierHEIConnect?id=${utilisateurs.name}">${utilisateurs.name}</a></br>
-		</c:forEach>
+	
+	<c:forEach var="utilisateurs" items="${utilisateurs}">
+		<a href="calendrierHEIConnect?id=${utilisateurs.name}">${utilisateurs.name}</a>
+	</c:forEach>
 	</nav>
-
 	<section id='calendar'></section>
 
 </body>

@@ -22,8 +22,7 @@
     <servlet-name>AccueilServlet</servlet-name>
     <url-pattern>/accueil</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>AccueilPostulantServlet</display-name>
     <servlet-name>AccueilPostulantServlet</servlet-name>
@@ -33,9 +32,7 @@
     <servlet-name>AccueilPostulantServlet</servlet-name>
     <url-pattern>/accueilPostulant</url-pattern>
   </servlet-mapping>
- 
-  
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>AccueilRealisateurServlet</display-name>
     <servlet-name>AccueilRealisateurServlet</servlet-name>
@@ -45,7 +42,6 @@
     <servlet-name>AccueilRealisateurServlet</servlet-name>
     <url-pattern>/accueilRealisateur</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>ConnexionServlet</display-name>
@@ -78,7 +74,6 @@
     <servlet-name>DownloadServlet</servlet-name>
     <url-pattern>/fichiers/*</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>SupprimerMembreServlet</display-name>
@@ -137,7 +132,7 @@
     <dispatcher>FORWARD</dispatcher>
     <dispatcher>INCLUDE</dispatcher>
   </filter-mapping>
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>CalendrierHEIConnectServlet</display-name>
     <servlet-name>CalendrierHEIConnectServlet</servlet-name>
@@ -206,5 +201,15 @@
   <servlet-mapping>
     <servlet-name>SupprimerEvenementServlet</servlet-name>
     <url-pattern>/supprimerEvenement</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>WebcalServlet</display-name>
+    <servlet-name>WebcalServlet</servlet-name>
+    <servlet-class>controllers.WebcalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WebcalServlet</servlet-name>
+    <url-pattern>/webcal</url-pattern>
   </servlet-mapping>
 </web-app>
