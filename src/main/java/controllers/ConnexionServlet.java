@@ -2,6 +2,7 @@ package controllers;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -48,6 +49,7 @@ public class ConnexionServlet extends HttpServlet {
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, utilisateur );
 
-        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+        RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/calendrierHEIConnect.jsp");
+		view.forward(request, response);
     }
 }

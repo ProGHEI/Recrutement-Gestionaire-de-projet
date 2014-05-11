@@ -8,14 +8,7 @@
 </head>
 <body>
 
-<form method="post" action="deleteMembre" class="form-horizontal">
-					<div class="form-group">
-						<label for="libelle" class="col-sm-4 control-label">Libellé</label>
-						<div class="col-sm-8">
-							<input type="text" class="form-control" name="name" id="libelle">
-						</div>
-					</div>
-				</form>
+Voulez-vous réellement supprimer l'utilisateur ${utilisateurs.name}?
 
 </body>
 </html>

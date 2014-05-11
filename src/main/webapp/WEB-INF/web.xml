@@ -212,4 +212,34 @@
     <servlet-name>WebcalServlet</servlet-name>
     <url-pattern>/webcal</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdministrationServlet</display-name>
+    <servlet-name>AdministrationServlet</servlet-name>
+    <servlet-class>controllers.AdministrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdministrationServlet</servlet-name>
+    <url-pattern>/administration</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModifierMembreServlet</display-name>
+    <servlet-name>ModifierMembreServlet</servlet-name>
+    <servlet-class>controllers.ModifierMembreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModifierMembreServlet</servlet-name>
+    <url-pattern>/modifierMembre</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AjouterMembreServlet</display-name>
+    <servlet-name>AjouterMembreServlet</servlet-name>
+    <servlet-class>controllers.AjouterMembreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjouterMembreServlet</servlet-name>
+    <url-pattern>/ajouterMembre</url-pattern>
+  </servlet-mapping>
 </web-app>

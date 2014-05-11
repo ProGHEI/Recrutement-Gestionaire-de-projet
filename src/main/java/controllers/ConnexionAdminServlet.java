@@ -2,6 +2,7 @@ package controllers;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -48,6 +49,7 @@ public class ConnexionAdminServlet extends HttpServlet{
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, admin );
 
-        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+        RequestDispatcher view = request.getRequestDispatcher("admin/administration.jsp");
+		view.forward(request, response);;
     }
 }

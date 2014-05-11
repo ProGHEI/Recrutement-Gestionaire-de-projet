@@ -40,13 +40,13 @@ public class MembreDao {
 	}
 		
 		
-	public void deleteMembre(Integer id) {
+	public void supprimerMembre(Integer id) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
 					.getConnection();
 			// Utiliser la connexion
 			PreparedStatement stmt = connection
-					.prepareStatement("DELETE FROM `membre` WHERE `idetudiant`=?");
+					.prepareStatement("DELETE FROM `user` WHERE `id`=?");
 			stmt.setInt(1, id);
 			stmt.executeUpdate();
 

@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import metier.Manager;
-import model.Membre;
 
 
 public class SupprimerMembreServlet extends HttpServlet {
@@ -17,6 +16,7 @@ public class SupprimerMembreServlet extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/pages/supprimerMembre.jsp");
 		view.forward(request, response);
 	}
@@ -25,7 +25,11 @@ public class SupprimerMembreServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		Integer id = Integer.parseInt(request.getParameter("id"));
 
-		Manager.getInstance().deleteMembre(id);
+		Manager.getInstance().supprimerMembre(id);
+		
+		request.removeAttribute("id");
+		
+		response.sendRedirect("administration");
 	}
 
 }
