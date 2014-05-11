@@ -32,33 +32,28 @@ public class UserTestCase {
 	
 	private UserDao userDao = new UserDao();
 	
-	
-//	@Test
-//	public void testGetAllUser() throws Exception {
-//		List<User> liste = new ArrayList<User>();
-//		liste = userDao.getAllUser();
-//		
-//		Connection connection = DataSourceProvider.getDataSource()
-//				.getConnection();
+//	@Test     
+//	   public void testGetAllUser() throws Exception {
+//	   List<User> liste = new ArrayList<User>();
+//	   liste = userDao.getAllUser();
+//	   Connection connection = DataSourceProvider.getDataSource().getConnection();             
 //		Statement stmt = connection.createStatement();
-//		
-//		ResultSet results = stmt.executeQuery("SELECT * FROM `user` WHERE `id`=1");
-//		Assert.assertTrue(results.next());
-//		Assert.assertEquals(liste.get(0).getName(), "user1");
-//		Assert.assertEquals(liste.get(0).getWebcal(), "https://www.google.com/calendar/feeds/9v6rkge5agbn8ijag8ilch67kn995gde%40import.calendar.google.com/public/basic");
-//		results.close();
-//		
-//		
-//		ResultSet results1 = stmt.executeQuery("SELECT * FROM `user` WHERE `id`=2");
-//		Assert.assertTrue(results1.next());
-//		Assert.assertEquals(liste.get(1).getName(), "user2");
-//		Assert.assertEquals(liste.get(1).getWebcal(), "https://www.google.com/calendar/feeds/s8tcnkpm7uj4rkfqcc4bb9f8d30n121o%40import.calendar.google.com/public/basic");
-//		results1.close();
-//		
+//		ResultSet results = stmt.executeQuery("SELECT * FROM user");
+//		int i=0;
+//		while (results.next()){
+//			Assert.assertEquals((int) liste.get(i).getId(), results.getInt("id"));
+//			Assert.assertEquals(liste.get(i).getName(),results.getString("name"));
+//			Assert.assertEquals(liste.get(i).getPass(), results.getString("pass"));
+//			Assert.assertEquals(liste.get(i).getMail(), results.getString("mail"));
+//			Assert.assertEquals(liste.get(i).getRole(), results.getString("role"));
+//			Assert.assertEquals(liste.get(i).getWebcal(),results.getString("webcal"));
+//			i=i+1;
+//		}              
 //		stmt.close();
 //		connection.close();
-//		
 //	}
+	
+
 	
 //	@Test
 //	public void testGetUser() throws Exception {
@@ -147,28 +142,28 @@ public class UserTestCase {
 //	}
 	
 	
-	@Test
-	public void testSupprimerUser(){
-		userDao.supprimerUser(2);
-		
-		try {
-			Connection connection = DataSourceProvider.getDataSource()
-					.getConnection();
-				
-			Statement stmt = connection.createStatement();
-			ResultSet results = stmt.executeQuery("SELECT * FROM `evenement` WHERE `id`=2");
-			Assert.assertFalse(results.next());
-			results.close();
-			stmt.close();
-			connection.close();
-		}
-				
-		catch (SQLException e) {
-				
-			e.printStackTrace();
-		}
-	
-	}
+//	@Test
+//	public void testSupprimerUser(){
+//		userDao.supprimerUser(2);
+//		
+//		try {
+//			Connection connection = DataSourceProvider.getDataSource()
+//					.getConnection();
+//				
+//			Statement stmt = connection.createStatement();
+//			ResultSet results = stmt.executeQuery("SELECT * FROM `evenement` WHERE `id`=2");
+//			Assert.assertFalse(results.next());
+//			results.close();
+//			stmt.close();
+//			connection.close();
+//		}
+//				
+//		catch (SQLException e) {
+//				
+//			e.printStackTrace();
+//		}
+//	
+//	}
 	
 }
 

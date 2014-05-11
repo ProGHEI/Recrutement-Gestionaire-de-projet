@@ -122,57 +122,55 @@ public class EvenementTestCase {
 //		connection.close();
 //	}
 	
-//	@Test
-//	public void testListerEvenement() throws Exception {
-//		List<Evenement> liste = new ArrayList<Evenement>();
-//		liste = evenementDao.listerEvenement();
-//
-//		Connection connection = DataSourceProvider.getDataSource()
-//				.getConnection();
+	//(`id`,`libelle`,`dateDebut`,`heureDebut`,`minuteDebut`,`dateFin`,`heureFin`,`minuteFin`)
+	
+//	@Test     
+//	   public void testListerEvenement() throws Exception {
+//	   List<Evenement> liste = new ArrayList<Evenement>();
+//	   liste = evenementDao.listerEvenement();
+//	   Connection connection = DataSourceProvider.getDataSource().getConnection();             
 //		Statement stmt = connection.createStatement();
-//		
-//		ResultSet results = stmt.executeQuery("SELECT * FROM `evenement` WHERE `id`=3");
-//		Assert.assertTrue(results.next());
-//		Assert.assertEquals((int) liste.get(0).getId(), 3);
-//		Assert.assertEquals(liste.get(0).getLibelle(), "Evenement1");
-//		Assert.assertEquals(liste.get(0).getDateDebut(), "2014-05-10");
-//		Assert.assertEquals(liste.get(0).getHeureDebut(), "10");
-//		Assert.assertEquals(liste.get(0).getMinuteDebut(), "00");
-//		Assert.assertEquals(liste.get(0).getDateFin(), "2014-05-10");
-//		Assert.assertEquals(liste.get(0).getHeureFin(), "15");
-//		Assert.assertEquals(liste.get(0).getMinuteFin(), "00");
-//		results.close();
-//		
-//		
-//		ResultSet results1 = stmt.executeQuery("SELECT * FROM `evenement` WHERE `id`=4");
-//		Assert.assertTrue(results1.next());
-//		Assert.assertEquals((int) liste.get(0).getId(), 3);
-//		Assert.assertEquals(liste.get(1).getLibelle(), "Evenement2");
-//		Assert.assertEquals(liste.get(1).getDateDebut(), "2014-05-11");
-//		Assert.assertEquals(liste.get(1).getHeureDebut(), "11");
-//		Assert.assertEquals(liste.get(1).getMinuteDebut(), "00");
-//		Assert.assertEquals(liste.get(1).getDateFin(), "2014-05-11");
-//		Assert.assertEquals(liste.get(1).getHeureFin(), "16");
-//		Assert.assertEquals(liste.get(1).getMinuteFin(), "00");
-//		results1.close();
-//		
-//		
-//		ResultSet results2 = stmt.executeQuery("SELECT * FROM `evenement` WHERE `id`=5");
-//		Assert.assertTrue(results2.next());
-//		Assert.assertEquals((int) liste.get(0).getId(), 3);
-//		Assert.assertEquals(liste.get(2).getLibelle(), "Evenement3");
-//		Assert.assertEquals(liste.get(2).getDateDebut(), "2014-05-11");
-//		Assert.assertEquals(liste.get(2).getHeureDebut(), "11");
-//		Assert.assertEquals(liste.get(2).getMinuteDebut(), "00");
-//		Assert.assertEquals(liste.get(2).getDateFin(), "2014-05-11");
-//		Assert.assertEquals(liste.get(2).getHeureFin(), "16");
-//		Assert.assertEquals(liste.get(2).getMinuteFin(), "00");
-//		results2.close();
-//		
-//		
+//		ResultSet results = stmt.executeQuery("SELECT * FROM evenement");
+//		int i=0;
+//		while (results.next()){
+//			Assert.assertEquals((int) liste.get(i).getId(), results.getInt("id"));
+//			Assert.assertEquals(liste.get(i).getLibelle(),results.getString("libelle"));
+//			Assert.assertEquals(liste.get(i).getDateDebut(), results.getString("dateDebut"));
+//			Assert.assertEquals(liste.get(i).getHeureDebut(), results.getString("heureDebut"));
+//			Assert.assertEquals(liste.get(i).getMinuteDebut(), results.getString("minuteDebut"));
+//			Assert.assertEquals(liste.get(i).getDateFin(),results.getString("dateFin"));
+//			Assert.assertEquals(liste.get(i).getHeureFin(),results.getString("heureFin"));
+//			Assert.assertEquals(liste.get(i).getMinuteFin(),results.getString("minuteFin"));
+//			i=i+1;
+//		}              
 //		stmt.close();
 //		connection.close();
-//		
+//	}
+	
+	
+//	@Test     
+//	   public void testListerEvenementJSON() throws Exception {
+//	   List<String> liste = new ArrayList<String>();
+//	   liste = evenementDao.listerEvenementJSON();
+//	   Connection connection = DataSourceProvider.getDataSource().getConnection();             
+//		Statement stmt = connection.createStatement();
+//		ResultSet results = stmt.executeQuery("SELECT * FROM evenement");
+//		int i=0;
+//		while (results.next()){
+//			//"{\"title\":\"Evenement1\",\"start\":\"2014-05-10T10:00:00\",\"end\":\"2014-05-10T15:00:00\"}"
+//			Assert.assertEquals(liste.get(i),"{\"title\":\""
+//					+results.getString("libelle")+"\",\"start\":\""
+//					+results.getString("dateDebut")+"T"
+//					+results.getString("heureDebut")+":"
+//					+results.getString("minuteDebut")+":00\",\"end\":\""
+//					+results.getString("dateFin")+"T"
+//					+results.getString("heureFin")+":"
+//					+results.getString("minuteFin")+":00\"}"
+//			);
+//			i=i+1;
+//		}              
+//		stmt.close();
+//		connection.close();
 //	}
 	
 	
