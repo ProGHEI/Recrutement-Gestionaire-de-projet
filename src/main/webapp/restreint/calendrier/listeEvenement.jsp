@@ -18,12 +18,11 @@
 </head>
 <body>
 
-	<c:forEach var="evenement" items="${evenements}">
+	<c:forEach var="evenement" items="${liste}">
 		<b>${evenement.libelle}</b> : Du ${evenement.dateDebut} ${evenement.heureDebut}h${evenement.minuteDebut} Au ${evenement.dateFin} ${evenement.heureFin}h${evenement.minuteFin}
 			<ul>
 				<li><a href="modifierEvenement?id=${evenement.id}">Modifier</a></li>
 				<li><a href="supprimerEvenement?id=${evenement.id}" onclick='validateForm()'>Supprimer</a></li>
-				
 			</ul>
 	</c:forEach>
 

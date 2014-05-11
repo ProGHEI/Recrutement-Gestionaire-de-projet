@@ -19,6 +19,9 @@ public class CalendrierHEIConnectServlet extends HttpServlet {
 		
 		System.out.println(request.getParameter("user"));
 		
+		User user = UserManager.getInstance().getUser("name");
+		request.setAttribute("user", user);
+		
 		List<User> listeUsers = UserManager.getInstance().getAllUser();
 		request.setAttribute("utilisateurs", listeUsers );
 		

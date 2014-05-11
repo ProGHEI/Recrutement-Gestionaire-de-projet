@@ -58,8 +58,14 @@ public class UserDao {
 			stmt.setString(1, name);
 			ResultSet results = stmt.executeQuery();
 			results.next();
-
-			user = new User(results.getInt("id"), results.getString("name"),results.getString("pass"),results.getString("mail"), results.getString("role"), results.getString("webcal"));
+				user = new User(results.getInt("id"),
+						results.getString("name"), 
+						results.getString("pass"), 
+						results.getString("mail"),
+						results.getString("role"),
+						results.getString("webcal"));
+				
+			
 			
 			// Fermer la connexion
 			stmt.close();

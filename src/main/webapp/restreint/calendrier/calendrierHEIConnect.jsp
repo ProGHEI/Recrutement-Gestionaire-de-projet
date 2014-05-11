@@ -13,8 +13,7 @@
 <script src='js/fullcalendar/fr.js'></script>
 <script>
 
-	var param = window.location.search
-	var url = "http://localhost:8080/upload/webcal"+param
+
 
 	$(document).ready(function() {
 		
@@ -33,22 +32,12 @@
 			},
 			
 			// Lien pour l'adresse de l'agenda Google
-			events : 'https://www.google.com/calendar/feeds/9v6rkge5agbn8ijag8ilch67kn995gde%40import.calendar.google.com/public/basic',
-			
-			
-			eventClick: function(event) {
-			// opens events in a popup window
-			window.open(event.url, 'gcalevent', 'width=700,height=600');
-			return false;
-			},
-		
+			eventSources : [$("#bli").text()]
 		});
-		
-		
-	
 	});
 
-
+</script>
+<script>
 
 </script>
 <style>
@@ -71,8 +60,11 @@
 
 	<nav>
 	${user.webcal}
+	<div id="bli" style="display: none;">${user.webcal}</div>
 	<c:forEach var="utilisateurs" items="${utilisateurs}">
-		<a href="calendrierHEIConnect?id=${utilisateurs.name}">${utilisateurs.name}</a>
+		<form method="post" action="calendrierHEIConnect?name=${utilisateurs.name}">
+			<button type="submit" value="${utilisateurs.name}">${utilisateurs.name}</button>
+		</form>
 	</c:forEach>
 	</nav>
 	<section id='calendar'></section>

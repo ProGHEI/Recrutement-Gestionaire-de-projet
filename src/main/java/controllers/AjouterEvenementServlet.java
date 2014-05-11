@@ -20,7 +20,7 @@ public class AjouterEvenementServlet extends HttpServlet {
        
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/pages/calendrier/ajouterEvenement.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/ajouterEvenement.jsp");
 		view.forward(request, response);
 	}
 
