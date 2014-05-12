@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import metier.Manager;
 import model.Membre;
 
+
+/*
+ * C'est cette servlet qui va rÃ©colter les coordonnÃ©es de la page acceuilPostulant, c'est aussi elle qui compte le nombre de postulants Ã  chaque poste
+ * */
+
 public class AccueilPostulantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -23,7 +28,7 @@ public class AccueilPostulantServlet extends HttpServlet {
 		int nbRespCo = Manager.getInstance().getNbPostulants("responsable commercial");
 		int nbSecGen = Manager.getInstance().getNbPostulants("secretaire generale");
 		int nbRespDepITI = Manager.getInstance().getNbPostulants("responsable departement ITI");
-		int nbRespDepInge = Manager.getInstance().getNbPostulants("responsable departement Ingé");
+		int nbRespDepInge = Manager.getInstance().getNbPostulants("responsable departement IngÃ©");
 		int nbDSI = Manager.getInstance().getNbPostulants("directeur des systemes informatiques");
 		int nbRespComExt = Manager.getInstance().getNbPostulants("responsable communication externe");
 		int nbRespComInt = Manager.getInstance().getNbPostulants("responsable communication interne");
@@ -72,6 +77,10 @@ public class AccueilPostulantServlet extends HttpServlet {
 				postulant);
 
 		Manager.getInstance().ajouterMembre(nemMembre);
+		
+		RequestDispatcher view = request
+				.getRequestDispatcher("WEB-INF/pages/remerciement.jsp");
+		view.forward(request, response);
 
 	}
 }

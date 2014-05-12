@@ -203,31 +203,41 @@
 							<div class="nav-collapse">
 								<nav role="navigation">
 									<ul class="menu nav">
-										<li class="first leaf"><a href="/" class="active">Accueil</a></li>
-										<li class="leaf"><a href="/junior-entreprises">Junior-Entreprise
+										<li class="first leaf"><a href="http://localhost:8080/upload" >Accueil</a></li>
+										<li class="leaf"><a href="http://localhost:8080/upload">Junior-Entreprise
 												?</a></li>
-										<li class="leaf"><a href="/partenaires">Nos
+										<li class="leaf"><a href="http://localhost:8080/upload">Nos
 												partenaires</a></li>
-										<li class="leaf"><a href="/equipe">Notre Équipe</a></li>
-										<li class="last expanded dropdown"><a href="/processus"
+										<li class="leaf"><a href="http://localhost:8080/upload">Notre Équipe</a></li>
+										<li class="last expanded dropdown"><a href="http://localhost:8080/upload"
 											title="" class="dropdown-toggle" data-toggle="dropdown"
 											data-target="#">Prestations<span class="caret"></span></a>
 											<ul class="dropdown-menu">
-												<li class="first leaf"><a href="/competences" title="">Nos
+												<li class="first leaf"><a href="http://localhost:8080/upload" title="">Nos
 														Compétences</a></li>
-												<li class="last leaf"><a href="/processus">Notre
+												<li class="last leaf"><a href="http://localhost:8080/upload">Notre
 														Démarche</a></li>
 											</ul>
-										<li class="last expanded dropdown"><a href="/processus"
+										<li class="last expanded dropdown"><a href="http://localhost:8080/upload"
 											title="" class="dropdown-toggle" data-toggle="dropdown"
 											data-target="#">Postuler<span class="caret"></span></a>
 											<ul class="dropdown-menu">
 												<li class="first leaf"><a href="accueilPostulant"
-													title="">Postulant</a></li>
-												<li class="last leaf"><a href="accueilRealisateur">Eleve
+													title="" class="active">Membre de la J.E</a></li>
+												<li class="last leaf"><a href="accueilRealisateur" class="active">Eleve
 														Realisateur</a></li>
 											</ul>
+											<li class="last expanded dropdown"><a
+											href="http://localhost:8080/upload" title=""
+											class="dropdown-toggle" data-toggle="dropdown"
+											data-target="#">Espace Membre<span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li class="first leaf"><a href="connexion"
+													title="">Membre</a></li>
+												<li class="last leaf"><a href="connexionAdmin">Admin</a></li>
+											</ul>
 									</ul>
+									
 								</nav>
 							</div>
 						</div>
@@ -615,9 +625,9 @@
 												</select></td>
 												</tr>
 												<tr>
-													<td>Matricule HEI (sans le "h")</td>
+													<td>Matricule HEI</td>
 													<td><input type="text" id="matricule"
-														name="idetudiant" required></td>
+														name="idetudiant" required placeholder="Matricule HEI sans le h"></td>
 												</tr>
 												<tr>
 													<td>Nom</td>
@@ -680,15 +690,15 @@
 												<tr>
 													<td>Certificat de scolarité</td>
 													<td><input type="file" value="certificatScolarite"
-														required></td>
+														></td>
 												</tr>
 												<tr>
 													<td>Carte Vitale (ou attestion de sécurité sociale)</td>
-													<td><input type="file" value="carteVitale" required></td>
+													<td><input type="file" value="carteVitale" ></td>
 												</tr>
 												<tr>
 													<td>CV</td>
-													<td><input type="file" value="cv" required></td>
+													<td><input type="file" value="cv" ></td>
 												</tr>
 												<tr>
 													<td>Lettre de motivation</td>
@@ -715,15 +725,14 @@
 									</table>
 									<tr>
 										<td></td>
-										<td><input type="submit" value="Enregistrer"></td>
+										<td><input type="submit" value="Enregistrer" ></td>
 									</tr>
 
 								</form>
 
 							</div>
 
-						</div>
-					</div>
+					
 					<div class="span12 quotation" id="slogan">
 						<hr>
 						<h5>ProG'HEI - Vos projets, nos compétences.</h5>
