@@ -31,31 +31,31 @@ public class MembreTestCase {
 	
 	private MembreDao membreDao = new MembreDao();
 	
-//	@Test
-//	public void testAddMembre() throws Exception {
-//		Membre membre = new Membre(1,11243,"LOMBARD-PLATET","Félix","0600000000","email@hei.fr","ITI","43","DSI",0,1);
-//		membreDao.addMembre(membre);
-//
-//		Connection connection = DataSourceProvider.getDataSource()
-//				.getConnection();
-//		Statement stmt = connection.createStatement();
-//		ResultSet results = stmt.executeQuery("SELECT * FROM membre WHERE idetudiant=11243");
-//		Assert.assertTrue(results.next());
-//		Assert.assertEquals(1, results.getInt("civilite"));
-//		Assert.assertEquals("LOMBARD-PLATET", results.getString("nom"));
-//		Assert.assertEquals("Félix", results.getString("prenom"));
-//		Assert.assertEquals("0600000000", results.getString("telephone"));
-//		Assert.assertEquals("email@hei.fr", results.getString("email"));
-//		Assert.assertEquals("ITI", results.getString("domaine"));
-//		Assert.assertEquals("43", results.getString("promo"));
-//		Assert.assertEquals("DSI", results.getString("postevise"));
-//		Assert.assertEquals(0, results.getInt("eleverealisateur"));
-//		Assert.assertEquals(1, results.getInt("postulant"));
-//
-//		results.close();
-//		stmt.close();
-//		connection.close();
-//	}
+	@Test
+	public void testAddMembre() throws Exception {
+		Membre membre = new Membre(1,11243,"LOMBARD-PLATET","Félix","0600000000","email@hei.fr","ITI","43","DSI",0,1);
+		membreDao.addMembre(membre);
+
+		Connection connection = DataSourceProvider.getDataSource()
+				.getConnection();
+		Statement stmt = connection.createStatement();
+		ResultSet results = stmt.executeQuery("SELECT * FROM membre WHERE idetudiant=11243");
+		Assert.assertTrue(results.next());
+		Assert.assertEquals(1, results.getInt("civilite"));
+		Assert.assertEquals("LOMBARD-PLATET", results.getString("nom"));
+		Assert.assertEquals("Félix", results.getString("prenom"));
+		Assert.assertEquals("0600000000", results.getString("telephone"));
+		Assert.assertEquals("email@hei.fr", results.getString("email"));
+		Assert.assertEquals("ITI", results.getString("domaine"));
+		Assert.assertEquals("43", results.getString("promo"));
+		Assert.assertEquals("DSI", results.getString("postevise"));
+		Assert.assertEquals(0, results.getInt("eleverealisateur"));
+		Assert.assertEquals(1, results.getInt("postulant"));
+
+		results.close();
+		stmt.close();
+		connection.close();
+	}
 	
 	
 //	@Test

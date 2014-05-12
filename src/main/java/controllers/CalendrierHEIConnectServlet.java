@@ -15,13 +15,7 @@ import model.User;
 public class CalendrierHEIConnectServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		System.out.println(request.getParameter("user"));
-		
-		User user = UserManager.getInstance().getUser("name");
-		request.setAttribute("user", user);
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
 		List<User> listeUsers = UserManager.getInstance().getAllUser();
 		request.setAttribute("utilisateurs", listeUsers );
 		
