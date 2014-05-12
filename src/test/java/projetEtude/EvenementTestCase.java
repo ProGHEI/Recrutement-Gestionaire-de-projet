@@ -33,31 +33,31 @@ public class EvenementTestCase {
 	
 	private EvenementDao evenementDao = new EvenementDao();
 	
-	// Pour ce test, modifier la méthode pour renter la valeur voulue pour "id"
+	// ATTENTION!!! Pour ce test, modifier la méthode pour pourvoir renter la valeur voulue de "id"
 	
-//	@Test
-//	public void testAjouterEvenement() throws Exception {
-//		Evenement evenement = new Evenement(1, "Soutenance", "2014-05-19", "15", "00", "2014-05-19", "16", "00");
-//		evenementDao.ajouterEvenement(evenement);
-//
-//		Connection connection = DataSourceProvider.getDataSource()
-//				.getConnection();
-//		Statement stmt = connection.createStatement();
-//		ResultSet results = stmt.executeQuery("SELECT * FROM `evenement` WHERE `id`=1");
-//		Assert.assertTrue(results.next());
-//		Assert.assertNotNull(results.getInt("id"));
-//		Assert.assertEquals("Soutenance", results.getString("libelle"));
-//		Assert.assertEquals("2014-05-19", results.getString("dateDebut"));
-//		Assert.assertEquals("15", results.getString("heureDebut"));
-//		Assert.assertEquals("00", results.getString("minuteDebut"));
-//		Assert.assertEquals("2014-05-19", results.getString("dateFin"));
-//		Assert.assertEquals("16", results.getString("heureFin"));
-//		Assert.assertEquals("00", results.getString("minuteFin"));
-//
-//		results.close();
-//		stmt.close();
-//		connection.close();
-//	}
+	@Test
+	public void testAjouterEvenement() throws Exception {
+		Evenement evenement = new Evenement(1, "Soutenance", "2014-05-19", "15", "00", "2014-05-19", "16", "00");
+		evenementDao.ajouterEvenement(evenement);
+
+		Connection connection = DataSourceProvider.getDataSource()
+				.getConnection();
+		Statement stmt = connection.createStatement();
+		ResultSet results = stmt.executeQuery("SELECT * FROM `evenement` WHERE `id`=1");
+		Assert.assertTrue(results.next());
+		Assert.assertNotNull(results.getInt("id"));
+		Assert.assertEquals("Soutenance", results.getString("libelle"));
+		Assert.assertEquals("2014-05-19", results.getString("dateDebut"));
+		Assert.assertEquals("15", results.getString("heureDebut"));
+		Assert.assertEquals("00", results.getString("minuteDebut"));
+		Assert.assertEquals("2014-05-19", results.getString("dateFin"));
+		Assert.assertEquals("16", results.getString("heureFin"));
+		Assert.assertEquals("00", results.getString("minuteFin"));
+
+		results.close();
+		stmt.close();
+		connection.close();
+	}
 	
 	
 //	@Test
