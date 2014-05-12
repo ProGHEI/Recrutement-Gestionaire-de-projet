@@ -59,7 +59,6 @@
 <body>
 
 	<nav>
-	${user.webcal}
 	<div id="bli" style="display: none;">${user.webcal}</div>
 	<c:forEach var="utilisateurs" items="${utilisateurs}">
 		<form method="post" action="calendrierHEIConnect?name=${utilisateurs.name}">
