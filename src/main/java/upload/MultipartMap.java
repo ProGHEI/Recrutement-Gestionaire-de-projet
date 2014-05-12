@@ -81,14 +81,15 @@ public class MultipartMap extends HashMap<String, Object> {
     // Constructors -------------------------------------------------------------------------------
 
     /**
-     * Construct multipart map based on the given multipart request and the servlet associated with
-     * the request. The file upload location will be extracted from <code>@MultipartConfig</code>
-     * of the servlet. When the encoding is not specified in the given request, then it will default
-     * to <tt>UTF-8</tt>.
-     * @param multipartRequest The multipart request to construct the multipart map for.
-     * @param servlet The servlet which is responsible for the given request.
-     * @throws ServletException If something fails at Servlet level.
-     * @throws IOException If something fails at I/O level.
+     * Construit une map multi map à partir de la requête et de la requête associée à la requête. La location du fichier uploadé 
+     * sera extrait à partir de <code>@MultipartConfig</code> de la servlet. Quand l'encoding n'est pas specifiée dans la requête spécifiée, il sera 
+     * par défaut <tt>UTF-8</tt>.
+     * 
+     *  
+     * @param multipartRequest La requête multipart pour construire la multimap.
+     * @param servlet La requête responsable de la requête donnée.
+     * @throws ServletException Exception de la requête.
+     * @throws IOException Si quelque chose ne se passe pas bien au niveau I/O.
      */
     public MultipartMap(HttpServletRequest multipartRequest, Servlet servlet)
         throws ServletException, IOException

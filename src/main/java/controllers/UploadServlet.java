@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import upload.MultipartMap;
 
-@WebServlet(urlPatterns = { "/upload" })
 @MultipartConfig(location = "/upload", maxFileSize = 10485760L) // 10MB.
 public class UploadServlet extends HttpServlet {
 
@@ -21,7 +20,7 @@ public class UploadServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException
     {
-        request.getRequestDispatcher("/WEB-INF/upload.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/pages/upload.jsp").forward(request, response);
     }
 
     @Override
@@ -29,16 +28,12 @@ public class UploadServlet extends HttpServlet {
         throws ServletException, IOException
     {
         MultipartMap map = new MultipartMap(request, this);
-        String text = map.getParameter("text");
         File file = map.getFile("file");
-        String[] check = map.getParameterValues("check");
 
         // Now do your thing with the obtained input.
-        System.out.println("Text: " + text);
         System.out.println("File: " + file);
-        System.out.println("Check: " + Arrays.toString(check));
 
-        request.getRequestDispatcher("/WEB-INF/upload.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/pages/upload.jsp").forward(request, response);
     }
 
 }
