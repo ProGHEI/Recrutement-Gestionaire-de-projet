@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
-<jsp:include page="head.jsp">
+<jsp:include page="../../WEB-INF/pages/head.jsp">
 			<jsp:param name="pageSelectionnee" value="ajout"/>
 </jsp:include>
 </head>
@@ -20,14 +20,9 @@
 
 			<aside class="span2" role="complementary">
 				<div class="menu-gauche" id="contact">
-					<ul class="liste-contact">
-						<li><a
-							href="/sites/proghei.fr/themes/bootstrap/assets/telecharge.php?pdf=Plaquette_ProG_HEI.pdf">
-								Notre plaquette </a></li>
-						<li><a href="contact"> Nous contacter </a></li>
-						<li><a href="#"> 03.28.38.48.70 </a></li>
-						<li><a href="#"> Nous rejoindre </a></li>
-					</ul>
+					<form method="link" action="deconnexion">
+						<button type="submit" value="deconnexion">Déconnexion</button>
+					</form>
 				</div>
 			</aside>
 
@@ -130,23 +125,24 @@
 					<div class="spanGlobal">
 						<div class="spanArticle">
 
-						<body>
-
-	<c:forEach var="evenement" items="${liste}">
-								<b>${evenement.libelle}</b> : Du ${evenement.dateDebut} ${evenement.heureDebut}h${evenement.minuteDebut} Au ${evenement.dateFin} ${evenement.heureFin}h${evenement.minuteFin}
-									<ul>
-										<li><a href="modifierEvenement?id=${evenement.id}">Modifier</a></li>
-										<li><a href="supprimerEvenement?id=${evenement.id}" onclick='validateForm()'>Supprimer</a></li>
-									</ul>
+							<c:if test="${liste.size()==0}">
+							Aucun évènement à venir!
+							</c:if>
+							<c:forEach var="evenement" items="${liste}">
+								<b><u>${evenement.libelle}</u></b> : <p><b>De</b> ${evenement.heureDebut}h${evenement.minuteDebut} le ${evenement.dateDebut} <b>à</b> ${evenement.heureFin}h${evenement.minuteFin} le  ${evenement.dateFin}<p>
+								<ul>
+									<li><a href="modifierEvenement?id=${evenement.id}">Modifier</a></li>
+									<li><a href="supprimerEvenement?id=${evenement.id}" onclick='validateForm()'>Supprimer</a></li>
+								</ul>
 							</c:forEach>
-
-
-</body>
 							
-					<div class="span12 quotation" id="slogan">
-						<hr>
-						<h5>ProG'HEI - Vos projets, nos compétences.</h5>
-						<hr>
+
+							
+						<div class="span12 quotation" id="slogan">
+							<hr>
+								<h5>ProG'HEI - Vos projets, nos compétences.</h5>
+							<hr>
+						</div>
 					</div>
 				</div>
 		</div>

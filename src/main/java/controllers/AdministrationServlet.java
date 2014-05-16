@@ -22,7 +22,7 @@ public class AdministrationServlet extends HttpServlet {
 		List<User> utilisateurs = UserManager.getInstance().getAllUser();
 		request.setAttribute("utilisateurs", utilisateurs);
 		
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/pages/administration.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("admin/administration.jsp");
 		view.forward(request, response);
 	}
 

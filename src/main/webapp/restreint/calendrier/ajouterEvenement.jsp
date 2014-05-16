@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <%@ page pageEncoding="UTF-8"%>
-<jsp:include page="head.jsp">
-			<jsp:param name="pageSelectionnee" value="ajout"/>
-</jsp:include>
+<head>
+	<jsp:include page="../../WEB-INF/pages/head.jsp">
+				<jsp:param name="pageSelectionnee" value="ajout"/>
+	</jsp:include>
+</head>
 <body
 	class="html front not-logged-in no-sidebars page-node page-node- page-node-2 node-type-page">
 
@@ -17,14 +19,9 @@
 
 			<aside class="span2" role="complementary">
 				<div class="menu-gauche" id="contact">
-					<ul class="liste-contact">
-						<li><a
-							href="/sites/proghei.fr/themes/bootstrap/assets/telecharge.php?pdf=Plaquette_ProG_HEI.pdf">
-								Notre plaquette </a></li>
-						<li><a href="contact"> Nous contacter </a></li>
-						<li><a href="#"> 03.28.38.48.70 </a></li>
-						<li><a href="#"> Nous rejoindre </a></li>
-					</ul>
+					<form method="link" action="deconnexion">
+						<button type="submit" value="deconnexion">Déconnexion</button>
+					</form>
 				</div>
 			</aside>
 
@@ -126,7 +123,7 @@
 					<div class="spanGlobal">
 						<div class="spanArticle">
 
-							<body>
+
 
 <h1>Ajouter un évènement</h1>
 
@@ -156,11 +153,6 @@
 						</script>
 					
 				</form>
-				
-
-		
-
-</body>
 							
 					<div class="span12 quotation" id="slogan">
 						<hr>

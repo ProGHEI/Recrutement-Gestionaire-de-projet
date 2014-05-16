@@ -49,7 +49,7 @@ public class ConnexionServlet extends HttpServlet {
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, utilisateur );
 
-        RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/calendrierHEIConnect.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("restreint/bienvenueMembre.jsp");
 		view.forward(request, response);
     }
 }

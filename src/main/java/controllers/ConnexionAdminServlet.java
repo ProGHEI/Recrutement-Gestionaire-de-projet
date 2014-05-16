@@ -49,7 +49,7 @@ public class ConnexionAdminServlet extends HttpServlet{
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, admin );
 
-        RequestDispatcher view = request.getRequestDispatcher("admin/administration.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("admin/bienvenueAdmin.jsp");
 		view.forward(request, response);;
     }
 }

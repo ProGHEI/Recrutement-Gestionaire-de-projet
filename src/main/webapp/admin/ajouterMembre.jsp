@@ -3,7 +3,7 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
-<jsp:include page="head.jsp">
+<jsp:include page="../WEB-INF/pages/head.jsp">
 			<jsp:param name="pageSelectionnee" value="ajout"/>
 </jsp:include>
 </head>
@@ -20,14 +20,9 @@
 
 			<aside class="span2" role="complementary">
 				<div class="menu-gauche" id="contact">
-					<ul class="liste-contact">
-						<li><a
-							href="/sites/proghei.fr/themes/bootstrap/assets/telecharge.php?pdf=Plaquette_ProG_HEI.pdf">
-								Notre plaquette </a></li>
-						<li><a href="contact"> Nous contacter </a></li>
-						<li><a href="#"> 03.28.38.48.70 </a></li>
-						<li><a href="#"> Nous rejoindre </a></li>
-					</ul>
+					<form method="link" action="deconnexion">
+						<button type="submit" value="deconnexion">Déconnexion</button>
+					</form>
 				</div>
 			</aside>
 

@@ -165,14 +165,14 @@
 											<p style="float: left; padding: 5px;">
 												<img src="images/president.png" width="200" alt="">
 											</p>
-											<Strong>Charles Serard, Président</Strong></br> </br>Le Président est
+											<Strong>Charles Serard, Président</Strong><br> <br>Le Président est
 											garant du bon fonctionnement de la J.E., il préside les
 											conseils d’administrations, pose les objectifs à long terme,
 											gère la coordination interne, est responsable de la
 											représentation externe de la J.E. auprès de la CNJE et d'HEI.
 											Il doit également négocier, suivre et améliorer les
 											partenariats, prendre des décisions et en informer les
-											membres.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											membres.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbPres} </Strong>
 										</div>
 									</div>
@@ -183,7 +183,7 @@
 											<p style="float: left; padding: 5px;">
 												<img src="images/vice president.png" width="200" alt="">
 											</p>
-											<Strong>Alizée Blanchon, Vice Présidente</Strong></br> </br>La
+											<Strong>Alizée Blanchon, Vice Présidente</Strong><br> <br>La
 											Vice-Présidente doit seconder le Président, gérer les
 											relations internes, motiver les responsables, poser les
 											objectifs en interne, proposer des solutions, définir des
@@ -192,7 +192,7 @@
 											tout le monde. Elle est également responsable du recrutement
 											et de la formation, doit assurer la direction du pôle
 											communication et répartir les diverses missions entre les
-											Chargés de Mission.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											Chargés de Mission.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbVicePres} </Strong>
 										</div>
 									</div>
@@ -204,14 +204,14 @@
 												<img src="images/responsable commercial.png" width="200"
 													alt="">
 											</p>
-											<Strong>Alexandre Virolles, Responsable Commercial</Strong></br> </br>Le
+											<Strong>Alexandre Virolles, Responsable Commercial</Strong><br> <br>Le
 											Responsable Commercial est responsable de tout le Pôle
 											Commercial. Il sert de soutien ainsi que de référence aux
 											Responsables de Département. C’est pourquoi il doit relire
 											chaque document avant qu’ils soient envoyés au client. Il
 											supervise l’ensemble des affaires en cours, va aux entretiens
 											clients avec le chef de projet. Le Directeur Général réalise
-											le lien entre le pôle commercial et le pôle administratif. </br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											le lien entre le pôle commercial et le pôle administratif. <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbRespCo} </Strong>
 
 										</div>
@@ -223,14 +223,14 @@
 											<p style="float: left; padding: 5px;">
 												<img src="images/tresorier.png" width="200" alt="">
 											</p>
-											<Strong>Sébastien Tan, Trésorier</Strong></br> </br>Le Trésorier est
+											<Strong>Sébastien Tan, Trésorier</Strong><br> <br>Le Trésorier est
 											chargé de la gestion de la vie de la J.E. et en particulier
 											de ses finances. En début de mandat, il établit un budget
 											prévisionnel avec l’aide puis l’approbation du Conseil
 											d’Administration. Puis au cours de l’année il gère au
 											quotidien la trésorerie et donne son accord pour les
 											éventuels dépenses. Il remplit également les différents
-											déclaratifs sociaux et fiscaux.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											déclaratifs sociaux et fiscaux.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbTreso} </Strong>
 										</div>
 									</div>
@@ -241,13 +241,13 @@
 											<p style="float: left; padding: 5px;">
 												<img src="images/secretaire generale.png" width="200" alt="">
 											</p>
-											<Strong>Marie Bastaert, Secrétaire Générale</Strong></br> </br>La
+											<Strong>Marie Bastaert, Secrétaire Générale</Strong><br> <br>La
 											secrétaire générale est responsable de tous les papiers
 											administratifs (déclaratifs légaux, changements de statuts,
 											ceux concernant les membres) et doit rédiger les comptes
 											rendus des réunions et conseils d’administration. Elle est
 											responsable de la gestion associative de la
-											Junior-Entreprise.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											Junior-Entreprise.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbSecGen} </Strong>
 										</div>
 									</div>
@@ -259,13 +259,13 @@
 												<img src="images/charges de qualite1.png" width="150" alt="">
 											</p>
 											<Strong>Sixtine Quirouard Frileuse, Chargé de
-												Qualité</Strong></br> </br>Le pôle Qualité est responsable du contrôle et de la
+												Qualité</Strong><br> <br>Le pôle Qualité est responsable du contrôle et de la
 											correction des documents produits de la Junior, de la
 											préparation de l’équipe à l’audit et de l’amélioration des
 											procédures. Les membres du pôle qualité doivent être capable
 											d’analyser le travail de chaque pôle et de proposer des
 											solutions permettant de formaliser et d'augmenter
-											l'éfficacité de chacun.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											l'éfficacité de chacun.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbCdQ} </Strong>
 										</div>
 									</div>
@@ -276,14 +276,14 @@
 											<p style="float: left; padding: 5px;">
 												<img src="images/charges de qualite2.png" width="150" alt="">
 											</p>
-											<Strong>Emeline Bassaget, Chargé de Qualitée</Strong></br> </br>Le pôle
+											<Strong>Emeline Bassaget, Chargé de Qualitée</Strong><br> <br>Le pôle
 											Qualité est responsable du contrôle et de la correction des
 											documents produits de la Junior, de la préparation de
 											l’équipe à l’audit et de l’amélioration des procédures. Les
 											membres du pôle qualité doivent être capable d’analyser le
 											travail de chaque pôle et de proposer des solutions
 											permettant de formaliser et d'augmenter l'éfficacité de
-											chacun.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											chacun.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbCdQ} </Strong>
 										</div>
 									</div>
@@ -294,14 +294,14 @@
 											<p style="float: left; padding: 5px;">
 												<img src="images/charges de qualite3.png" width="150" alt="">
 											</p>
-											<Strong>Julie Gassot, Chargé de Qualité</Strong></br> </br>Le pôle
+											<Strong>Julie Gassot, Chargé de Qualité</Strong><br> <br>Le pôle
 											Qualité est responsable du contrôle et de la correction des
 											documents produits de la Junior, de la préparation de
 											l’équipe à l’audit et de l’amélioration des procédures. Les
 											membres du pôle qualité doivent être capable d’analyser le
 											travail de chaque pôle et de proposer des solutions
 											permettant de formaliser et d'augmenter l'éfficacité de
-											chacun.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											chacun.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbCdQ} </Strong>
 										</div>
 									</div>
@@ -314,13 +314,13 @@
 												<img src="images/charges de mission2.png" width="150" alt="">
 											</p>
 											<Strong>Matthieu Barsacq & Olivier Des Dorides,
-												Chargés de Mission</Strong></br> </br>Ils sont chargés d’assurer le côté
+												Chargés de Mission</Strong><br> <br>Ils sont chargés d’assurer le côté
 											commerciale de ProG’HEI. En effet, ils gèrent la prospection,
 											suivent des affaires, améliorent l'image de la J.E par le
 											biais d'une prospection efficace. Ils sont chargés de suivre
 											une étude lors de sa réalisation, c'est le lien entre l'élève
 											réalisateur et le client, son rôle est essentiel pour le bon
-											fonctionnement de la J.E </br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											fonctionnement de la J.E <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbCdM} </Strong>
 										</div>
 									</div>
@@ -332,14 +332,14 @@
 												<img src="images/DSI.png" width="150" alt="">
 											</p>
 											<Strong>Félix Lombard Platet, Directeur des Systèmes
-												Informatiques</Strong></br> </br>Le DSI gère tout le système d'information de
+												Informatiques</Strong><br> <br>Le DSI gère tout le système d'information de
 											la Junior : ordinateur du local, site internet, extranet,
 											dropbox, pages Facebook... Il s'assure que ces derniers
 											fonctionnent et les améliore pour gagner en performance.
 											Comme il travaille avec tous les membres de la Junior, il
 											doit être à l'écoute des autres, se montrer flexible, faire
 											preuve de spontanité pour assurer le développement cohérent
-											de l'ensemble des pôles.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											de l'ensemble des pôles.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbDSI} </Strong>
 										</div>
 									</div>
@@ -352,14 +352,14 @@
 													width="150" alt="">
 											</p>
 											<Strong>Sélim Abed, Responsable Communication
-												Interne</Strong></br> </br>Le responsable de communication est responsable de
+												Interne</Strong><br> <br>Le responsable de communication est responsable de
 											la communication interne (HEI) et externe (Hors HEI) de
 											ProG'HEI. Pour cela il définit en début d'année une stratégie
 											efficasse et organisée afin de toucher le plus de monde
 											possible. Pour l'interne il réalise des affcihes, des
 											supports vidéos, met à jour les pages ProG des réseau
 											sociaux,organise des manifestations afin de faire connaitre
-											ProG au seins d'HEI.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											ProG au seins d'HEI.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbRespComInt} </Strong>
 										</div>
 									</div>
@@ -372,14 +372,14 @@
 													width="150" alt="">
 											</p>
 											<Strong>Florent Dancy, Responsable Communication
-												Interne</Strong></br> </br>Le responsable de communication est responsable de
+												Interne</Strong><br> <br>Le responsable de communication est responsable de
 											la communication interne (HEI) et externe (Hors HEI) de
 											ProG'HEI. Pour cela il définit en début d'année une stratégie
 											efficasse et organisée afin de toucher le plus de monde
 											possible. Pour l'interne il réalise des affcihes, des
 											supports vidéos, met à jour les pages ProG des réseau
 											sociaux,organise des manifestations afin de faire connaitre
-											ProG au seins d'HEI.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											ProG au seins d'HEI.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbRespComExt} </Strong>
 										</div>
 									</div>
@@ -392,12 +392,12 @@
 													width="150" alt="">
 											</p>
 											<Strong>Rodolphe Rivaux, Responsable Département
-												Inge</Strong></br> </br>Le responsable de pôle définit une stratégie et cible
+												Inge</Strong><br> <br>Le responsable de pôle définit une stratégie et cible
 											les prospects et s’assure de la prospection efficace de son
 											pôle. Il va aussi sélectionner les étudiants réalisateurs et
 											aider les chargés d’affaires dans la rédaction des documents.
 											Il doit être force de proposition pour faire évoluer les
-											indicateurs et garder la motivation dans son pôle.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											indicateurs et garder la motivation dans son pôle.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbRespDepInge} </Strong>
 										</div>
 									</div>
@@ -409,13 +409,13 @@
 												<img src="images/responsable departement iti.png"
 													width="150" alt="">
 											</p>
-											<Strong>Théo Fanchini, Responsable Département ITI</Strong></br> </br>Le
+											<Strong>Théo Fanchini, Responsable Département ITI</Strong><br> <br>Le
 											responsable de pôle définit une stratégie et cible les
 											prospects et s’assure de la prospection efficace de son pôle.
 											Il va aussi sélectionner les étudiants réalisateurs et aider
 											les chargés d’affaires dans la rédaction des documents. Il
 											doit être force de proposition pour faire évoluer les
-											indicateurs et garder la motivation dans son pôle.</br> </br>&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											indicateurs et garder la motivation dans son pôle.<br> <br>&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbRespDepITI} </Strong>
 										</div>
 									</div>
@@ -433,13 +433,13 @@
 											</p>
 											<Strong>Thomas Biget, Solenne Roy, Amandine Lecomte,
 												Alexandre Spiri, Hélène Guibault, Alice Delabre, Chargés
-												d'Affaire</Strong></br> </br>Ils sont chargés d’assurer le côté commerciale de
+												d'Affaire</Strong><br> <br>Ils sont chargés d’assurer le côté commerciale de
 											ProG’HEI. En effet, ils gèrent la prospection, suivent des
 											affaires, améliorent l'image de la J.E par le biais d'une
 											prospection efficace. Ils sont chargés de suivre une étude
 											lors de sa réalisation, c'est le lien entre l'élève
 											réalisateur et le client, son rôle est essentiel pour le bon
-											fonctionnement de la J.E</br>
+											fonctionnement de la J.E<br>
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbCdA} </Strong>
 										</div>
@@ -451,14 +451,14 @@
 											<p style="float: left; padding: 5px;">
 												<img src="images/comptable.png" width="150" alt="">
 											</p>
-											<Strong>Pierre Le Douarin, Comptable</Strong></br> </br>Le Trésorier
+											<Strong>Pierre Le Douarin, Comptable</Strong><br> <br>Le Trésorier
 											est chargé de la gestion de la vie de la J.E. et en
 											particulier de ses finances. En début de mandat, il établit
 											un budget prévisionnel avec l’aide puis l’approbation du
 											Conseil d’Administration. Puis au cours de l’année il gère au
 											quotidien la trésorerie et donne son accord pour les
 											éventuels dépenses. Il remplit également les différents
-											déclaratifs sociaux et fiscaux.</br> </br>&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
+											déclaratifs sociaux et fiscaux.<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Nombre
 												de personnes postulant à ce poste : ${nbComptable} </Strong>
 										</div>
 									</div>

@@ -23,7 +23,7 @@ public class ModifierMembreServlet extends HttpServlet {
 		User utilisateurs = UserManager.getInstance().getUser(user);
 		request.setAttribute("utilisateurs", utilisateurs);
 		
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/pages/membre.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("admin/membre.jsp");
 		view.forward(request, response);
 	}
 

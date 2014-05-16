@@ -167,13 +167,17 @@
 								<form method="post" action="accueilRealisateur">
 									<table>
 
-										<tbody>
-											<div class="coordonnees">
-												<td>Civilité</td>
-												<td><select name="civilite" id="civilite">
+										<tbody class="coordonnees">
+											
+												<tr>
+													<td>Civilité</td>
+												</tr>
+												<tr>
+													<td><select name="civilite" id="civilite">
 														<option value="2">Mlle.</option>
 														<option value="1">M.</option>
-												</select></td>
+														</select>
+													</td>
 												</tr>
 												<tr>
 													<td>Matricule HEI</td>
@@ -235,23 +239,22 @@
 
 												<tr>
 													<td>Fiche d'adhésion (à imprimer pour signature)</td>
-													<td><a
-														href="http://localhost:8080/upload/images/ficheAdhesion.pdf"
-														download="Fiche d'Adhésion">Télécharger</td>
+													<td><a href="http://localhost:8080/upload/images/ficheAdhesion.pdf" download="Fiche d'Adhésion">Télécharger</a></td>
 												</tr>
 												<tr>
 													<td>Fiche de Membre (à remplir directement)</td>
 													<td><a
 														href="http://localhost:8080/upload/images/Membre Actif.docx"
-														download="Membre Actif">Télécharger</td>
+														download="Membre Actif">Télécharger</a></td>
 												</tr>
-											</div>
+											
 
 
 
 										</tbody>
 									</table>
 									
+								</form>
 
 							</div>
 

@@ -35,6 +35,7 @@ public class RestrictionFilter implements Filter{
          */
         if ( session.getAttribute( ATT_SESSION_USER ) == null && session.getAttribute( ATT_SESSION_USER2 ) == null ) {		//on outrepasse ici le filtre en admin
             /* Redirection vers la page publique */
+        	
             response.sendRedirect( request.getContextPath() + ACCES_PUBLIC );
         } else {
             /* Affichage de la page restreinte */
