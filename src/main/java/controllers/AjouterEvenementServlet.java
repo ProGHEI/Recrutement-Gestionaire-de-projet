@@ -48,7 +48,7 @@ public class AjouterEvenementServlet extends HttpServlet {
 
         		EvenementManager.getInstance().ajouterEvenement(newEvenement);
         		
-        		response.sendRedirect("/projetEtude/calendrierProG");
+        		response.sendRedirect("/upload/calendrierProG");
         	}
 		}
 		catch(ParseException ex){

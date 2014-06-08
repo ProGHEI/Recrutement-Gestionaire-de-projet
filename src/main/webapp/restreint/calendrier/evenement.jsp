@@ -64,60 +64,10 @@
 
 				</div>
 
-				<header id="navbar" role="banner" class="navbar navbar-fixed-top">
-					<div class="navbar-inner">
-
-						<div class="container">
-							<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-							<a class="btn btn-navbar" data-toggle="collapse"
-								data-target=".nav-collapse"> <span class="icon-bar"></span>
-								<span class="icon-bar"></span> <span class="icon-bar"></span>
-							</a>
-
-
-
-							<div class="nav-collapse">
-								<nav role="navigation">
-									<ul class="menu nav">
-										<li class="first leaf"><a href="http://localhost:8080/upload" class="active">Accueil</a></li>
-										<li class="leaf"><a href="http://localhost:8080/upload">Junior-Entreprise
-												?</a></li>
-										<li class="leaf"><a href="http://localhost:8080/upload">Nos
-												partenaires</a></li>
-										<li class="leaf"><a href="http://localhost:8080/upload">Notre Équipe</a></li>
-										<li class="last expanded dropdown"><a href="/processus"
-											title="" class="dropdown-toggle" data-toggle="dropdown"
-											data-target="#">Prestations<span class="caret"></span></a>
-											<ul class="dropdown-menu">
-												<li class="first leaf"><a href="http://localhost:8080/upload" title="">Nos
-														Compétences</a></li>
-												<li class="last leaf"><a href="http://localhost:8080/upload">Notre
-														Démarche</a></li>
-											</ul>
-										<li class="last expanded dropdown"><a href="http://localhost:8080/upload"
-											title="" class="dropdown-toggle" data-toggle="dropdown"
-											data-target="#">Postuler<span class="caret"></span></a>
-											<ul class="dropdown-menu">
-												<li class="first leaf"><a href="accueilPostulant"
-													title="">Postulant</a></li>
-												<li class="last leaf"><a href="accueilRealisateur">Eleve
-														Realisateur</a></li>
-											</ul>
-											<li class="last expanded dropdown"><a
-											href="http://localhost:8080/upload" title=""
-											class="dropdown-toggle" data-toggle="dropdown"
-											data-target="#">Espace Membre<span class="caret"></span></a>
-											<ul class="dropdown-menu">
-												<li class="first leaf"><a href="connexion"
-													title="">Membre</a></li>
-												<li class="last leaf"><a href="connexionAdmin">Admin</a></li>
-											</ul>
-									</ul>
-								</nav>
-							</div>
-						</div>
-					</div>
-				</header>
+				<jsp:include page="../../WEB-INF/pages/menu.jsp">
+					<jsp:param name="pageSelectionnee" value="ajout"/>
+				</jsp:include>
+				
 				<br /> <a id="main-content"></a>
 				<div class="contenu-principal">
 					<div class="spanGlobal">
