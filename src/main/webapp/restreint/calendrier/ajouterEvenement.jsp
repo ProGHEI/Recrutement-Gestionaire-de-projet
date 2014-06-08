@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page pageEncoding="UTF-8"%>
 <head>
 	<jsp:include page="../../WEB-INF/pages/head.jsp">
@@ -101,6 +102,28 @@
 						})();
 						
 						</script>
+						
+					
+					<table>
+						<tbody>
+							<tr>
+								<td><h3>Quels membres de la Junior sont concernés?</h3></td>
+							</tr>
+							<c:forEach var="utilisateurs" items="${utilisateurs}">
+								<tr>
+									<td><input type="checkbox" name="utilisateur" value="${utilisateurs.name}"> ${utilisateurs.name}<br></td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+					
+					<table>
+						<tbody>
+							<tr>
+								<td><input type="submit" value="Enregistrer"></td>
+							</tr>
+						</tbody>
+					</table>
 					
 				</form>
 							

@@ -101,9 +101,5 @@
 						 <option ${evenement.minuteFin == "55" ? 'selected' : '' } value="55">55</option>
 						</select></td>
 				</tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" value="Enregistrer"></td>
-				</tr>
 			</tbody>
 		</table>

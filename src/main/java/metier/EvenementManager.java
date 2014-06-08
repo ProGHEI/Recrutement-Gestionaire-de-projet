@@ -22,16 +22,16 @@ private static EvenementManager instance;
 		evenementDao = new EvenementDao();
 	}
 
-	public List<String> listerEvenementJSON() {
-		return evenementDao.listerEvenementJSON();
+	public List<String> listerEvenementJSON(Integer idUser) {
+		return evenementDao.listerEvenementJSON(idUser);
 	}
 	
 	public List<Evenement> listerEvenement() {
 		return evenementDao.listerEvenement();
 	}
 
-	public Evenement ajouterEvenement(Evenement newEvenement) {
-		evenementDao.ajouterEvenement(newEvenement);
+	public Evenement ajouterEvenement(Evenement newEvenement, Integer idUser) {
+		evenementDao.ajouterEvenement(newEvenement, idUser);
 		return newEvenement;
 		
 	}

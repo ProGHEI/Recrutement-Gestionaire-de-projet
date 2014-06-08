@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import metier.EvenementManager;
+import metier.UserManager;
+import model.User;
 
 
 public class ListerEvenementJSONServlet extends HttpServlet {
@@ -17,8 +19,16 @@ public class ListerEvenementJSONServlet extends HttpServlet {
        
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<String> evenements = EvenementManager.getInstance().listerEvenementJSON();
+	
+		String name = request.getParameter("name");
+		
+		if(!(name.isEmpty())){
+		
+		User user = UserManager.getInstance().getUser(name);
+		
+		List<String> evenements = EvenementManager.getInstance().listerEvenementJSON(user.getId());
 		request.setAttribute("evenements", evenements);
+		}
 		
 		RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/eventJSON.jsp");
 		view.forward(request, response);

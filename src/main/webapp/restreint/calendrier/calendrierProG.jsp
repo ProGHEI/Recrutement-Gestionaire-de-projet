@@ -33,7 +33,8 @@
 			},
 			
 			// Lien pour l'adresse de l'agenda Google
-			events:{url:'http://localhost:8080/upload/JSON'},
+			eventSources : [$("#bli").text()]
+			,
 		});
 	});
 
@@ -115,6 +116,8 @@
 				<div class="contenu-principal">
 					<div class="spanGlobal">
 						<div class="spanArticle">
+						
+							<div id="bli" style="display: none;">http://localhost:8080/upload/JSON?name=${user.name}</div>
 
 							<a href="ajouterEvenement">Ajouter un évènement</a>&nbsp;&nbsp;
 							<a href="listerEvenement">Modifier un évènement</a>

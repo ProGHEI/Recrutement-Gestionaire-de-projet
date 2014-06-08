@@ -12,14 +12,16 @@ import model.Evenement;
 
 public class EvenementDao {
 
-	public List<String> listerEvenementJSON() {
+	public List<String> listerEvenementJSON(Integer idUser) {
 		List<String> liste = new ArrayList<String>();
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
 					.getConnection();
-
-			Statement stmt = connection.createStatement();
-			ResultSet results = stmt.executeQuery("SELECT * FROM `evenement` ");
+			
+			PreparedStatement stmt = connection
+					.prepareStatement("SELECT * FROM evenement WHERE idUser=?");
+			stmt.setInt(1, idUser);
+			ResultSet results = stmt.executeQuery();
 
 			while (results.next()) {
 				String JSON = "";
@@ -49,14 +51,14 @@ public class EvenementDao {
 		return liste;
 	}
 
-	public void ajouterEvenement(Evenement newEvenement) {
+	public void ajouterEvenement(Evenement newEvenement, Integer idUser) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
 					.getConnection();
 
 			// Utiliser la connexion
 			PreparedStatement stmt = connection
-					.prepareStatement("INSERT INTO `evenement`(`id`,`libelle`,`dateDebut`,`heureDebut`,`minuteDebut`,`dateFin`,`heureFin`,`minuteFin`) VALUES(null,?,?,?,?,?,?,?)");
+					.prepareStatement("INSERT INTO `evenement`(`id`,`libelle`,`dateDebut`,`heureDebut`,`minuteDebut`,`dateFin`,`heureFin`,`minuteFin`,`idUser`) VALUES(null,?,?,?,?,?,?,?,?)");
 			stmt.setString(1, newEvenement.getLibelle());
 			stmt.setString(2, newEvenement.getDateDebut());
 			stmt.setString(3, newEvenement.getHeureDebut());
@@ -64,6 +66,7 @@ public class EvenementDao {
 			stmt.setString(5, newEvenement.getDateFin());
 			stmt.setString(6, newEvenement.getHeureFin());
 			stmt.setString(7, newEvenement.getMinuteFin());
+			stmt.setInt(8, idUser);
 			stmt.executeUpdate();
 
 			// Fermer la connexion

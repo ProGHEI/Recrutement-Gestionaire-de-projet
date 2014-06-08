@@ -40,6 +40,6 @@ public class CalendrierHEIConnectServlet extends HttpServlet {
 		RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/calendrierHEIConnect.jsp");
 		view.forward(request, response);
 
-		}
+	}
 
 }
