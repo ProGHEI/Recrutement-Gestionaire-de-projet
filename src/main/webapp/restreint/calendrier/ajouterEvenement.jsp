@@ -126,6 +126,10 @@
 					</table>
 					
 				</form>
+				
+				<form method="link" action="calendrierProG">
+					<input type="submit" value="Annuler">
+				</form>
 							
 					<div class="span12 quotation" id="slogan">
 						<hr>

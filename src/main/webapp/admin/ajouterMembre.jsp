@@ -164,7 +164,7 @@
 				</tr>
 				<tr>
 					<td>Webcal</td>
-					<td><input type="text" id="webcal" name="webcal" required></td>
+					<td><input type="text" id="webcal" name="webcal"></td>
 				</tr>
 				<tr>
 					<td>Mot de passe</td>

@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,7 +30,10 @@ public class ConnexionServlet extends HttpServlet {
         ConnexionForm form = new ConnexionForm();
 
         /* Traitement de la requête et récupération du bean en résultant */
-        Utilisateur utilisateur = form.connecterUtilisateur( request );
+        Utilisateur utilisateur;
+		
+		utilisateur = form.connecterUtilisateur( request );
+		
 
         /* Récupération de la session depuis la requête */
         HttpSession session = request.getSession();

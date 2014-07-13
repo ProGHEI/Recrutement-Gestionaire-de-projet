@@ -20,6 +20,14 @@
 
 			<aside class="span2" role="complementary">
 				<div class="menu-gauche" id="contact">
+				
+					<ul class="list">
+						<li><a href="http://localhost:8080/upload/calendrierProG"> Calendrier ProG </a></li>
+					</ul>
+					<ul class="list">
+						<li><a href="http://localhost:8080/upload/calendrierHEIConnect"> Calendrier HEIConnect </a></li>
+					</ul>
+				
 					<form method="link" action="deconnexion">
 						<button type="submit" value="deconnexion">Déconnexion</button>
 					</form>

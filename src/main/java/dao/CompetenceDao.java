@@ -14,7 +14,7 @@ public class CompetenceDao {
 	 * <p>
 	 * Elle récupère donc id_competence de la table 'compétence' et idetudiant de la table 'membre'.
 	 */
-	public void CreateDetenir(Integer idCompetence, Integer bareme, Integer idetudiant) {
+	public void CreateDetenir(Integer idCompetence, Integer bareme, String idetudiant) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
 					.getConnection();
@@ -24,7 +24,7 @@ public class CompetenceDao {
 					.prepareStatement("INSERT INTO `detenir`(`id_competence`,`bareme`,`idetudiant`) VALUES(?,?,?)");
 			stmt.setInt(1, idCompetence);
 			stmt.setInt(2, bareme);
-			stmt.setInt(3, idetudiant);
+			stmt.setString(3, idetudiant);
 			stmt.executeUpdate();
 
 			// Fermer la connexion

@@ -3,20 +3,20 @@ package model;
 public class Membre {
 
 	private Integer civilite;
-	private Integer idetudiant;
+	private String idetudiant;
 	private String nom;
 	private String prenom;
 	private String telephone;
 	private String email;
 	private String domaine;
-	private String promo;
+	private Integer promo;
 	private String postevise;
 	private Integer eleverealisateur;
 	private Integer postulant;
 
-	public Membre(Integer civilite, Integer idetudiant, String nom,
+	public Membre(Integer civilite, String idetudiant, String nom,
 			String prenom, String telephone, String email, String domaine,
-			String promo, String postevise, Integer eleverealisateur,
+			Integer promo, String postevise, Integer eleverealisateur,
 			Integer postulant) {
 		this.civilite = civilite;
 		this.idetudiant = idetudiant;
@@ -39,11 +39,11 @@ public class Membre {
 		this.civilite = civilite;
 	}
 
-	public Integer getIdetudiant() {
+	public String getIdetudiant() {
 		return idetudiant;
 	}
 
-	public void setIdetudiant(Integer idetudiant) {
+	public void setIdetudiant(String idetudiant) {
 		this.idetudiant = idetudiant;
 	}
 
@@ -87,11 +87,11 @@ public class Membre {
 		return domaine;
 	}
 
-	public void setPromo(String promo) {
+	public void setPromo(Integer promo) {
 		this.promo = promo;
 	}
 
-	public String getPromo() {
+	public Integer getPromo() {
 		return promo;
 	}
 

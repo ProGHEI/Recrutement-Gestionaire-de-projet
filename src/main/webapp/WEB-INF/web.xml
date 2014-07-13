@@ -252,4 +252,14 @@
     <servlet-name>UploadServlet</servlet-name>
     <url-pattern>/upload</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListeUserServlet</display-name>
+    <servlet-name>ListeUserServlet</servlet-name>
+    <servlet-class>controllers.ListeUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListeUserServlet</servlet-name>
+    <url-pattern>/listeMembre</url-pattern>
+  </servlet-mapping>
 </web-app>

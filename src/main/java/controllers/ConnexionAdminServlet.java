@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,8 +30,10 @@ public class ConnexionAdminServlet extends HttpServlet{
         ConnexionForm form = new ConnexionForm();
 
         /* Traitement de la requête et récupération du bean en résultant */
-        Utilisateur admin = form.connecterAdmin( request );
-        
+        Utilisateur admin;
+		
+		admin = form.connecterAdmin( request );
+		
 
         /* Récupération de la session depuis la requête */
         HttpSession session = request.getSession();

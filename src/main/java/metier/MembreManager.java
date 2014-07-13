@@ -1,5 +1,7 @@
 package metier;
 
+import java.util.List;
+
 import metier.MembreManager;
 import model.Membre;
 import dao.MembreDao;
@@ -24,6 +26,10 @@ public class MembreManager {
 	public Membre ajouterMembre(Membre newMembre) {
 		membreDao.addMembre(newMembre);
 		return newMembre;
+	}
+	
+	public List<Membre> getAllMembre() {
+		return membreDao.getAllMembre();
 	}
 
 	

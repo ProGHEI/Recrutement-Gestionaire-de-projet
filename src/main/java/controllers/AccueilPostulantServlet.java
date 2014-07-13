@@ -1,7 +1,9 @@
 package controllers;
 
-import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,13 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import upload.MultipartMap;
 import metier.Manager;
+import metier.MembreManager;
+import metier.UserManager;
 import model.Membre;
+import model.User;
 
 
 /*
- * C'est cette servlet qui va rÃ©colter les coordonnÃ©es de la page acceuilPostulant, c'est aussi elle qui compte le nombre de postulants Ã  chaque poste
+ * C'est cette servlet qui va récolter les coordonnées de la page acceuilPostulant, c'est aussi elle qui compte le nombre de postulants à chaque poste
  * */
 
 public class AccueilPostulantServlet extends HttpServlet {
@@ -63,26 +67,55 @@ public class AccueilPostulantServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		Integer civilite = Integer.parseInt(request.getParameter("civilite"));
-		Integer idetudiant = Integer.parseInt(request
-				.getParameter("idetudiant"));
+		String idetudiant = request.getParameter("idetudiant");
 		String nom = request.getParameter("nom");
 		String prenom = request.getParameter("prenom");
 		String telephone = request.getParameter("telephone");
 		String email = request.getParameter("email");
-		String domaine = " ";
-		String promo = request.getParameter("promo");
+		int promo = Integer.parseInt(request.getParameter("promo"));
 		String postevise = request.getParameter("postevise");
-		Integer postulant = 1;
-
-		Membre nemMembre = new Membre(civilite, idetudiant, nom, prenom,
-				telephone, email, domaine, promo, postevise, 0,
-				postulant);
-
-		Manager.getInstance().ajouterMembre(nemMembre);
 		
-		RequestDispatcher view = request
-				.getRequestDispatcher("WEB-INF/pages/remerciement.jsp");
-		view.forward(request, response);
+		List<Membre> liste = MembreManager.getInstance().getAllMembre();
+
+		// L'email doit être celui d'HEI
+		Pattern pEmail = Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@hei.fr$");
+		Matcher mEmail = pEmail.matcher(email);
+		
+		// On vérifie que l'identifiant soit correct
+		// Ici, l'id doit être composé de 5 chiffres de 0 à 9 sauf pour le premier (de 1 à 2)
+		Pattern pId = Pattern.compile("[1-2]+[0-9]{4}$");
+		Matcher mId = pId.matcher(idetudiant);
+		
+		// On vérifie que le téléphone soit correct
+		// Ici on le configure pour des 06 et 07
+		Pattern pTel = Pattern.compile("^0+[6,7]+[0-9]{8}$");
+		Matcher mTel = pTel.matcher(telephone);
+		
+		Boolean doublon = false;
+		for (int i = 0; i < liste.size(); i++) {
+			if(liste.get(i).getEmail().equals(email) || liste.get(i).getIdetudiant()==idetudiant){
+				doublon = true;
+			}
+		}
+		
+		if(mEmail.matches() && mId.matches() && mTel.matches() && !doublon){
+			Membre nemMembre = new Membre(civilite, idetudiant, nom, prenom,
+					telephone, email, "", promo, postevise, 0, 1);
+
+			Manager.getInstance().ajouterMembre(nemMembre);
+			
+			RequestDispatcher view = request
+					.getRequestDispatcher("WEB-INF/pages/remerciement.jsp");
+			view.forward(request, response);
+		}
+		
+		else{
+			RequestDispatcher view = request
+					.getRequestDispatcher("WEB-INF/pages/remerciement.jsp");
+			view.forward(request, response);
+		}
+		
+		
 
 	}
 }

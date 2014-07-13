@@ -55,7 +55,7 @@
 				<div class="menu-gauche" id="contact">
 					<ul class="list">
 						</br>	
-						<li><a href="http://localhost:8080/upload/calendrierHEIConnect"> Calendrier HEI-Connect </a></li>
+						<li><a href="http://localhost:8080/upload/calendrierHEIConnect"> Calendrier HEI</a></li>
 
 					</ul>
 					<c:forEach var="utilisateurs" items="${utilisateurs}">

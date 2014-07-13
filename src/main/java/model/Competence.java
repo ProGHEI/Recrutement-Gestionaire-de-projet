@@ -5,7 +5,7 @@ public class Competence {
 	private Integer nom_competence;
 	
 
-	public Competence(Integer civilite, Integer idetudiant, String nom,
+	public Competence(Integer civilite, String idetudiant, String nom,
 			String prenom, String telephone, String email, String domaine,
 			String promo, String postevise, Integer eleverealisateur,
 			Integer postulant) {

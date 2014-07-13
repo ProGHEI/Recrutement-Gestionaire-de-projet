@@ -8,14 +8,16 @@ public class User {
 	private String mail;
 	private String role;
 	private String webcal;
+	private String salt;
 		
-	public User (Integer id, String name, String pass, String mail, String role, String webcal) {
+	public User (Integer id, String name, String pass, String mail, String role, String webcal, String salt) {
 		this.id = id;
 		this.name = name;
 		this.pass = pass;
 		this.mail = mail;
 		this.role = role;
 		this.webcal = webcal;
+		this.salt = salt;
 	}
 
 	public String getName() {
@@ -66,6 +68,12 @@ public class User {
 		this.role = role;
 	}
 	
-	
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
 
 }

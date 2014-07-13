@@ -13,24 +13,8 @@
 							<div class="nav-collapse">
 								<nav role="navigation">
 									<ul class="menu nav">
-										<li class="first leaf"><a
-											href="http://localhost:8080/upload" class="active">Accueil</a></li>
-										<li class="leaf"><a href="http://localhost:8080/upload">Junior-Entreprise
-												?</a></li>
-										<li class="leaf"><a href="http://localhost:8080/upload">Nos
-												partenaires</a></li>
-										<li class="leaf"><a href="http://localhost:8080/upload">Notre
-												Équipe</a></li>
-										<li class="last expanded dropdown"><a href="/processus"
-											title="" class="dropdown-toggle" data-toggle="dropdown"
-											data-target="#">Prestations<span class="caret"></span></a>
-											<ul class="dropdown-menu">
-												<li class="first leaf"><a
-													href="http://localhost:8080/upload" title="">Nos
-														Compétences</a></li>
-												<li class="last leaf"><a
-													href="http://localhost:8080/upload">Notre Démarche</a></li>
-											</ul>
+										<li class="leaf"><a href="http://localhost:8080/upload/calendrierHEIConnect">Calendrier HEI-Connect</a></li>
+										<li class="leaf"><a href="http://localhost:8080/upload/calendrierProG">Calendier ProG</a></li>
 										<li class="last expanded dropdown"><a
 											href="http://localhost:8080/upload" title=""
 											class="dropdown-toggle" data-toggle="dropdown"
@@ -41,7 +25,8 @@
 												<li class="last leaf"><a href="accueilRealisateur">Eleve
 														Realisateur</a></li>
 											</ul>
-											<li class="last expanded dropdown"><a
+										</li>
+										<li class="last expanded dropdown"><a
 											href="http://localhost:8080/upload" title=""
 											class="dropdown-toggle" data-toggle="dropdown"
 											data-target="#">Espace Membre<span class="caret"></span></a>
@@ -50,6 +35,12 @@
 													title="">Membre</a></li>
 												<li class="last leaf"><a href="http://localhost:8080/upload/admin/bienvenueAdmin.jsp">Admin</a></li>
 											</ul>
+										</li>
+										
+										<li class="leaf"><a href="http://localhost:8080/upload/listeMembre">Les membres</a></li>
+										
+										<li class="first leaf"><a
+											href="http://localhost:8080/upload" class="active">Retour sur le site</a></li>
 									</ul>
 								</nav>
 							</div>

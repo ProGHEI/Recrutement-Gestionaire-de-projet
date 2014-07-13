@@ -53,10 +53,10 @@
 			<aside class="span2" role="complementary">
 				<div class="menu-gauche" id="contact">
 					<ul class="list">
-						</br>	
+						</br>
 						<li><a href="http://localhost:8080/upload/calendrierProG"> Calendrier ProG </a></li>
-
 					</ul>
+					
 					<c:forEach var="utilisateurs" items="${utilisateurs}">
 								<form method="post" action="calendrierHEIConnect?name=${utilisateurs.name}">
 									<button type="submit" value="${utilisateurs.name}">${utilisateurs.name}</button>

@@ -19,7 +19,7 @@ private static CompetenceManager instance;
 		competenceDao = new CompetenceDao();
 	}
 	
-	public void CreateDetenir(Integer id_competence, Integer bareme,Integer idetudiant) {
+	public void CreateDetenir(Integer id_competence, Integer bareme,String idetudiant) {
 		competenceDao.CreateDetenir(id_competence,bareme, idetudiant);
 		
 	}

@@ -19,7 +19,7 @@ public class UserDao {
 					.getConnection();
 
 			Statement stmt = connection.createStatement();
-			ResultSet results = stmt.executeQuery("SELECT * FROM `user`");
+			ResultSet results = stmt.executeQuery("SELECT * FROM user");
 
 			while (results.next()) {
 				Integer id = results.getInt("id");
@@ -29,7 +29,7 @@ public class UserDao {
 				String role = results.getString("role");
 				String webcal = results.getString("webcal");
 				
-				User utilisateur = new User(id, name, pass, mail, role, webcal);
+				User utilisateur = new User(id, name, pass, mail, role, webcal, null);
 				
 				liste.add(utilisateur);
 			}
@@ -63,7 +63,7 @@ public class UserDao {
 						results.getString("pass"), 
 						results.getString("mail"),
 						results.getString("role"),
-						results.getString("webcal"));
+						results.getString("webcal"), null);
 				
 			
 			
@@ -110,12 +110,13 @@ public class UserDao {
 
 			// Utiliser la connexion
 			PreparedStatement stmt = connection
-					.prepareStatement("INSERT INTO `user` (`id`,`name`,`pass`,`mail`,`status`,`role`,`webcal`) VALUES (null,?,?,?,'actif',?,?)");
+					.prepareStatement("INSERT INTO `user` (`id`,`name`,`pass`,`mail`,`status`,`role`,`webcal`,`salt`) VALUES (null,?,?,?,'actif',?,?,?)");
 			stmt.setString(1, user.getName());
 			stmt.setString(2, user.getPass());
 			stmt.setString(3, user.getMail());
 			stmt.setString(4, user.getRole());
 			stmt.setString(5, user.getWebcal());
+			stmt.setString(6, user.getSalt());
 			stmt.executeUpdate();
 			
 			// Fermer la connexion
