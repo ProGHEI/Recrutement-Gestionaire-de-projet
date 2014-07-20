@@ -8,12 +8,18 @@ import model.Competence;
 
 public class CompetenceDao {
 	
-	/*
+	/**
+	 * 
 	 * Cette Dao permet d'introduire dans la table 'detenir' qui est la table de jointure entre les tables membre et compétence une note (ici noté 'bareme')
 	 * que l'élève réalisateur s'est attribué sur une compétence donnée.
 	 * <p>
 	 * Elle récupère donc id_competence de la table 'compétence' et idetudiant de la table 'membre'.
+	 * 
+	 * @param idCompetence
+	 * @param bareme
+	 * @param idetudiant
 	 */
+	
 	public void CreateDetenir(Integer idCompetence, Integer bareme, String idetudiant) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()

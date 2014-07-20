@@ -34,33 +34,7 @@
 							<div class="titre"></div>
 							<div class="sous-titre">La Junior-Entreprise de HEI</div>
 						</div>
-						<div class="span4">
-
-							<div class="span12">
-
-								<div id="twitter">
-									<a href="https://twitter.com/proghei" target="_blank"><img
-										src="images/logo-twitter.png" alt=""></a>
-								</div>
-								<div id="facebook">
-									<a
-										href="https://www.facebook.com/pages/ProGHEI-La-Junior-Entreprise-dHEI/232534073459701"
-										target="_blank"><img src="images/logo-facebook.png" alt=""></a>
-								</div>
-
-							</div>
-
-							<div class="span12">
-								<!--              <div id="viadeo">
-                              <a href="http://www.linkedin.com/company/prog'hei" target="_blank"><img src="sites/proghei.fr/themes/bootstrap/assets/img/linkedi32.png" alt=""></a>
-                            </div>-->
-								<div id="linkedin">
-									<a href="http://www.linkedin.com/company/prog'hei"
-										target="_blank"><img src="images/logo-linkedin.png" alt=""></a>
-								</div>
-							</div>
-
-						</div>
+						
 					</div>
 
 				</div>
@@ -160,11 +134,16 @@
 				</tr>
 				<tr>
 					<td>Webcal</td>
-					<td><input type="text" id="webcal" name="webcal" value="${utilisateurs.webcal }" required></td>
+					<td><input type="text" id="webcal" name="webcal" value="${utilisateurs.webcal }"></td>
 				</tr>
 				<tr>
-					<td>Mot de passe</td>
-					<td><input type="password" id="pass" name="pass" value="${utilisateurs.pass }" required>
+					<td>Nouveau mot de passe</td>
+					<td><input type="password" id="pass" name="pass">
+					</td>
+				</tr>
+				<tr>
+					<td>Confirmer le mot de passe</td>
+					<td><input type="password" id="pass2" name="pass2">
 					</td>
 				</tr>
 				<tr>
@@ -173,6 +152,10 @@
 				</tr>
 			</tbody>
 		</table>
+		</form>
+		<form method="link" action="administration">
+			<button type="submit" value="administration">Annuler</button>
+		</form>
 							
 					<div class="span12 quotation" id="slogan">
 						<hr>

@@ -9,12 +9,33 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.MembreDao;
+import dao.UserDao;
 import metier.UserManager;
+import model.Membre;
 import model.User;
+
+/**
+ * 
+ * La servlet gérant l'affichage (<code>doGet</code>) du calendrier <code>calendrierHEIConnect</code>.
+ * <p>
+ * Ici le <code>doPost</code> ne sert qu'à afficher le calendrier du membre selectionné.
+ * 
+ * @author Felix
+ * @see calendrierHEIConnect.jsp
+ * @see UserDao
+ * @see User
+ *
+ */
 
 public class CalendrierHEIConnectServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	
+	/**
+	 * @see UserDao#getAllUser()
+	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
 		List<User> listeUsers = UserManager.getInstance().getAllUser();
 		request.setAttribute("utilisateurs", listeUsers );
@@ -22,6 +43,12 @@ public class CalendrierHEIConnectServlet extends HttpServlet {
 		RequestDispatcher view = request.getRequestDispatcher("restreint/calendrier/calendrierHEIConnect.jsp");
 		view.forward(request, response);
 	}
+	
+	
+	/**
+	 * @see UserDao#getAllUser()
+	 * @see UserDao#getUser(String)
+	 */
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

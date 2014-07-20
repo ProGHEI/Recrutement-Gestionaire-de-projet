@@ -12,6 +12,11 @@ import model.User;
 
 public class UserDao {
 
+	/**
+	 * Retourne tous les users sous forme d'ArrayList
+	 * 
+	 */
+	
 	public List<User> getAllUser() {
 		List<User> liste = new ArrayList<User>();
 		try {
@@ -46,6 +51,14 @@ public class UserDao {
 		return liste;
 	}
 	
+	
+	/**
+	 * Retourne l'user dont le nom est passé en paramètre
+	 * 
+	 * @param name
+	 * 
+	 */
+	
 	public User getUser(String name) {
 		User user = null;
 		try {
@@ -77,6 +90,13 @@ public class UserDao {
 		return user;
 	}
 
+	
+	/**
+	 * Fait un update d'un user
+	 * 
+	 * @param user
+	 */
+	
 	public void updateUser(User user) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
@@ -103,6 +123,13 @@ public class UserDao {
 		
 	}
 
+	
+	/**
+	 * Ajoute un nouvel user
+	 * 
+	 * @param user
+	 */
+	
 	public void ajouterUser(User user) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
@@ -128,6 +155,12 @@ public class UserDao {
 		}
 		
 	}
+	
+	/**
+	 * Supprime l'user dont l'id est passé en paramètre
+	 * 
+	 * @param id
+	 */
 	
 	public void supprimerUser(Integer id) {
 		try {

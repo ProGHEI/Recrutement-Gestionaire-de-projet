@@ -1,7 +1,6 @@
 package controllers;
 
 import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,8 +9,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Membre;
+import model.User;
 import model.Utilisateur;
 import dao.ConnexionForm;
+import dao.MembreDao;
+import dao.UserDao;
+
+/**
+ * 
+ * La servlet gérant la connexion en tant qu'admin.
+ * 
+ * @author Felix
+ * @see connexionAdmin.jsp
+ * @see UserDao
+ * @see ConnexionForm
+ * @see User
+ *
+ */
 
 public class ConnexionAdminServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
@@ -25,6 +40,11 @@ public class ConnexionAdminServlet extends HttpServlet{
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }
 
+    
+    /**
+	 * @see ConnexionForm#connecterAdmin(HttpServletRequest)
+	 */
+    
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         /* Préparation de l'objet formulaire */
         ConnexionForm form = new ConnexionForm();

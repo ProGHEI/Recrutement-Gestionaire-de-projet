@@ -28,8 +28,19 @@ public final class ConnexionForm {
     public Map<String, String> getErreurs() {
         return erreurs;
     }
+    
+  //======================= UTILISATEUR ================================================================
 
+    /**
+	 * Cette méthode permet de connecter un membre en récupérant son e-mail et son mot de passe
+	 * rentrés dans le formulaire
+	 * <p>
+	 * On récupère le "salt" contenu dans la BDD afin de hasher le mot de passe 
+	 * rentré. Si le résultat correspond à la valeur contenu dans la BDD, on valide la connexion.
+	 */
+    
     public Utilisateur connecterUtilisateur( HttpServletRequest request ) {
+    	
         /* Récupération des champs du formulaire */
         String email = getValeurChamp( request, CHAMP_EMAIL );
         String motDePasse = getValeurChamp( request, CHAMP_PASS );
@@ -68,6 +79,17 @@ public final class ConnexionForm {
         return utilisateur;
     }
     
+    
+  //======================= ADMIN ================================================================
+    
+    
+    /**
+	 * Cette méthode permet de connecter un membre en récupérant son e-mail et son mot de passe
+	 * rentrés dans le formulaire
+	 * <p>
+	 * On récupère le "salt" contenu dans la BDD afin de hasher le mot de passe 
+	 * rentré. Si le résultat correspond à la valeur contenu dans la BDD, on valide la connexion.
+	 */
     
     public Utilisateur connecterAdmin( HttpServletRequest request ) {
         /* Récupération des champs du formulaire */
@@ -109,6 +131,8 @@ public final class ConnexionForm {
     }
     
 
+    
+    
     private void validationAdmin(String email, String motDePasse) throws Exception {
      boolean validation = false;
     
@@ -138,6 +162,8 @@ public final class ConnexionForm {
 		     }
 		
 	}
+    
+  //======================= ================================================================
     
     private String getSalt(String email, String motDePasse) throws Exception {
         String salt = null;

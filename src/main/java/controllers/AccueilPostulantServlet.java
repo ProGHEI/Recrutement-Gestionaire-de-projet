@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.MembreDao;
 import metier.Manager;
 import metier.MembreManager;
 import metier.UserManager;
@@ -18,16 +19,30 @@ import model.Membre;
 import model.User;
 
 
-/*
- * C'est cette servlet qui va récolter les coordonnées de la page acceuilPostulant, c'est aussi elle qui compte le nombre de postulants à chaque poste
- * */
+/**
+ * 
+ * La servlet gérant l'affichage (<code>doGet</code>) de la page <code>accueilPostulant</code> et son formulaire
+ * d'inscription (<code>doPost</code>)
+ * 
+ * @author Felix
+ * @see accueilPostulant.jsp
+ * @see MembreDao
+ * @see Membre
+ *
+ */
 
 public class AccueilPostulantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	
+	/**
+	 * @see MembreDao#getNbPostulants(String)
+	 */
+	
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		int nbPres = Manager.getInstance().getNbPostulants("president");
 		int nbVicePres = Manager.getInstance().getNbPostulants("vice president");
 		int nbTreso = Manager.getInstance().getNbPostulants("tresorier");
@@ -63,6 +78,12 @@ public class AccueilPostulantServlet extends HttpServlet {
 		view.forward(request, response);
 	}
 
+	
+	
+	/**
+	 * @see MembreDao#addMembre(Membre)
+	 */
+	
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");

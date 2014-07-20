@@ -10,14 +10,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.CompetenceDao;
+import dao.MembreDao;
 import metier.CompetenceManager;
 import metier.Manager;
+import model.Competence;
 import model.Membre;
 
-/*
- * Cette servlet sert Ã  obtenir les coordonnÃ©es et les compÃ©tences d'un Ã©lÃ¨ve rÃ©alisateur sur la page rÃ©alisateur
+/**
  * 
- * */
+ * La servlet gérant l'affichage (<code>doGet</code>) de la page <code>accueilRealisateur</code> et son formulaire
+ * d'inscription (<code>doPost</code>)
+ * 
+ * @author Felix
+ * @see accueilRealisateur.jsp
+ * @see MembreDao
+ * @see CompetenceDao
+ * @see Membre
+ * @see Competence
+ *
+ */
+
 public class AccueilRealisateurServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -33,6 +46,11 @@ public class AccueilRealisateurServlet extends HttpServlet {
 	 * 
 	 * */
 
+	/**
+	 * @see MembreDao#addMembre(Membre)
+	 * @see CompetenceDao#CreateDetenir(Integer, Integer, String)
+	 */
+	
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");

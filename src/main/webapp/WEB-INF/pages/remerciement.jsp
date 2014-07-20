@@ -3,7 +3,7 @@
 <%@ page pageEncoding="UTF-8"%>
 <head>
 <jsp:include page="head.jsp">
-			<jsp:param name="pageSelectionnee" value="ajout"/>
+	<jsp:param name="pageSelectionnee" value="ajout" />
 </jsp:include>
 </head>
 <body
@@ -38,76 +38,51 @@
 							<div class="titre"></div>
 							<div class="sous-titre">La Junior-Entreprise de HEI</div>
 						</div>
-						<div class="span4">
 
-							<div class="span12">
-
-								<div id="twitter">
-									<a href="https://twitter.com/proghei" target="_blank"><img
-										src="images/logo-twitter.png" alt=""></a>
-								</div>
-								<div id="facebook">
-									<a
-										href="https://www.facebook.com/pages/ProGHEI-La-Junior-Entreprise-dHEI/232534073459701"
-										target="_blank"><img src="images/logo-facebook.png" alt=""></a>
-								</div>
-
-							</div>
-
-							<div class="span12">
-								<!--              <div id="viadeo">
-                              <a href="http://www.linkedin.com/company/prog'hei" target="_blank"><img src="sites/proghei.fr/themes/bootstrap/assets/img/linkedi32.png" alt=""></a>
-                            </div>-->
-								<div id="linkedin">
-									<a href="http://www.linkedin.com/company/prog'hei"
-										target="_blank"><img src="images/logo-linkedin.png" alt=""></a>
-								</div>
-							</div>
-
-						</div>
 					</div>
 
 				</div>
 
 				<jsp:include page="menu.jsp">
-					<jsp:param name="pageSelectionnee" value="ajout"/>
+					<jsp:param name="pageSelectionnee" value="ajout" />
 				</jsp:include>
-				
+
 				<br /> <a id="main-content"></a>
 				<div class="contenu-principal">
 					<div class="spanGlobal">
 						<div class="spanArticle">
 
 							Merci d'avoir postulé à ProG'HEI !
-							
-					<div class="span12 quotation" id="slogan">
-						<hr>
-						<h5>ProG'HEI - Vos projets, nos compétences.</h5>
-						<hr>
+
+							<div class="span12 quotation" id="slogan">
+								<hr>
+								<h5>ProG'HEI - Vos projets, nos compétences.</h5>
+								<hr>
+							</div>
+						</div>
 					</div>
 				</div>
-		</div>
-		</section>
+			</section>
 
 
-		<div class="span12">
-			<div class="span10 offset2">
-				<footer class="footer container">
+			<div class="span12">
+				<div class="span10 offset2">
+					<footer class="footer container">
 
-					<div class="infos-legales">
-						<p class="infos-legales">
-							ProG'HEI - La Junior Entreprise d'HEI <br> 13 Rue de Toul -
-							59046 Lille Cedex <br> <a href="http://www.hei.fr">HEI</a> |
-							<a href="http://www.junior-entreprises.com/">CNJE</a>
-						</p>
+						<div class="infos-legales">
+							<p class="infos-legales">
+								ProG'HEI - La Junior Entreprise d'HEI <br> 13 Rue de Toul -
+								59046 Lille Cedex <br> <a href="http://www.hei.fr">HEI</a>
+								| <a href="http://www.junior-entreprises.com/">CNJE</a>
+							</p>
 
-					</div>
+						</div>
 
-				</footer>
+					</footer>
+				</div>
 			</div>
-		</div>
 
-	</div>
+		</div>
 
 	</div>
 

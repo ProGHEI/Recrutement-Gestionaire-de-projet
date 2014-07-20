@@ -1,7 +1,6 @@
 package controllers;
 
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -14,14 +13,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.EvenementDao;
+import dao.UserDao;
 import metier.EvenementManager;
 import model.Evenement;
 
+/**
+ * 
+ * Cette servlet permet d'affichage de l'ensemble des évènements <u>à venir</u> relatifs à l'utilisateur.
+ * 
+ * @author Felix
+ * @see listeEvenement.jsp
+ * @see EvenementDao
+ * @see Evenement
+ *
+ */
 
 public class ListerEvenementServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
+	
+	/**
+	* @see EvenementDao#listerEvenement()
+	*
+	*/
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		

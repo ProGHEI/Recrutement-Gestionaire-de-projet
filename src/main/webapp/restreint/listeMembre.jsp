@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page pageEncoding="UTF-8"%>
 <head>
-	<jsp:include page="../WEB-INF/pages/head.jsp">
-				<jsp:param name="pageSelectionnee" value="ajout"/>
-	</jsp:include>
+<jsp:include page="../WEB-INF/pages/head.jsp">
+	<jsp:param name="pageSelectionnee" value="ajout" />
+</jsp:include>
 </head>
-<body class="html front not-logged-in no-sidebars page-node page-node- page-node-2 node-type-page">
+<body
+	class="html front not-logged-in no-sidebars page-node page-node- page-node-2 node-type-page">
 
 
 	<div id="container" class="container">
@@ -33,41 +34,15 @@
 							<div class="titre"></div>
 							<div class="sous-titre">La Junior-Entreprise de HEI</div>
 						</div>
-						<div class="span4">
 
-							<div class="span12">
-
-								<div id="twitter">
-									<a href="https://twitter.com/proghei" target="_blank"><img
-										src="images/logo-twitter.png" alt=""></a>
-								</div>
-								<div id="facebook">
-									<a
-										href="https://www.facebook.com/pages/ProGHEI-La-Junior-Entreprise-dHEI/232534073459701"
-										target="_blank"><img src="images/logo-facebook.png" alt=""></a>
-								</div>
-
-							</div>
-
-							<div class="span12">
-								<!--              <div id="viadeo">
-                              <a href="http://www.linkedin.com/company/prog'hei" target="_blank"><img src="sites/proghei.fr/themes/bootstrap/assets/img/linkedi32.png" alt=""></a>
-                            </div>-->
-								<div id="linkedin">
-									<a href="http://www.linkedin.com/company/prog'hei"
-										target="_blank"><img src="images/logo-linkedin.png" alt=""></a>
-								</div>
-							</div>
-
-						</div>
 					</div>
 
 				</div>
 
 				<jsp:include page="../WEB-INF/pages/menu.jsp">
-					<jsp:param name="pageSelectionnee" value="ajout"/>
+					<jsp:param name="pageSelectionnee" value="ajout" />
 				</jsp:include>
-				
+
 				<br /> <a id="main-content"></a>
 				<div class="contenu-principal">
 					<div class="spanGlobal">
@@ -86,30 +61,31 @@
 									</c:forEach>
 								</tbody>
 							</table>
-						
-</div>
-		</div>
-		</section>
 
-
-		<div class="span12">
-			<div class="span10 offset2">
-				<footer class="footer container">
-
-					<div class="infos-legales">
-						<p class="infos-legales">
-							ProG'HEI - La Junior Entreprise d'HEI <br> 13 Rue de Toul -
-							59046 Lille Cedex <br> <a href="http://www.hei.fr">HEI</a> |
-							<a href="http://www.junior-entreprises.com/">CNJE</a>
-						</p>
-
+						</div>
 					</div>
+				</div>	
+			</section>
 
-				</footer>
+
+			<div class="span12">
+				<div class="span10 offset2">
+					<footer class="footer container">
+
+						<div class="infos-legales">
+							<p class="infos-legales">
+								ProG'HEI - La Junior Entreprise d'HEI <br> 13 Rue de Toul -
+								59046 Lille Cedex <br> <a href="http://www.hei.fr">HEI</a>
+								| <a href="http://www.junior-entreprises.com/">CNJE</a>
+							</p>
+
+						</div>
+
+					</footer>
+				</div>
 			</div>
-		</div>
 
-	</div>
+		</div>
 
 	</div>
 </body>

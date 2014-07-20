@@ -11,6 +11,15 @@ import java.util.List;
 import model.Evenement;
 
 public class EvenementDao {
+	
+	/**
+	 * Retourne tous les évènements relatifs à un User sous forme de JSON dans la page <code>eventJSON</code>.
+	 * <p>
+	 * Cette page sert de source à FullCalendar (pour le calendrier ProG)
+	 * 
+	 * @param idUser
+	 * 
+	 */
 
 	public List<String> listerEvenementJSON(Integer idUser) {
 		List<String> liste = new ArrayList<String>();
@@ -51,6 +60,14 @@ public class EvenementDao {
 		return liste;
 	}
 
+	
+	/**
+	 * Ajoute un nouvel évènement
+	 * 
+	 * @param newEvenement
+	 * @param idUser
+	 */
+	
 	public void ajouterEvenement(Evenement newEvenement, Integer idUser) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
@@ -79,6 +96,11 @@ public class EvenementDao {
 		
 		
 	}
+	
+	/**
+	 * Retourne tous les évènements
+	 * 
+	 */
 	
 	public List<Evenement> listerEvenement() {
 		List<Evenement> liste = new ArrayList<Evenement>();
@@ -116,6 +138,14 @@ public class EvenementDao {
 		return liste;
 	}
 
+	
+	/**
+	 * Retourne l'évènement correspondant à l'id
+	 * 
+	 * @param idEvenement
+	 * 
+	 */
+	
 	public Evenement getEvenement(Integer idEvenement) {
 		Evenement evenement = null;
 		try {
@@ -147,6 +177,13 @@ public class EvenementDao {
 		return evenement;
 	}
 
+	
+	/**
+	 * Fait un update d'un évènement en particulier
+	 * 
+	 * @param updatedEvenement
+	 */
+	
 	public void updateEvenement(Evenement updatedEvenement) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
@@ -174,6 +211,13 @@ public class EvenementDao {
 		}
 	}
 
+	
+	/**
+	 * Supprime l'évènement dont l'id est passé en paramètre
+	 * 
+	 * @param idEvenement
+	 */
+	
 	public void supprimerEvenement(Integer idEvenement) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()

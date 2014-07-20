@@ -11,14 +11,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.EvenementDao;
+import dao.UserDao;
 import metier.EvenementManager;
 import model.Evenement;
 
+/**
+ * 
+ * Cette servlet permet de récapituler (<code>doGet</code>) le contenu d'un évènement puis de le modifier
+ * (<code>doPost</code>)
+ * 
+ * @author Felix
+ * @see evenement.jsp
+ * @see EvenementDao
+ * @see Evenement
+ *
+ */
 
 public class ModifierEvenementServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
    
+	/**
+	* @see EvenementDao#getEvenement(Integer)
+	*
+	*/
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Integer idEvenement = Integer.parseInt(request.getParameter("id"));
@@ -30,6 +48,12 @@ public class ModifierEvenementServlet extends HttpServlet {
 		view.forward(request, response);
 	}
 
+	
+	/**
+	* @see EvenementDao#updateEvenement(Evenement)
+	*
+	*/
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		Integer id = Integer.parseInt((request.getParameter("id")));

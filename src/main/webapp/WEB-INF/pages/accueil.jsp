@@ -3,7 +3,7 @@
 <%@ page pageEncoding="UTF-8"%>
 <head>
 <jsp:include page="head.jsp">
-			<jsp:param name="pageSelectionnee" value="ajout"/>
+	<jsp:param name="pageSelectionnee" value="ajout" />
 </jsp:include>
 </head>
 <body
@@ -16,13 +16,6 @@
 		<!-- /#header -->
 
 		<div class="row-fluid">
-
-
-
-
-
-
-
 
 			<aside class="span2" role="complementary">
 				<div class="menu-gauche" id="contact">
@@ -45,39 +38,13 @@
 							<div class="titre"></div>
 							<div class="sous-titre">La Junior-Entreprise de HEI</div>
 						</div>
-						<div class="span4">
 
-							<div class="span12">
-
-								<div id="twitter">
-									<a href="https://twitter.com/proghei" target="_blank"><img
-										src="images/logo-twitter.png" alt=""></a>
-								</div>
-								<div id="facebook">
-									<a
-										href="https://www.facebook.com/pages/ProGHEI-La-Junior-Entreprise-dHEI/232534073459701"
-										target="_blank"><img src="images/logo-facebook.png" alt=""></a>
-								</div>
-
-							</div>
-
-							<div class="span12">
-								<!--              <div id="viadeo">
-                              <a href="http://www.linkedin.com/company/prog'hei" target="_blank"><img src="sites/proghei.fr/themes/bootstrap/assets/img/linkedi32.png" alt=""></a>
-                            </div>-->
-								<div id="linkedin">
-									<a href="http://www.linkedin.com/company/prog'hei"
-										target="_blank"><img src="images/logo-linkedin.png" alt=""></a>
-								</div>
-							</div>
-
-						</div>
 					</div>
 
 				</div>
 
 				<jsp:include page="menu.jsp">
-					<jsp:param name="pageSelectionnee" value="ajout"/>
+					<jsp:param name="pageSelectionnee" value="ajout" />
 				</jsp:include>
 
 
@@ -109,18 +76,10 @@
 						href="#myCarousel" data-slide="next">›</a>
 				</div>
 
-
-
 				<br /> <a id="main-content"></a>
 				<div class="contenu-principal">
 
-
-
-
-
 					<div class="span12">
-
-
 
 						<div class="span7">
 
@@ -272,9 +231,6 @@
 						</div>
 					</div>
 
-
-
-
 				</div>
 			</section>
 
@@ -299,8 +255,6 @@
 		</div>
 
 	</div>
-
-
 
 </body>
 </html>

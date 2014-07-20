@@ -14,8 +14,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.MembreDao;
+import dao.UserDao;
 import metier.UserManager;
+import model.Membre;
 import model.User;
+
+/**
+ * 
+ * La servlet gérant l'affichage (<code>doGet</code>) de la page <code>accueilPostulant</code> et son formulaire
+ * d'inscription (<code>doPost</code>)
+ * 
+ * @author Felix
+ * @see accueilPostulant.jsp
+ * @see MembreDao
+ * @see Membre
+ *
+ */
 
 
 public class AjouterMembreServlet extends HttpServlet{
@@ -27,6 +42,12 @@ public class AjouterMembreServlet extends HttpServlet{
 		view.forward(request, response);
 	}
 
+	
+	
+	/**
+	 * @see UserDao#ajouterUser(User)
+	 * @see UserDao#getAllUser()
+	 */
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

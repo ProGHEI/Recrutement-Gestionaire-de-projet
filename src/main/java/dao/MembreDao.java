@@ -13,6 +13,12 @@ import model.User;
 
 public class MembreDao {
 	
+	/**
+	 * Ajoute un nouveau membre
+	 * 
+	 * @param newMembre
+	 */
+	
 	public void addMembre(Membre newMembre) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource()
@@ -44,7 +50,12 @@ public class MembreDao {
 	}
 		
 		
-	
+	/**
+	 * Retourne le nombre de postulant pour un poste
+	 * 
+	 * @param poste
+	 * 
+	 */
 	
 	public int getNbPostulants(String poste){
 		int nbPostulants=0;
@@ -75,6 +86,13 @@ public class MembreDao {
 	
 		return nbPostulants;
 	}
+	
+	
+	/**
+	 * 
+	 * Retourne l'ensemble de tous les membres sous forme d'ArrayList
+	 * 
+	 */
 	
 	public List<Membre> getAllMembre() {
 		List<Membre> liste = new ArrayList<Membre>();

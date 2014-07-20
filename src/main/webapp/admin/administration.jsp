@@ -34,33 +34,7 @@
 							<div class="titre"></div>
 							<div class="sous-titre">La Junior-Entreprise de HEI</div>
 						</div>
-						<div class="span4">
-
-							<div class="span12">
-
-								<div id="twitter">
-									<a href="https://twitter.com/proghei" target="_blank"><img
-										src="images/logo-twitter.png" alt=""></a>
-								</div>
-								<div id="facebook">
-									<a
-										href="https://www.facebook.com/pages/ProGHEI-La-Junior-Entreprise-dHEI/232534073459701"
-										target="_blank"><img src="images/logo-facebook.png" alt=""></a>
-								</div>
-
-							</div>
-
-							<div class="span12">
-								<!--              <div id="viadeo">
-                              <a href="http://www.linkedin.com/company/prog'hei" target="_blank"><img src="sites/proghei.fr/themes/bootstrap/assets/img/linkedi32.png" alt=""></a>
-                            </div>-->
-								<div id="linkedin">
-									<a href="http://www.linkedin.com/company/prog'hei"
-										target="_blank"><img src="images/logo-linkedin.png" alt=""></a>
-								</div>
-							</div>
-
-						</div>
+						
 					</div>
 
 				</div>

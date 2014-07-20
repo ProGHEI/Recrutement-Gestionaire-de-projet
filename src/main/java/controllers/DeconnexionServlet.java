@@ -8,6 +8,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ * 
+ * La servlet permettant la déconnexion de tous les utilisateurs
+ * 
+ * @author Felix
+ *
+ */
+
 public class DeconnexionServlet extends HttpServlet {
     public static final String VUE = "/accueil";
 
